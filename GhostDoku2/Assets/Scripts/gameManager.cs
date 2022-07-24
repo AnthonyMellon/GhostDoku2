@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class gameManager : MonoBehaviour
 {
-    private gameGrid myGrid;
+    public GameGrid myGrid;
 
     [Space]
     [Header("Grid Varibles")]
@@ -19,8 +19,10 @@ public class gameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        myGrid = new gameGrid(gridWidth, gridHeight, cellWidth, cellHeight, gridOrigin, CellObj, gridParent);
+        myGrid = new GameGrid(gridWidth, gridHeight, cellWidth, cellHeight, gridOrigin, CellObj, gridParent);
         myGrid.generate();
+
+        Debug.Log(PathFinder.findPath(myGrid, new Vector2(0, 0), new Vector2(1, 1)));        
     }
 
     // Update is called once per frame

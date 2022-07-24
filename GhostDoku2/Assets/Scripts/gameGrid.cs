@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class gameGrid
+public class GameGrid
 {
     private int width;
     private int height;
@@ -14,7 +14,7 @@ public class gameGrid
 
     public GameObject[,] cells;
 
-    public gameGrid(int width, int height, float cellWidth, float cellHeight, Vector2 origin, GameObject CellObj, GameObject gridParent)
+    public GameGrid(int width, int height, float cellWidth, float cellHeight, Vector2 origin, GameObject CellObj, GameObject gridParent)
     {
         this.width = width;
         this.height = height;

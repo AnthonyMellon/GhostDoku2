@@ -4,21 +4,10 @@ using UnityEngine;
 
 public class tile : MonoBehaviour
 {
-    public enum tileStates
-    {
-        walkable,
-        wall,
-        start,
-        end
-    }
-
     public Sprite walkableSprite;
     public Sprite wallSprite;
     public Sprite startSprite;
-    public Sprite endSprite;
-    
-    public bool walkable;
-    public tileStates state;
+    public Sprite endSprite;   
 
     private SpriteRenderer spriteRenderer;
     private void Start()
@@ -31,28 +20,16 @@ public class tile : MonoBehaviour
         if(Input.GetMouseButtonDown(0)) //Toggle sprite between walkable and wall
         {
             //Update state
-            tileStates newState = tileStates.walkable;
-            if (state == tileStates.walkable)
-                newState = tileStates.wall;
-            state = newState;
+            string newTag = "tile_walkable";                       
+            if (tag == "tile_walkable")
+                newTag = "tile_wall";
+            tag = newTag;
 
             //Update sprite
             Sprite sprite = walkableSprite;
-            if(state == tileStates.wall)
+            if(tag == "tile_wall")
                 sprite = wallSprite; 
             spriteRenderer.sprite = sprite;
-        }
-
-        if(Input.GetKeyDown(KeyCode.S))
-        {
-            state = tileStates.start;
-            spriteRenderer.sprite = startSprite;
-        }
-
-        if(Input.GetKeyDown(KeyCode.E))
-        {
-            state = tileStates.end;
-            spriteRenderer.sprite = endSprite;
         }
     }
 }

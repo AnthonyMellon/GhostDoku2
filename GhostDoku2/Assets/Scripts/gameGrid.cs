@@ -48,6 +48,7 @@ public class GameGrid
 
                 GameObject currentCellObj = Transform.Instantiate(CellObj, new Vector3(posX, posY, 0), new Quaternion(0, 0, 0, 0), gridParent.transform);                   
                 currentCellObj.transform.localScale = new Vector3(cellWidth, cellHeight, 1);
+                currentCellObj.GetComponent<tile>().normalPosition = new Vector2Int(x, y);
                 cells[x, y] = currentCellObj;
             }
         }

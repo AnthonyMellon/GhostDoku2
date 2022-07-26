@@ -6,8 +6,8 @@ public class gameManager : MonoBehaviour
 {
     public GameGrid myGrid;
 
-    public Sprite goodSprite;
-    public Sprite redSprite;
+    public Sprite pathSprite;
+    public Sprite whiteSprite;
 
     [Space]
     [Header("Grid Varibles")]
@@ -19,29 +19,40 @@ public class gameManager : MonoBehaviour
     public GameObject CellObj;
     public GameObject gridParent;
 
+    private List<tile> path;
+
     // Start is called before the first frame update
     void Start()
     {
         myGrid = new GameGrid(gridWidth, gridHeight, cellWidth, cellHeight, gridOrigin, CellObj, gridParent);
         myGrid.generate();
 
-        //List<tile> path = PathFinder.findPath(myGrid, new Vector2Int(0, 0), new Vector2Int(1, 5), gridWidth, gridHeight, redSprite);
-        //StartCoroutine(pathAnimate(path));
+        path = PathFinder.FindPath(0, 0, 2, 6, myGrid);
+        Debug.Log(path.Count);
+        StartCoroutine(pathAnimate(path));
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if(Input.GetKeyDown(KeyCode.P))
+        {
+            foreach(tile tile in path)
+            {
+                if(tile.gameObject.tag == "tile_walkable") tile.gameObject.GetComponent<SpriteRenderer>().sprite = whiteSprite;
+            }
+
+            path = PathFinder.FindPath(0, 0, 2, 6, myGrid);
+            StartCoroutine(pathAnimate(path));
+        }
     }
 
     private IEnumerator pathAnimate(List<tile> path)
     {
         foreach (tile step in path)
         {
-            step.gameObject.GetComponent<SpriteRenderer>().sprite = goodSprite;
-            Debug.Log("Displaying part of the path!");
-            yield return new WaitForSeconds(.5f);
+            step.gameObject.GetComponent<SpriteRenderer>().sprite = pathSprite;
+            yield return new WaitForSeconds(.1f);
         }        
     }
 }

@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class GameGrid
 {
-    private int width;
-    private int height;
+    public int width;
+    public int height;
     private float cellWidth;
     private float cellHeight;
     private Vector2 origin;

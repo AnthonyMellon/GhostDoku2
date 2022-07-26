@@ -10,10 +10,11 @@ public class tile : MonoBehaviour
     public Sprite endSprite;
 
     //Values used for path finding    
-    [HideInInspector] public float f = 0;
-    [HideInInspector] public float g = 0;
-    [HideInInspector] public float h = 0;
+    [HideInInspector] public int f = 0;
+    [HideInInspector] public int g = 0;
+    [HideInInspector] public int h = 0;
     [HideInInspector] public Vector2Int normalPosition;
+    public tile parent;
 
     private SpriteRenderer spriteRenderer;
     private void Start()
@@ -23,9 +24,6 @@ public class tile : MonoBehaviour
 
     private void Update()
     {
-        transform.Find("fScore").GetComponent<TextMesh>().text = $"F: {f.ToString("F2")}";
-        transform.Find("gScore").GetComponent<TextMesh>().text = $"G: {g.ToString("F2")}";
-        transform.Find("hScore").GetComponent<TextMesh>().text = $"H: {h.ToString("F2")}";
     }
 
     private void OnMouseOver()
@@ -44,5 +42,10 @@ public class tile : MonoBehaviour
                 sprite = wallSprite; 
             spriteRenderer.sprite = sprite;
         }
+    }
+
+    public void calcFCost()
+    {
+        f = g + h;
     }
 }

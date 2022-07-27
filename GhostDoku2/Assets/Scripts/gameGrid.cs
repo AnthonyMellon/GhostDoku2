@@ -12,6 +12,9 @@ public class GameGrid
     private GameObject CellObj;
     private GameObject gridParent;
 
+    private int nTilesX;
+    private int nTilesY;
+
     public GameObject[,] cells;
 
     public GameGrid(int width, int height, float cellWidth, float cellHeight, Vector2 origin, GameObject CellObj, GameObject gridParent)
@@ -34,8 +37,8 @@ public class GameGrid
         }
 
         //Make a fresh array for the new cells
-        int nTilesX = Mathf.CeilToInt(width / cellWidth);
-        int nTilesY = Mathf.CeilToInt(height / cellHeight);
+        nTilesX = Mathf.CeilToInt(width / cellWidth);
+        nTilesY = Mathf.CeilToInt(height / cellHeight);
         cells = new GameObject[nTilesX, nTilesY];
         
         //Instantiate the cell objects into the scene and pass them into the cells array
@@ -43,15 +46,30 @@ public class GameGrid
         {
             for(int y = 0; y < nTilesY; y++)
             {
-                float posX = (x + origin.x) - (nTilesX / 2);
-                float posY = (y + origin.y) - (nTilesY / 2);
+                Vector2 wPos = absoluteToWorld(new Vector2(x, y));
 
-                GameObject currentCellObj = Transform.Instantiate(CellObj, new Vector3(posX, posY, 0), new Quaternion(0, 0, 0, 0), gridParent.transform);                   
+                GameObject currentCellObj = Transform.Instantiate(CellObj, new Vector3(wPos.x, wPos.y, 0), new Quaternion(0, 0, 0, 0), gridParent.transform);                   
                 currentCellObj.transform.localScale = new Vector3(cellWidth, cellHeight, 1);
                 currentCellObj.GetComponent<tile>().normalPosition = new Vector2Int(x, y);
                 cells[x, y] = currentCellObj;
             }
         }
+    }
+
+    public Vector2 absoluteToWorld(Vector2 aPos)
+    {
+        Vector2 wPos;
+        wPos.x = (aPos.x + origin.x) - (nTilesX / 2);
+        wPos.y = (aPos.y + origin.y) - (nTilesY / 2);
+        return wPos;
+    }
+
+    public Vector2 worldToAbsolute(Vector2 wPos)
+    {
+        Vector2 aPos;
+        aPos.x = (wPos.x - origin.x) + (nTilesX / 2);
+        aPos.y = (wPos.y - origin.y) + (nTilesY / 2);
+        return aPos;
     }
 
     private void destroyAllCells()

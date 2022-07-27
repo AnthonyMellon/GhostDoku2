@@ -25,25 +25,12 @@ public class gameManager : MonoBehaviour
     {
         myGrid = new GameGrid(gridWidth, gridHeight, cellWidth, cellHeight, gridOrigin, CellObj, gridParent);
         myGrid.generate();
-
-        path = PathFinder.FindPath(0, 0, 2, 6, myGrid);
-        Debug.Log(path.Count);
-        StartCoroutine(pathAnimate(path));
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.P))
-        {
-            foreach(tile tile in path)
-            {
-                tile.gameObject.GetComponent<SpriteRenderer>().sprite = tile.walkableSprite;
-            }
 
-            path = PathFinder.FindPath(0, 0, 2, 6, myGrid);
-            StartCoroutine(pathAnimate(path));
-        }
     }
 
     private IEnumerator pathAnimate(List<tile> path)

@@ -28,10 +28,25 @@ public class Player : MonoBehaviour
         {
             if (path.Count != 0)
             {
-                transform.position = new Vector3(path[0].normalPosition.x, path[0].normalPosition.x, 0);
+                Vector2 position = new Vector2(path[0].normalPosition.x, path[0].normalPosition.y);
+                position = gameManager.GetComponent<gameManager>().myGrid.absoluteToWorld(position);                
+
+                transform.position = new Vector3(position.x, position.y, 0);
                 path.RemoveAt(0);
             }
         }
+
+    }
+
+    private bool reachedBreacCrumb()
+    {
+        bool reachedBreadCrumb = false;
+
+        return reachedBreadCrumb;
+    }
+
+    private void rotateTowardsTarget(Vector2 targetPos)
+    {
 
     }
 }

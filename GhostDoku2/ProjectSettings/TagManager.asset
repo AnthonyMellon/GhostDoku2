@@ -6,6 +6,7 @@ TagManager:
   tags:
   - tile_walkable
   - tile_wall
+  - tile_grave
   layers:
   - Default
   - TransparentFX
@@ -42,4 +43,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Ground
+    uniqueID: 3200982505
+    locked: 0
+  - name: Objects
+    uniqueID: 4191139457
     locked: 0

@@ -54,7 +54,7 @@ public class PathFinder
             foreach(tile neighbourNode in GetNeighboursList(currentNode))
             {
                 if (closedList.Contains(neighbourNode)) continue;
-                if (neighbourNode.gameObject.tag == "tile_wall") continue;
+                if (neighbourNode.gameObject.tag != "tile_walkable") continue;
 
                 int tentativeGCost = currentNode.g + calcDistance(currentNode.normalPosition, neighbourNode.normalPosition);
                 if(tentativeGCost < neighbourNode.g)

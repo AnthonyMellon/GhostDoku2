@@ -7,7 +7,6 @@ public class gameManager : MonoBehaviour
     public GameGrid myGrid;
 
     public Sprite pathSprite;
-    public Sprite whiteSprite;
 
     [Space]
     [Header("Grid Varibles")]
@@ -39,7 +38,7 @@ public class gameManager : MonoBehaviour
         {
             foreach(tile tile in path)
             {
-                if(tile.gameObject.tag == "tile_walkable") tile.gameObject.GetComponent<SpriteRenderer>().sprite = whiteSprite;
+                tile.gameObject.GetComponent<SpriteRenderer>().sprite = tile.walkableSprite;
             }
 
             path = PathFinder.FindPath(0, 0, 2, 6, myGrid);

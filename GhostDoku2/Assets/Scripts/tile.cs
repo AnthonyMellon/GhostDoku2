@@ -33,14 +33,14 @@ public class tile : MonoBehaviour
             //Update state
             string newTag = "tile_walkable";                       
             if (tag == "tile_walkable")
-                newTag = "tile_wall";
+                newTag = "tile_grave";
             tag = newTag;
 
             //Update sprite
-            Sprite sprite = walkableSprite;
-            if(tag == "tile_wall")
+            Sprite sprite = null;
+            if(tag == "tile_grave")
                 sprite = wallSprite; 
-            spriteRenderer.sprite = sprite;
+            transform.Find("ObjectOverlay").GetComponent<SpriteRenderer>().sprite = sprite;
         }
     }
 

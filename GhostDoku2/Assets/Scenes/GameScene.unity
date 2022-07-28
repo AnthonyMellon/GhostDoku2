@@ -145,7 +145,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 166127534}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.7346433, y: -0.6640284, z: 13.790794}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1500413014}
@@ -423,7 +423,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 20
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -912,7 +912,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1500413013}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.8564518, y: 0.0038584694, z: -54.948463}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 166127535}
@@ -1271,11 +1271,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pathSprite: {fileID: 21300000, guid: 50c5dc28fa7ccd14582ec89fea9e7349, type: 3}
-  gridWidth: 18
-  gridHeight: 10
-  cellWidth: 1
-  cellHeight: 1
-  gridOrigin: {x: 0.5, y: 0.5}
+  gridWidth: 72
+  gridHeight: 40
+  cellWidth: 4
+  cellHeight: 4
+  gridOrigin: {x: -25, y: -13}
   CellObj: {fileID: 798920232547003345, guid: 9c16f8a627c4cd44694054034054ec69, type: 3}
   gridParent: {fileID: 166127534}
 --- !u!4 &1725141965
@@ -1371,7 +1371,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32b0b3ac82114794a8e22cb6b37d16e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManager: {fileID: 0}
+  walkSpeed: 10
+  gameManager: {fileID: 1725141963}
 --- !u!1 &1911733338
 GameObject:
   m_ObjectHideFlags: 0
@@ -1398,7 +1399,7 @@ Transform:
   m_GameObject: {fileID: 1911733338}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1818506461}
   m_RootOrder: 0

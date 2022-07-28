@@ -12,8 +12,8 @@ public class GameGrid
     private GameObject CellObj;
     private GameObject gridParent;
 
-    private int nTilesX;
-    private int nTilesY;
+    public int nTilesX { get; private set; }        
+    public int nTilesY { get; private set; }
 
     public GameObject[,] cells;
 
@@ -49,7 +49,7 @@ public class GameGrid
                 Vector2 wPos = absoluteToWorld(new Vector2(x, y));
 
                 GameObject currentCellObj = Transform.Instantiate(CellObj, new Vector3(wPos.x, wPos.y, 0), new Quaternion(0, 0, 0, 0), gridParent.transform);                   
-                currentCellObj.transform.localScale = new Vector3(cellWidth, cellHeight, 1);
+                //currentCellObj.transform.localScale = new Vector3(cellWidth, cellHeight, 1);
                 currentCellObj.GetComponent<tile>().normalPosition = new Vector2Int(x, y);
                 cells[x, y] = currentCellObj;
             }
@@ -59,16 +59,16 @@ public class GameGrid
     public Vector2 absoluteToWorld(Vector2 aPos)
     {
         Vector2 wPos;
-        wPos.x = (aPos.x + origin.x) - (nTilesX / 2);
-        wPos.y = (aPos.y + origin.y) - (nTilesY / 2);
+        wPos.x = (aPos.x * cellWidth) + origin.x - (nTilesX / 2);
+        wPos.y = (aPos.y * cellHeight) + origin.y - (nTilesY / 2);
         return wPos;
     }
 
     public Vector2 worldToAbsolute(Vector2 wPos)
     {
         Vector2 aPos;
-        aPos.x = (wPos.x - origin.x) + (nTilesX / 2);
-        aPos.y = (wPos.y - origin.y) + (nTilesY / 2);
+        aPos.x = (wPos.x - origin.x + (nTilesX / 2)) / cellWidth;
+        aPos.y = (wPos.y - origin.y + (nTilesY / 2)) / cellHeight;
         return aPos;
     }
 

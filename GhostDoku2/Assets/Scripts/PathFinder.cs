@@ -21,9 +21,9 @@ public class PathFinder
         openList = new List<tile> { startNode };
         closedList = new List<tile>();
 
-        for(int x = 0; x < myGrid.width; x++)
+        for(int x = 0; x < myGrid.nTilesX; x++)
         {
-            for(int y = 0; y < myGrid.height; y++)
+            for(int y = 0; y < myGrid.nTilesY; y++)
             {
                 tile currentNode = myGrid.cells[x, y].GetComponent<tile>();
                 currentNode.g = int.MaxValue;
@@ -87,23 +87,23 @@ public class PathFinder
             //Left Down
             if (currentTile.normalPosition.y - 1 >= 0) neighbourList.Add(grid.cells[currentTile.normalPosition.x - 1, currentTile.normalPosition.y - 1].GetComponent<tile>());
             //Left Up
-            if (currentTile.normalPosition.y + 1 < grid.height) neighbourList.Add(grid.cells[currentTile.normalPosition.x - 1, currentTile.normalPosition.y + 1].GetComponent<tile>());
+            if (currentTile.normalPosition.y + 1 < grid.nTilesY) neighbourList.Add(grid.cells[currentTile.normalPosition.x - 1, currentTile.normalPosition.y + 1].GetComponent<tile>());
         }
 
-        if(currentTile.normalPosition.x + 1 < grid.width)
+        if(currentTile.normalPosition.x + 1 < grid.nTilesX)
         {
             //Right
             neighbourList.Add(grid.cells[currentTile.normalPosition.x + 1, currentTile.normalPosition.y].GetComponent<tile>());
             //Right Down
             if (currentTile.normalPosition.y - 1 >= 0) neighbourList.Add(grid.cells[currentTile.normalPosition.x + 1, currentTile.normalPosition.y - 1].GetComponent<tile>());
             //Right Up
-            if (currentTile.normalPosition.y + 1 < grid.height) neighbourList.Add(grid.cells[currentTile.normalPosition.x + 1, currentTile.normalPosition.y + 1].GetComponent<tile>());
+            if (currentTile.normalPosition.y + 1 < grid.nTilesY) neighbourList.Add(grid.cells[currentTile.normalPosition.x + 1, currentTile.normalPosition.y + 1].GetComponent<tile>());
         }
 
         //Down
         if (currentTile.normalPosition.y - 1 >= 0) neighbourList.Add(grid.cells[currentTile.normalPosition.x, currentTile.normalPosition.y - 1].GetComponent<tile>());
         //Up
-        if (currentTile.normalPosition.y + 1 < grid.height) neighbourList.Add(grid.cells[currentTile.normalPosition.x, currentTile.normalPosition.y + 1].GetComponent<tile>());
+        if (currentTile.normalPosition.y + 1 < grid.nTilesY) neighbourList.Add(grid.cells[currentTile.normalPosition.x, currentTile.normalPosition.y + 1].GetComponent<tile>());
 
         return neighbourList;
     }

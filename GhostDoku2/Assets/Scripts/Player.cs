@@ -20,8 +20,20 @@ public class Player : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(1))
         {
-            path = PathFinder.FindPath(0, 0, 5, 6, gameManager.GetComponent<gameManager>().myGrid);
-            transform.position = gameManager.GetComponent<gameManager>().myGrid.absoluteToWorld(path[0].GetComponent<tile>().normalPosition);
+            GameGrid grid = gameManager.GetComponent<gameManager>().myGrid;
+
+            Vector2 targetPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            targetPos = grid.worldToAbsolute(targetPos);
+            targetPos.x = Mathf.RoundToInt(targetPos.x);
+            targetPos.y = Mathf.RoundToInt(targetPos.y);
+
+            Vector2 originPos = transform.position;
+            originPos = grid.worldToAbsolute(originPos);
+            originPos.x = Mathf.RoundToInt(originPos.x);
+            originPos.y = Mathf.RoundToInt(originPos.y);
+
+            path = PathFinder.FindPath((int)originPos.x, (int)originPos.y, (int)targetPos.x, (int)targetPos.y, grid);
+            //transform.position = grid.absoluteToWorld(path[0].GetComponent<tile>().normalPosition);
         }
     }
 
@@ -31,12 +43,6 @@ public class Player : MonoBehaviour
         {
             if (path.Count != 0)
             {
-                //Vector2 position = new Vector2(path[0].normalPosition.x, path[0].normalPosition.y);
-                //position = gameManager.GetComponent<gameManager>().myGrid.absoluteToWorld(position);                
-
-                //transform.position = new Vector3(position.x, position.y, 0);
-                //path.RemoveAt(0);
-
                 Vector2 targetPosition = new Vector2(path[0].normalPosition.x, path[0].normalPosition.y);
                 targetPosition = gameManager.GetComponent<gameManager>().myGrid.absoluteToWorld(targetPosition);
                 transform.position = Vector2.MoveTowards(transform.position, targetPosition, walkSpeed * Time.deltaTime);

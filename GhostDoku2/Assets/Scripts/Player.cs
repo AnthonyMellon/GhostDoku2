@@ -18,6 +18,40 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        getNewTargetPos();
+        sortSprite();
+    }
+
+    private void FixedUpdate()
+    {
+
+        followPath();
+    }
+
+    private void sortSprite()
+    {
+        transform.Find("PlayerSprite").GetComponent<SpriteRenderer>().sortingOrder = utils.yToZIndex(transform.position.y);
+    }
+
+    private void followPath()
+    {
+        if (path != null)
+        {
+            if (path.Count != 0)
+            {
+                Vector2 targetPosition = new Vector2(path[0].normalPosition.x, path[0].normalPosition.y);
+                targetPosition = gameManager.GetComponent<gameManager>().myGrid.absoluteToWorld(targetPosition);
+                transform.position = Vector2.MoveTowards(transform.position, targetPosition, walkSpeed * Time.deltaTime);
+                if (reachedBreacCrumb(targetPosition))
+                {
+                    path.RemoveAt(0);
+                }
+            }
+        }
+    }
+
+    private void getNewTargetPos()
+    {
         if (Input.GetMouseButtonDown(1))
         {
             GameGrid grid = gameManager.GetComponent<gameManager>().myGrid;
@@ -35,24 +69,6 @@ public class Player : MonoBehaviour
             path = PathFinder.FindPath((int)originPos.x, (int)originPos.y, (int)targetPos.x, (int)targetPos.y, grid);
             //transform.position = grid.absoluteToWorld(path[0].GetComponent<tile>().normalPosition);
         }
-    }
-
-    private void FixedUpdate()
-    {
-        if (path != null)
-        {
-            if (path.Count != 0)
-            {
-                Vector2 targetPosition = new Vector2(path[0].normalPosition.x, path[0].normalPosition.y);
-                targetPosition = gameManager.GetComponent<gameManager>().myGrid.absoluteToWorld(targetPosition);
-                transform.position = Vector2.MoveTowards(transform.position, targetPosition, walkSpeed * Time.deltaTime);
-                if(reachedBreacCrumb(targetPosition))
-                {
-                    path.RemoveAt(0);
-                }
-            }
-        }
-
     }
 
     private bool reachedBreacCrumb(Vector2 breadCrumbPos)

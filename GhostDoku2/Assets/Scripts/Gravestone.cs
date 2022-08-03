@@ -15,4 +15,14 @@ public class Gravestone : MonoBehaviour
     {
         
     }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        Debug.Log("Ouch!");
+    }
+
+    void OnTriggerExit2D(Collider2D other)
+    {
+        Debug.Log("C ya!");
+    }
 }

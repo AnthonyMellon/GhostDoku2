@@ -7,6 +7,7 @@ public class gameManager : MonoBehaviour
     public GameGrid myGrid;
 
     public Sprite pathSprite;
+    public GameObject touchIndicator;
 
     [Space]
     [Header("Grid Varibles")]

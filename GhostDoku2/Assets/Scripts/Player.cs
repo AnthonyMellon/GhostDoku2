@@ -8,11 +8,13 @@ public class Player : MonoBehaviour
 
     public GameObject gameManager;
     private List<tile> path;
+    private GameObject spriteObj;
+    public Animator playerAnimation;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        spriteObj = transform.Find("PlayerSprite").gameObject;
     }
 
     // Update is called once per frame
@@ -30,7 +32,7 @@ public class Player : MonoBehaviour
 
     private void sortSprite()
     {
-        transform.Find("PlayerSprite").GetComponent<SpriteRenderer>().sortingOrder = utils.yToZIndex(transform.position.y);
+        spriteObj.transform.GetComponent<SpriteRenderer>().sortingOrder = utils.yToZIndex(transform.position.y);
     }
 
     private void followPath()
@@ -42,12 +44,21 @@ public class Player : MonoBehaviour
                 Vector2 targetPosition = new Vector2(path[0].normalPosition.x, path[0].normalPosition.y);
                 targetPosition = gameManager.GetComponent<gameManager>().myGrid.absoluteToWorld(targetPosition);
                 transform.position = Vector2.MoveTowards(transform.position, targetPosition, walkSpeed * Time.deltaTime);
+                spriteObj.transform.GetComponent<Animator>().SetBool("moving", true);
+
+                if(targetPosition.x < transform.position.x) spriteObj.transform.GetComponent<Animator>().SetBool("facingLeft", true);
+                else spriteObj.transform.GetComponent<Animator>().SetBool("facingLeft", false);
+
                 if (reachedBreacCrumb(targetPosition))
                 {
                     path.RemoveAt(0);
                 }
             }
-        }
+            else
+            {
+                spriteObj.transform.GetComponent<Animator>().SetBool("moving", false);
+            }
+        }        
     }
 
     private void getNewTargetPos()
@@ -83,7 +94,7 @@ public class Player : MonoBehaviour
         return reachedBreadCrumb;
     }
 
-    private void rotateTowardsTarget(Vector2 targetPos)
+    private void updateAnimator()
     {
 
     }

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &798920232547003345
+--- !u!1 &5571509379344326103
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,38 +8,37 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 798920232547003347}
-  - component: {fileID: 798920232547003346}
-  - component: {fileID: 1174888198166338474}
-  - component: {fileID: 8782236412425914139}
+  - component: {fileID: 5571509379344326104}
+  - component: {fileID: 5571509379344326105}
+  - component: {fileID: 5571509379344326102}
   m_Layer: 0
-  m_Name: Tile
-  m_TagString: tile_walkable
+  m_Name: touchIndicator
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &798920232547003347
+--- !u!4 &5571509379344326104
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 798920232547003345}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_GameObject: {fileID: 5571509379344326103}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &798920232547003346
+--- !u!212 &5571509379344326105
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 798920232547003345}
+  m_GameObject: {fileID: 5571509379344326103}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -69,66 +68,31 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1093984791
-  m_SortingLayer: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: bafc359333101ac48be46ec5fa7c4982, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c5d36e1bfd3920545a2291f80ba93ee9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 4, y: 4}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1174888198166338474
+--- !u!114 &5571509379344326102
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 798920232547003345}
+  m_GameObject: {fileID: 5571509379344326103}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a48e68fb03e205549a1e1e8791a753ce, type: 3}
+  m_Script: {fileID: 11500000, guid: fecf68c98080125469e2522a17425f7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkableSprite: {fileID: 21300000, guid: bafc359333101ac48be46ec5fa7c4982, type: 3}
-  wallSprite: {fileID: 21300000, guid: 76dc0fd4308472748b23cafc33f99987, type: 3}
-  startSprite: {fileID: 21300000, guid: 50c5dc28fa7ccd14582ec89fea9e7349, type: 3}
-  endSprite: {fileID: 21300000, guid: 588cd68e69142c34aaa5d27e65e5a3da, type: 3}
-  gravestones:
-  - {fileID: 431156629373085172, guid: 6a7238aa9c122d24ea91e9aa61c82000, type: 3}
-  f: 0
-  g: 0
-  h: 0
-  normalPosition: {x: 0, y: 0}
-  parent: {fileID: 0}
---- !u!61 &8782236412425914139
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 798920232547003345}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4, y: 4}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 4, y: 4}
-  m_EdgeRadius: 0
+  fadeSpeed: 0.5
+  alpha: 1

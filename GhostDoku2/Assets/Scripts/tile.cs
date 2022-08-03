@@ -8,6 +8,7 @@ public class tile : MonoBehaviour
     public Sprite wallSprite;
     public Sprite startSprite;
     public Sprite endSprite;
+    public GameObject[] gravestones;
 
     //Values used for path finding    
     [HideInInspector] public int f = 0;
@@ -19,7 +20,7 @@ public class tile : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private void Start()
     {
-        spriteRenderer = transform.GetComponent<SpriteRenderer>();
+        spriteRenderer = transform.GetComponent<SpriteRenderer>();        
     }
 
     private void Update()
@@ -36,11 +37,12 @@ public class tile : MonoBehaviour
                 newTag = "tile_grave";
             tag = newTag;
 
-            //Update sprite
-            Sprite sprite = null;
-            if(tag == "tile_grave")
-                sprite = wallSprite; 
-            transform.Find("ObjectOverlay").GetComponent<SpriteRenderer>().sprite = sprite;
+            //Add or remove gravestone if necessary             
+            if (tag == "tile_grave" && !transform.Find("Gravestone(Clone)"))
+            {
+                Instantiate(gravestones[0], new Vector3(0, 2.5f, 0) + transform.position, new Quaternion(0, 0, 0, 0), transform);
+            }
+            else Destroy(transform.Find("Gravestone(Clone)").gameObject);                  
         }
     }
 

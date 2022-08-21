@@ -11,6 +11,8 @@ public class Player : MonoBehaviour
     private GameObject spriteObj;
     public Animator playerAnimation;
 
+    public GameEvent testEvent;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +24,12 @@ public class Player : MonoBehaviour
     {
         getNewTargetPos();
         sortSprite();
+
+        if(Input.GetKeyDown(KeyCode.T))
+        {
+            testEvent.Raise();
+        }
+
     }
 
     private void FixedUpdate()
@@ -46,8 +54,14 @@ public class Player : MonoBehaviour
                 transform.position = Vector2.MoveTowards(transform.position, targetPosition, walkSpeed * Time.deltaTime);
                 spriteObj.transform.GetComponent<Animator>().SetBool("moving", true);
 
-                if(targetPosition.x < transform.position.x) spriteObj.transform.GetComponent<Animator>().SetBool("facingLeft", true);
-                else spriteObj.transform.GetComponent<Animator>().SetBool("facingLeft", false);
+                if (targetPosition.x < transform.position.x)
+                {
+                    transform.Find("PlayerSprite").localScale = new Vector3(1, 1, 1);
+                }
+                else if (targetPosition.x > transform.position.x)
+                {
+                    transform.Find("PlayerSprite").localScale = new Vector3(-1, 1, 1);
+                }
 
                 if (reachedBreacCrumb(targetPosition))
                 {

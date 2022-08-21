@@ -18,11 +18,11 @@ public class Gravestone : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        transform.Find("Ghost").gameObject.SetActive(true);
+        transform.Find("Ghost").GetComponent<Ghost>().Show();
     }
 
     void OnTriggerExit2D(Collider2D other)
     {
-        transform.Find("Ghost").gameObject.SetActive(false);
+        transform.Find("Ghost").GetComponent<Ghost>().Hide();
     }
 }

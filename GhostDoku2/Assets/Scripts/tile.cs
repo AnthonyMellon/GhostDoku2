@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class tile : MonoBehaviour
 {
@@ -28,7 +29,7 @@ public class tile : MonoBehaviour
     }
 
     private void OnMouseOver()
-    {
+    {        
         if(Input.GetMouseButtonDown(0)) //Toggle sprite between walkable and wall
         {
             //Update state

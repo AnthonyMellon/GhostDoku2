@@ -5,12 +5,17 @@ using UnityEngine.UI;
 
 public class Ghost : MonoBehaviour
 {
-    public GameObject textPrompt;
+    private GameObject canvasHideable;
+    [SerializeField] private GameObject sudokuPromptPrefab;
+    private GameObject currentPrompt;
+    public GameObject sudoku;
+    private GameUI guiManager;
 
     // Start is called before the first frame update
     void Start()
     {
-        textPrompt = GameObject.Find("TextPrompt");
+        canvasHideable = GameObject.Find("Hideable");
+        guiManager = GameObject.Find("Canvas_UIoverlay").GetComponent<GameUI>();
     }
 
     // Update is called once per frame
@@ -18,14 +23,21 @@ public class Ghost : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.E))
         {
-            StartCoroutine(ShowText("Do you want to play my sudoku?"));
+            if(!currentPrompt)
+            {
+                currentPrompt = Instantiate(sudokuPromptPrefab, canvasHideable.transform);
+            }
         }
     }
 
-    IEnumerator ShowText(string text)
+    public void Show()
     {
-        textPrompt.GetComponent<Text>().text = text;
-        yield return new WaitForSeconds(1);
-        textPrompt.GetComponent<Text>().text = "";
+        gameObject.SetActive(true);
+    }
+
+    public void Hide()
+    {
+        Destroy(currentPrompt.gameObject);
+        gameObject.SetActive(false);
     }
 }

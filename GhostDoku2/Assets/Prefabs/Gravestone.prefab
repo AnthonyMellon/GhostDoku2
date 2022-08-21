@@ -124,6 +124,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccf1bd799505b364fae432bbc0af5574, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sudokuPromptPrefab: {fileID: 8801930728178924529, guid: 38e004d463df31c469f9fab53e1be766,
+    type: 3}
+  sudoku: {fileID: 7128835030449516228, guid: bae7d83f730d5dd46964aefe56d05b7d, type: 3}
 --- !u!1001 &2123575917948843674
 PrefabInstance:
   m_ObjectHideFlags: 0

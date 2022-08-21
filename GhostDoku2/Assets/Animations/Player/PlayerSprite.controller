@@ -9,9 +9,6 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: facingLeft
-    m_EventTreshold: 0
-  - m_ConditionMode: 1
     m_ConditionEvent: moving
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
@@ -69,22 +66,16 @@ AnimatorStateMachine:
     m_State: {fileID: -2242759891296031031}
     m_Position: {x: 290, y: 190, z: 0}
   - serializedVersion: 1
-    m_State: {fileID: 8649088233349609461}
-    m_Position: {x: 290, y: 320, z: 0}
-  - serializedVersion: 1
     m_State: {fileID: 3978264628595404829}
     m_Position: {x: -30, y: 190, z: 0}
-  - serializedVersion: 1
-    m_State: {fileID: 1128444980792643406}
-    m_Position: {x: -30, y: 320, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
   m_StateMachineTransitions: {}
   m_StateMachineBehaviours: []
   m_AnyStatePosition: {x: 50, y: 20, z: 0}
-  m_EntryPosition: {x: -240, y: 200, z: 0}
-  m_ExitPosition: {x: 800, y: 120, z: 0}
+  m_EntryPosition: {x: -230, y: 190, z: 0}
+  m_ExitPosition: {x: 240, y: 20, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
   m_DefaultState: {fileID: 3978264628595404829}
 --- !u!1101 &-4133148442947542360
@@ -183,8 +174,6 @@ AnimatorState:
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -1970112456301867469}
-  - {fileID: 4995449712277215729}
-  - {fileID: -8205782576136976548}
   m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
@@ -208,9 +197,6 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 1
-    m_ConditionEvent: facingLeft
-    m_EventTreshold: 0
   - m_ConditionMode: 2
     m_ConditionEvent: moving
     m_EventTreshold: 0
@@ -237,12 +223,6 @@ AnimatorController:
   m_Name: PlayerSprite
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: facingLeft
-    m_Type: 4
-    m_DefaultFloat: 0
-    m_DefaultInt: 0
-    m_DefaultBool: 0
-    m_Controller: {fileID: 0}
   - m_Name: moving
     m_Type: 4
     m_DefaultFloat: 0
@@ -386,8 +366,6 @@ AnimatorState:
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
-  - {fileID: -2800605238107373346}
-  - {fileID: 1102357638247416561}
   - {fileID: -8838273480739847197}
   m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}

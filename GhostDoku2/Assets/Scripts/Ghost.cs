@@ -10,6 +10,10 @@ public class Ghost : MonoBehaviour
     private GameObject currentPrompt;
     public GameObject sudoku;
     private GameUI guiManager;
+    public GameEvent levelEvent;
+    public int currentLevel = 0;
+
+    public bool increaseLevel = false;
 
     // Start is called before the first frame update
     void Start()
@@ -28,6 +32,12 @@ public class Ghost : MonoBehaviour
                 currentPrompt = Instantiate(sudokuPromptPrefab, canvasHideable.transform);
             }
         }
+
+        if(increaseLevel)
+        {
+            levelUp();
+            increaseLevel = false;
+        }
     }
 
     public void Show()
@@ -39,5 +49,11 @@ public class Ghost : MonoBehaviour
     {
         Destroy(currentPrompt.gameObject);
         gameObject.SetActive(false);
+    }
+
+    public void levelUp()
+    {
+        currentLevel++;
+        levelEvent.Raise();
     }
 }

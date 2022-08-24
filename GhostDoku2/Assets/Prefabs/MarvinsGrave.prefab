@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 431156629373085163}
   - component: {fileID: 3290145015042029271}
   - component: {fileID: 7335381611603231222}
-  - component: {fileID: -6042145194731586747}
+  - component: {fileID: -256092682727455703}
   m_Layer: 0
-  m_Name: Gravestone
+  m_Name: MarvinsGrave
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -98,7 +98,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de0c4827ff2d65e49a2ea7039d6d4ddd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  self: {fileID: 11400000, guid: 1c5fc350aab7fe74cbe02ddc97b43fd1, type: 2}
   fog: {fileID: 2164608504148110269}
+  ghost: {fileID: 3075126498790476455}
 --- !u!58 &7335381611603231222
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -115,7 +117,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -2.5}
   serializedVersion: 2
   m_Radius: 6
---- !u!114 &-6042145194731586747
+--- !u!114 &-256092682727455703
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -168,7 +170,7 @@ Transform:
   m_GameObject: {fileID: 2164608504148110269}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 12, y: 12, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 431156629373085162}
   m_RootOrder: 1
@@ -209,10 +211,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -103827839
-  m_SortingLayer: 2
-  m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 9c0427abe96311d488a8d5f48c2f35c7, type: 3}
+  m_SortingLayerID: -1824243743
+  m_SortingLayer: 4
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 0a10695bf99c8eb4ca2b77e876274f48, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -238,9 +240,7 @@ MonoBehaviour:
   sudokuPromptPrefab: {fileID: 8801930728178924529, guid: 38e004d463df31c469f9fab53e1be766,
     type: 3}
   sudoku: {fileID: 7128835030449516228, guid: bae7d83f730d5dd46964aefe56d05b7d, type: 3}
-  levelEvent: {fileID: 11400000, guid: 411a1fc8043bdf54897d1ba07cfdaaa3, type: 2}
-  currentLevel: 0
-  increaseLevel: 0
+  self: {fileID: 11400000, guid: cb2477389634412438bf29fe1671ee9d, type: 2}
 --- !u!1001 &2123575917948843674
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -248,6 +248,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 431156629373085162}
     m_Modifications:
+    - target: {fileID: 3084951840533438212, guid: b028b2901ac343f49809e8e9e7d6346e,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4023260697699171378, guid: b028b2901ac343f49809e8e9e7d6346e,
         type: 3}
       propertyPath: m_Sprite

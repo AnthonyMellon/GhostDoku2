@@ -787,6 +787,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 1537709438}
+  testText: {fileID: 243895118}
 --- !u!114 &803779602
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -799,13 +800,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35ab157e1dcb0294ba6888e4f707b7e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  event: {fileID: 11400000, guid: bfec5587ea4b4c746a1710352579b626, type: 2}
+  event: {fileID: 11400000, guid: 411a1fc8043bdf54897d1ba07cfdaaa3, type: 2}
   response:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 243895118}
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 803779601}
+        m_MethodName: textFlash
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class Gravestone : MonoBehaviour
 {
-    private int currentLevel = 0;
+    public graveSO self;
     public GameObject fog;
+    public GameObject ghost;
 
     // Start is called before the first frame update
     void Start()
@@ -16,29 +17,29 @@ public class Gravestone : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        transform.Find("GhostMarvin").GetComponent<Ghost>().Show();
+        ghost.GetComponent<Ghost>().Show();
     }
 
     void OnTriggerExit2D(Collider2D other)
     {
-        transform.Find("GhostMarvin").GetComponent<Ghost>().Hide();
+        ghost.GetComponent<Ghost>().Hide();
     }    
 
     public void levelUp()
     {
-        currentLevel++;
-        Debug.Log($"I'm now level {currentLevel}");
+        self.IncLevel();
+        Debug.Log($"I'm now level {self.currentLevel}");
 
-        switch (currentLevel) {
+        switch (self.currentLevel) {
             case 0:
                 fog.SetActive(true);
                 break;
-            case 1:
+            default:
                 fog.SetActive(false);
                 break;
         }

@@ -10,16 +10,14 @@ public class Ghost : MonoBehaviour
     private GameObject currentPrompt;
     public GameObject sudoku;
     private GameUI guiManager;
-    public GameEvent levelEvent;
-    public int currentLevel = 0;
-
-    public bool increaseLevel = false;
+    public GhostSO self;
 
     // Start is called before the first frame update
     void Start()
     {
         canvasHideable = GameObject.Find("Hideable");
         guiManager = GameObject.Find("Canvas_UIoverlay").GetComponent<GameUI>();
+        UpdateFromSelf();
     }
 
     // Update is called once per frame
@@ -32,12 +30,19 @@ public class Ghost : MonoBehaviour
                 currentPrompt = Instantiate(sudokuPromptPrefab, canvasHideable.transform);
             }
         }
-
-        if(increaseLevel)
+        if(Input.GetKeyDown(KeyCode.U))
         {
-            levelUp();
-            increaseLevel = false;
+            UpdateFromSelf();
         }
+    }
+
+    private void UpdateFromSelf()
+    {
+        Debug.Log("Updating from self");
+        transform.GetComponent<SpriteRenderer>().sprite = self.sprite;
+
+        UnityGameEventListener listener = transform.parent.GetComponent<UnityGameEventListener>();
+        listener.swapEvent(self.levelEvent);
     }
 
     public void Show()
@@ -47,13 +52,8 @@ public class Ghost : MonoBehaviour
 
     public void Hide()
     {
-        Destroy(currentPrompt.gameObject);
+        if(currentPrompt)
+            Destroy(currentPrompt.gameObject);
         gameObject.SetActive(false);
-    }
-
-    public void levelUp()
-    {
-        currentLevel++;
-        levelEvent.Raise();
     }
 }

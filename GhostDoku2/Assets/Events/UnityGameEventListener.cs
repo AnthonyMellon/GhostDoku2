@@ -7,7 +7,7 @@ public class UnityGameEventListener : MonoBehaviour, IGameEventListener
 {
     [Tooltip("Event to register with.")]
     [SerializeField]
-    private GameEvent @event;
+    public GameEvent @event;
 
     [Tooltip("Response to invoke when Event is raised.")]
     [SerializeField]
@@ -15,10 +15,27 @@ public class UnityGameEventListener : MonoBehaviour, IGameEventListener
 
     public void OnEnable()
     {
-        if (@event != null) @event.RegisterListener(this);
+        RegisterSelf();
     }
 
     public void OnDisable()
+    {
+        UnregisterSelf();
+    }
+
+    public void swapEvent(GameEvent newEvent)
+    {
+        UnregisterSelf();
+        @event = newEvent;
+        RegisterSelf();
+    }
+
+    private void RegisterSelf()
+    {
+        if (@event != null) @event.RegisterListener(this);
+    }
+
+    private void UnregisterSelf()
     {
         @event.UnregisterListener(this);
     }

@@ -20,11 +20,13 @@ public class gameManager : MonoBehaviour
     public GameObject gridParent;
 
     private List<tile> path;
+    public List<TileOverlaySO> tileOverlays;
 
     // Start is called before the first frame update
     void Start()
     {
-        myGrid = new GameGrid(gridWidth, gridHeight, cellWidth, cellHeight, gridOrigin, CellObj, gridParent);
+        myGrid = new GameGrid(gridWidth, gridHeight, cellWidth, cellHeight, gridOrigin, CellObj, gridParent, tileOverlays);
+        myGrid.makeGrid();
         myGrid.generate();
     }
 

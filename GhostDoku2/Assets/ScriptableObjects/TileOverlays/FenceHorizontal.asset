@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18465ff0bab5b347976b92c3d12f6b3, type: 3}
-  m_Name: JaspersGhost
+  m_Script: {fileID: 11500000, guid: 0031f4cf1f42ca04ab92ba1d6dca1195, type: 3}
+  m_Name: FenceHorizontal
   m_EditorClassIdentifier: 
-  name: Jasper
-  sprite: {fileID: 21300000, guid: 6bf993b5b5723af46b7a67c7894e3068, type: 3}
-  levelEvent: {fileID: 11400000, guid: 140838e0dbf3aab4fb0d3fc5fea92cd6, type: 2}
+  name: FenceHorizontal
+  overlayObject: {fileID: 431156629373085172, guid: 551f2f0c3e8b18848aafe7629e00cc2e,
+    type: 3}

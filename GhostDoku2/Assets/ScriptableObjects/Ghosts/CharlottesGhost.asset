@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c18465ff0bab5b347976b92c3d12f6b3, type: 3}
   m_Name: CharlottesGhost
   m_EditorClassIdentifier: 
-  name: 
-  sprite: {fileID: 0}
-  levelEvent: {fileID: 0}
+  name: Charlotte
+  sprite: {fileID: 21300000, guid: d4a42cc45c0777e43bb17a92290b1af4, type: 3}
+  levelEvent: {fileID: 11400000, guid: bb8b3db81f4f98e4f9fba9c2724961f3, type: 2}

@@ -30,13 +30,9 @@ public class Ghost : MonoBehaviour
                 currentPrompt = Instantiate(sudokuPromptPrefab, canvasHideable.transform);
             }
         }
-        if(Input.GetKeyDown(KeyCode.U))
-        {
-            UpdateFromSelf();
-        }
     }
 
-    private void UpdateFromSelf()
+    public void UpdateFromSelf()
     {
         Debug.Log("Updating from self");
         transform.GetComponent<SpriteRenderer>().sprite = self.sprite;

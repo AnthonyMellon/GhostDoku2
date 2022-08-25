@@ -16,8 +16,24 @@ public class GameGrid
     public int nTilesY { get; private set; }
 
     public GameObject[,] cells;
+    public TileOverlaySO[,] grid;
 
-    public GameGrid(int width, int height, float cellWidth, float cellHeight, Vector2 origin, GameObject CellObj, GameObject gridParent)
+    public List<TileOverlaySO> tileOverlays;
+
+    public enum GridItem
+    {
+        Grass,
+        FenceVertical,
+        FenceHorizontal,
+        HusbandGrave,
+        BruceGrave,
+        CharlotteGrave,
+        EdithGrave,
+        JasperGrave,
+        MarthaGrave
+    }
+
+    public GameGrid(int width, int height, float cellWidth, float cellHeight, Vector2 origin, GameObject CellObj, GameObject gridParent, List<TileOverlaySO> tileOverlays)
     {
         this.width = width;
         this.height = height;
@@ -26,6 +42,33 @@ public class GameGrid
         this.origin = origin;
         this.CellObj = CellObj;
         this.gridParent = gridParent;
+        this.tileOverlays = tileOverlays;
+
+        nTilesX = Mathf.CeilToInt(width / cellWidth);
+        nTilesY = Mathf.CeilToInt(height / cellHeight);
+    }
+
+    public void makeGrid()
+    {
+        grid = new TileOverlaySO[nTilesX, nTilesY];
+        for(int x = 0; x < nTilesX; x++)
+        {
+            for(int y = 0; y < nTilesY; y++)
+            {
+                if((x == 2 || x == nTilesX - 3) && y > 1 && y < nTilesY - 2)
+                {
+                    grid[x, y] = tileOverlays.Find(to => to.name == "FenceVertical");
+                }
+                else if((y == 2 || y == nTilesY - 3) && x > 1 && x < nTilesX - 2)
+                {
+                    grid[x, y] = grid[x, y] = tileOverlays.Find(to => to.name == "FenceHorizontal");
+                }
+                else if (x == 5 && y == 5)
+                {
+                    grid[x, y] = grid[x, y] = tileOverlays.Find(to => to.name == "HusbandGrave");
+                }                           
+            }
+        }
     }
 
     public void generate()
@@ -37,8 +80,6 @@ public class GameGrid
         }
 
         //Make a fresh array for the new cells
-        nTilesX = Mathf.CeilToInt(width / cellWidth);
-        nTilesY = Mathf.CeilToInt(height / cellHeight);
         cells = new GameObject[nTilesX, nTilesY];
         
         //Instantiate the cell objects into the scene and pass them into the cells array
@@ -47,11 +88,23 @@ public class GameGrid
             for(int y = 0; y < nTilesY; y++)
             {
                 Vector2 wPos = absoluteToWorld(new Vector2(x, y));
-
-                GameObject currentCellObj = Transform.Instantiate(CellObj, new Vector3(wPos.x, wPos.y, 0), new Quaternion(0, 0, 0, 0), gridParent.transform);                   
-                //currentCellObj.transform.localScale = new Vector3(cellWidth, cellHeight, 1);
+                GameObject currentCellObj = Object.Instantiate(CellObj, new Vector3(wPos.x, wPos.y, 0), new Quaternion(0, 0, 0, 0), gridParent.transform);
                 currentCellObj.GetComponent<tile>().normalPosition = new Vector2Int(x, y);
                 cells[x, y] = currentCellObj;
+
+                if (grid[x, y] != null)
+                {
+                    TileOverlaySO currentOverlay = grid[x, y];                    
+                    GameObject overlayObj = Object.Instantiate(currentOverlay.overlayObject, currentCellObj.transform);
+                    if (currentOverlay.ghostObj && currentOverlay.ghostSO)
+                    {
+                        GameObject ghost = Object.Instantiate(currentOverlay.ghostObj, overlayObj.transform);
+                        ghost.GetComponent<Ghost>().self = currentOverlay.ghostSO;
+                        ghost.GetComponent<Ghost>().UpdateFromSelf();
+                        overlayObj.GetComponent<Gravestone>().ghost = ghost;
+
+                    }
+                }
             }
         }
     }

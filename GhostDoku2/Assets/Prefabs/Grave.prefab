@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7335381611603231222}
   - component: {fileID: -256092682727455703}
   m_Layer: 0
-  m_Name: MarvinsGrave
+  m_Name: Grave
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31,7 +31,6 @@ Transform:
   m_LocalPosition: {x: 0, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 3075126498790476457}
   - {fileID: 4906435401187853995}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -100,7 +99,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   self: {fileID: 11400000, guid: 1c5fc350aab7fe74cbe02ddc97b43fd1, type: 2}
   fog: {fileID: 2164608504148110269}
-  ghost: {fileID: 3075126498790476455}
+  ghost: {fileID: 0}
 --- !u!58 &7335381611603231222
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -160,7 +159,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4906435401187853995
 Transform:
   m_ObjectHideFlags: 0
@@ -173,7 +172,7 @@ Transform:
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 431156629373085162}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5633511623234739906
 SpriteRenderer:
@@ -225,84 +224,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1001 &5197526644178976677
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 431156629373085162}
-    m_Modifications:
-    - target: {fileID: 7101149342071158018, guid: ab5391c14184f7545abb49e1a55d1535,
-        type: 3}
-      propertyPath: m_Name
-      value: GhostMarvin
-      objectReference: {fileID: 0}
-    - target: {fileID: 7101149342071158028, guid: ab5391c14184f7545abb49e1a55d1535,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7101149342071158028, guid: ab5391c14184f7545abb49e1a55d1535,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -2.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7101149342071158028, guid: ab5391c14184f7545abb49e1a55d1535,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7101149342071158028, guid: ab5391c14184f7545abb49e1a55d1535,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7101149342071158028, guid: ab5391c14184f7545abb49e1a55d1535,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7101149342071158028, guid: ab5391c14184f7545abb49e1a55d1535,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7101149342071158028, guid: ab5391c14184f7545abb49e1a55d1535,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7101149342071158028, guid: ab5391c14184f7545abb49e1a55d1535,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7101149342071158028, guid: ab5391c14184f7545abb49e1a55d1535,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7101149342071158028, guid: ab5391c14184f7545abb49e1a55d1535,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7101149342071158028, guid: ab5391c14184f7545abb49e1a55d1535,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: ab5391c14184f7545abb49e1a55d1535, type: 3}
---- !u!1 &3075126498790476455 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7101149342071158018, guid: ab5391c14184f7545abb49e1a55d1535,
-    type: 3}
-  m_PrefabInstance: {fileID: 5197526644178976677}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &3075126498790476457 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7101149342071158028, guid: ab5391c14184f7545abb49e1a55d1535,
-    type: 3}
-  m_PrefabInstance: {fileID: 5197526644178976677}
-  m_PrefabAsset: {fileID: 0}

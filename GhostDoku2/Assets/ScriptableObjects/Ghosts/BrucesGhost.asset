@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c18465ff0bab5b347976b92c3d12f6b3, type: 3}
   m_Name: BrucesGhost
   m_EditorClassIdentifier: 
-  name: 
-  sprite: {fileID: 0}
-  levelEvent: {fileID: 0}
+  name: Bruce
+  sprite: {fileID: 21300000, guid: 0bf27b2c23ad9b146b71c80321092a6d, type: 3}
+  levelEvent: {fileID: 11400000, guid: aee4cca5ed2f0d54283f718f60fe7d86, type: 2}

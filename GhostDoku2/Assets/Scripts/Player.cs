@@ -24,12 +24,6 @@ public class Player : MonoBehaviour
     {
         getNewTargetPos();
         sortSprite();
-
-        if(Input.GetKeyDown(KeyCode.T))
-        {
-            testEvent.Raise();
-        }
-
     }
 
     private void FixedUpdate()

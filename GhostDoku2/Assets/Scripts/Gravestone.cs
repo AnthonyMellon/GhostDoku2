@@ -22,12 +22,14 @@ public class Gravestone : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        ghost.GetComponent<Ghost>().Show();
+        if(ghost)
+            ghost.GetComponent<Ghost>().Show();
     }
 
     void OnTriggerExit2D(Collider2D other)
     {
-        ghost.GetComponent<Ghost>().Hide();
+        if(ghost)
+            ghost.GetComponent<Ghost>().Hide();
     }    
 
     public void levelUp()

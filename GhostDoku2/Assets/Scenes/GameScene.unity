@@ -1388,6 +1388,10 @@ MonoBehaviour:
   gridOrigin: {x: -25, y: -13}
   CellObj: {fileID: 798920232547003345, guid: 9c16f8a627c4cd44694054034054ec69, type: 3}
   gridParent: {fileID: 166127534}
+  tileOverlays:
+  - {fileID: 11400000, guid: b4a2314a6bef2444396015d18763c3b7, type: 2}
+  - {fileID: 11400000, guid: e7c85754c2e650a438a280ca667fc664, type: 2}
+  - {fileID: 11400000, guid: a225ee3de8b299943bee3230a7323cf4, type: 2}
 --- !u!4 &1725141965
 Transform:
   m_ObjectHideFlags: 0

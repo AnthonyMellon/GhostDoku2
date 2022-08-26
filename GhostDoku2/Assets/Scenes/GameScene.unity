@@ -1391,7 +1391,7 @@ MonoBehaviour:
   tileOverlays:
   - {fileID: 11400000, guid: b4a2314a6bef2444396015d18763c3b7, type: 2}
   - {fileID: 11400000, guid: e7c85754c2e650a438a280ca667fc664, type: 2}
-  - {fileID: 11400000, guid: a225ee3de8b299943bee3230a7323cf4, type: 2}
+  - {fileID: 11400000, guid: e921d19b529955a429a249b19fdbd7a9, type: 2}
 --- !u!4 &1725141965
 Transform:
   m_ObjectHideFlags: 0

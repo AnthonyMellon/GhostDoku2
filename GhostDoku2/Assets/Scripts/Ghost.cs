@@ -16,7 +16,11 @@ public class Ghost : MonoBehaviour
     void Start()
     {
         canvasHideable = GameObject.Find("Hideable");
-        guiManager = GameObject.Find("Canvas_UIoverlay").GetComponent<GameUI>();
+        guiManager = GameObject.Find("Canvas_UIoverlay").GetComponent<GameUI>();        
+    }
+
+    void OnEnable()
+    {
         UpdateFromSelf();
     }
 

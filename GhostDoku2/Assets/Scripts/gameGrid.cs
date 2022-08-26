@@ -63,10 +63,30 @@ public class GameGrid
                 {
                     grid[x, y] = grid[x, y] = tileOverlays.Find(to => to.name == "FenceHorizontal");
                 }
-                else if (x == 5 && y == 5)
+                else if (x == 4 && y == 5)
                 {
                     grid[x, y] = grid[x, y] = tileOverlays.Find(to => to.name == "HusbandGrave");
-                }                           
+                }  
+                else if (x == 6 && y == 5)
+                {
+                    grid[x, y] = grid[x, y] = tileOverlays.Find(to => to.name == "BruceGrave");
+                }
+                else if (x == 8 && y == 5)
+                {
+                    grid[x, y] = grid[x, y] = tileOverlays.Find(to => to.name == "CharlotteGrave");
+                }
+                else if (x == 10 && y == 5)
+                {
+                    grid[x, y] = grid[x, y] = tileOverlays.Find(to => to.name == "EdithGrave");
+                }
+                else if (x == 12 && y == 5)
+                {
+                    grid[x, y] = grid[x, y] = tileOverlays.Find(to => to.name == "JasperGrave");
+                }
+                else if (x == 14 && y == 5)
+                {
+                    grid[x, y] = grid[x, y] = tileOverlays.Find(to => to.name == "MarthaGrave");
+                }
             }
         }
     }

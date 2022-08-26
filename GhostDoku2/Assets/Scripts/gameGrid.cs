@@ -44,8 +44,8 @@ public class GameGrid
         this.gridParent = gridParent;
         this.tileOverlays = tileOverlays;
 
-        nTilesX = Mathf.CeilToInt(width / cellWidth);
-        nTilesY = Mathf.CeilToInt(height / cellHeight);
+        nTilesX = width;
+        nTilesY = height;
     }
 
     public void makeGrid()
@@ -55,38 +55,21 @@ public class GameGrid
         {
             for(int y = 0; y < nTilesY; y++)
             {
-                if((x == 2 || x == nTilesX - 3) && y > 1 && y < nTilesY - 2)
-                {
-                    grid[x, y] = tileOverlays.Find(to => to.name == "FenceVertical");
-                }
-                else if((y == 2 || y == nTilesY - 3) && x > 1 && x < nTilesX - 2)
-                {
-                    grid[x, y] = grid[x, y] = tileOverlays.Find(to => to.name == "FenceHorizontal");
-                }
-                else if (x == 4 && y == 5)
-                {
-                    grid[x, y] = grid[x, y] = tileOverlays.Find(to => to.name == "HusbandGrave");
-                }  
-                else if (x == 6 && y == 5)
-                {
-                    grid[x, y] = grid[x, y] = tileOverlays.Find(to => to.name == "BruceGrave");
-                }
-                else if (x == 8 && y == 5)
-                {
-                    grid[x, y] = grid[x, y] = tileOverlays.Find(to => to.name == "CharlotteGrave");
-                }
-                else if (x == 10 && y == 5)
-                {
-                    grid[x, y] = grid[x, y] = tileOverlays.Find(to => to.name == "EdithGrave");
-                }
-                else if (x == 12 && y == 5)
-                {
-                    grid[x, y] = grid[x, y] = tileOverlays.Find(to => to.name == "JasperGrave");
-                }
-                else if (x == 14 && y == 5)
-                {
-                    grid[x, y] = grid[x, y] = tileOverlays.Find(to => to.name == "MarthaGrave");
-                }
+                if((x == 2 || x == nTilesX - 3) && y > 1 && y < nTilesY - 2) grid[x, y] = tileOverlays.Find(to => to.name == "FenceVertical");
+
+                else if((y == 2 || y == nTilesY - 3) && x > 1 && x < nTilesX - 2) grid[x, y] = grid[x, y] = tileOverlays.Find(to => to.name == "FenceHorizontal");
+
+                else if (x == 5 && y == 7) grid[x, y] = grid[x, y] = tileOverlays.Find(to => to.name == "HusbandGrave");
+
+                else if (x == 8 && y == 7) grid[x, y] = grid[x, y] = tileOverlays.Find(to => to.name == "BruceGrave");
+
+                else if (x == 11 && y == 7) grid[x, y] = grid[x, y] = tileOverlays.Find(to => to.name == "CharlotteGrave");
+
+                else if (x == 14 && y == 7) grid[x, y] = grid[x, y] = tileOverlays.Find(to => to.name == "EdithGrave");
+
+                else if (x == 17 && y == 7) grid[x, y] = grid[x, y] = tileOverlays.Find(to => to.name == "JasperGrave");
+
+                else if (x == 20 && y == 7) grid[x, y] = grid[x, y] = tileOverlays.Find(to => to.name == "MarthaGrave");
             }
         }
     }

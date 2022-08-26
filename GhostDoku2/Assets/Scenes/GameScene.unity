@@ -1381,8 +1381,8 @@ MonoBehaviour:
   pathSprite: {fileID: 21300000, guid: 50c5dc28fa7ccd14582ec89fea9e7349, type: 3}
   touchIndicator: {fileID: 5571509379344326103, guid: 31f182c066a45724d8865716770a0f94,
     type: 3}
-  gridWidth: 72
-  gridHeight: 40
+  gridWidth: 27
+  gridHeight: 15
   cellWidth: 4
   cellHeight: 4
   gridOrigin: {x: -25, y: -13}
@@ -1392,6 +1392,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b4a2314a6bef2444396015d18763c3b7, type: 2}
   - {fileID: 11400000, guid: e7c85754c2e650a438a280ca667fc664, type: 2}
   - {fileID: 11400000, guid: e921d19b529955a429a249b19fdbd7a9, type: 2}
+  - {fileID: 11400000, guid: 013f3032dc840474692d5b2ddb09e3b8, type: 2}
+  - {fileID: 11400000, guid: cd07def647f08634a8a212104092062f, type: 2}
+  - {fileID: 11400000, guid: 16b4ef243a72d1f4c8170b201e8d8b03, type: 2}
+  - {fileID: 11400000, guid: e005726d14f683a4f8e4fe224aff90cf, type: 2}
+  - {fileID: 11400000, guid: 721f7cbf627294245b55cd4988e4a76f, type: 2}
 --- !u!4 &1725141965
 Transform:
   m_ObjectHideFlags: 0

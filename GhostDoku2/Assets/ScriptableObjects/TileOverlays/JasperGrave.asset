@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0031f4cf1f42ca04ab92ba1d6dca1195, type: 3}
   m_Name: JasperGrave
   m_EditorClassIdentifier: 
-  name: 
-  overlayObject: {fileID: 0}
-  ghostObj: {fileID: 0}
-  ghostSO: {fileID: 0}
+  name: JasperGrave
+  overlayObject: {fileID: 431156629373085172, guid: 551f2f0c3e8b18848aafe7629e00cc2e,
+    type: 3}
+  ghostObj: {fileID: 7101149342071158018, guid: ab5391c14184f7545abb49e1a55d1535,
+    type: 3}
+  ghostSO: {fileID: 11400000, guid: 1be1059f014069e4ca4b302e03bffc75, type: 2}

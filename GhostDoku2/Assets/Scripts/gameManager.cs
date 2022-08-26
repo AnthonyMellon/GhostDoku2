@@ -13,8 +13,8 @@ public class gameManager : MonoBehaviour
     [Header("Grid Varibles")]
     public int gridWidth;
     public int gridHeight;
-    public float cellWidth;
-    public float cellHeight;
+    public int cellWidth;
+    public int cellHeight;
     public Vector2 gridOrigin;
     public GameObject CellObj;
     public GameObject gridParent;

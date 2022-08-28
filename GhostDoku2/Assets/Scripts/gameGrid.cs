@@ -9,6 +9,7 @@ public class GameGrid
     private float cellWidth;
     private float cellHeight;
     private Vector2 origin;
+    private int fencePad;
     private GameObject CellObj;
     private GameObject gridParent;
 
@@ -20,26 +21,14 @@ public class GameGrid
 
     public List<TileOverlaySO> tileOverlays;
 
-    public enum GridItem
-    {
-        Grass,
-        FenceVertical,
-        FenceHorizontal,
-        HusbandGrave,
-        BruceGrave,
-        CharlotteGrave,
-        EdithGrave,
-        JasperGrave,
-        MarthaGrave
-    }
-
-    public GameGrid(int width, int height, float cellWidth, float cellHeight, Vector2 origin, GameObject CellObj, GameObject gridParent, List<TileOverlaySO> tileOverlays)
+    public GameGrid(int width, int height, float cellWidth, float cellHeight, Vector2 origin, int fencePad, GameObject CellObj, GameObject gridParent, List<TileOverlaySO> tileOverlays)
     {
         this.width = width;
         this.height = height;
         this.cellWidth = cellWidth;
         this.cellHeight = cellHeight;
         this.origin = origin;
+        this.fencePad = fencePad;
         this.CellObj = CellObj;
         this.gridParent = gridParent;
         this.tileOverlays = tileOverlays;
@@ -55,9 +44,10 @@ public class GameGrid
         {
             for(int y = 0; y < nTilesY; y++)
             {
-                if((x == 2 || x == nTilesX - 3) && y > 1 && y < nTilesY - 2) grid[x, y] = tileOverlays.Find(to => to.name == "FenceVertical");
 
-                else if((y == 2 || y == nTilesY - 3) && x > 1 && x < nTilesX - 2) grid[x, y] = grid[x, y] = tileOverlays.Find(to => to.name == "FenceHorizontal");
+                if ((y == fencePad || y == nTilesY - 1 - fencePad) && x >= fencePad && x < nTilesX - fencePad) grid[x, y] = grid[x, y] = tileOverlays.Find(to => to.name == "FenceHorizontal");
+
+                else if((x == fencePad || x == nTilesX - 1 - fencePad) && y >= fencePad && y < nTilesY - fencePad) grid[x, y] = tileOverlays.Find(to => to.name == "FenceVertical");                
 
                 else if (x == 5 && y == 7) grid[x, y] = grid[x, y] = tileOverlays.Find(to => to.name == "HusbandGrave");
 
@@ -128,7 +118,7 @@ public class GameGrid
         return aPos;
     }
 
-    private void destroyAllCells()
+    public void destroyAllCells()
     {
         for (int x = 0; x < cells.GetLength(0); x++)
         {

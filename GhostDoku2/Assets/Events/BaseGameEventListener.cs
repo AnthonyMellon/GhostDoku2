@@ -2,16 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using System;
 
-public class UnityGameEventListener : MonoBehaviour, IGameEventListener
+public class BaseGameEventListener<T> : MonoBehaviour
 {
     [Tooltip("Event to register with.")]
     [SerializeField]
-    public GameEvent @event;
+    public GameEvent<T> @event;
 
     [Tooltip("Response to invoke when Event is raised.")]
     [SerializeField]
-    private UnityEvent response;
+    private UnityEvent<T> response;
 
     public void OnEnable()
     {
@@ -23,7 +24,7 @@ public class UnityGameEventListener : MonoBehaviour, IGameEventListener
         UnregisterSelf();
     }
 
-    public void swapEvent(GameEvent newEvent)
+    public void swapEvent(GameEvent<T> newEvent)
     {
         UnregisterSelf();
         @event = newEvent;
@@ -40,8 +41,8 @@ public class UnityGameEventListener : MonoBehaviour, IGameEventListener
         @event.UnregisterListener(this);
     }
 
-    public void OnEventRaised()
+    public void OnEventRaised(T arg)
     {
-        response?.Invoke();
+        response?.Invoke(arg);
     }
 }

@@ -7,5 +7,5 @@ public class GhostSO : ScriptableObject
 {
     public new string name;
     public Sprite sprite;
-    public GameEvent levelEvent;
+    public IntGameEvent levelEvent;
 }

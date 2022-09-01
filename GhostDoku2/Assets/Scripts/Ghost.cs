@@ -52,7 +52,7 @@ public class Ghost : MonoBehaviour
     {
         transform.GetComponent<SpriteRenderer>().sprite = self.sprite;
 
-        UnityGameEventListener listener = transform.parent.GetComponent<UnityGameEventListener>();
+        IntGameEventListener listener = transform.parent.GetComponent<IntGameEventListener>();
         listener.swapEvent(self.levelEvent);
     }
 

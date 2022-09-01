@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 431156629373085163}
   - component: {fileID: 3290145015042029271}
   - component: {fileID: 7335381611603231222}
-  - component: {fileID: -256092682727455703}
+  - component: {fileID: 6863023197943858589}
   m_Layer: 0
   m_Name: Grave
   m_TagString: Untagged
@@ -72,7 +72,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -103827839
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 76dc0fd4308472748b23cafc33f99987, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -116,7 +116,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -2.5}
   serializedVersion: 2
   m_Radius: 6
---- !u!114 &-256092682727455703
+--- !u!114 &6863023197943858589
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -125,7 +125,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 431156629373085172}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35ab157e1dcb0294ba6888e4f707b7e2, type: 3}
+  m_Script: {fileID: 11500000, guid: 2d9b3b7e20f7c7141bf68204708a032b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   event: {fileID: 11400000, guid: 411a1fc8043bdf54897d1ba07cfdaaa3, type: 2}
@@ -211,7 +211,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1824243743
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 0a10695bf99c8eb4ca2b77e876274f48, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

@@ -11,7 +11,7 @@ public class Player : MonoBehaviour
     private GameObject spriteObj;
     public Animator playerAnimation;
 
-    public GameEvent testEvent;
+    public IntGameEvent testEvent;
 
     // Start is called before the first frame update
     void Start()

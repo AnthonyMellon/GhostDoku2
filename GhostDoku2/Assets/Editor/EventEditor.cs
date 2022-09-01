@@ -3,18 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
-[CustomEditor(typeof(GameEvent))]
+[CustomEditor(typeof(IntGameEvent))]
 public class EventEditor : Editor
 {
     public override void OnInspectorGUI()
     {
         DrawDefaultInspector();
 
-        GameEvent myGameEvent = (GameEvent)target;
+        IntGameEvent myGameEvent = (IntGameEvent)target;
 
         if(GUILayout.Button("Raise Event"))
         {
-            myGameEvent.Raise();
+            myGameEvent.Raise(0);
         }
     }
 }

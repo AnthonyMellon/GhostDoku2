@@ -38,7 +38,7 @@ public class BaseGameEventListener<T> : MonoBehaviour
 
     private void UnregisterSelf()
     {
-        @event.UnregisterListener(this);
+        if (@event != null) @event.UnregisterListener(this);
     }
 
     public void OnEventRaised(T arg)

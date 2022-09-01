@@ -13,5 +13,7 @@ MonoBehaviour:
   m_Name: FenceVertical
   m_EditorClassIdentifier: 
   name: FenceVertical
-  overlayObject: {fileID: 431156629373085172, guid: 551f2f0c3e8b18848aafe7629e00cc2e,
+  overlayObject: {fileID: 5868777628274451517, guid: 00f59900857bc024da6dc3e8774f6c65,
     type: 3}
+  ghostObj: {fileID: 0}
+  ghostSO: {fileID: 0}

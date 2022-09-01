@@ -47,6 +47,9 @@ TagManager:
   - name: Ground
     uniqueID: 3200982505
     locked: 0
+  - name: ghostTrail
+    uniqueID: 1427428417
+    locked: 0
   - name: Objects
     uniqueID: 4191139457
     locked: 0

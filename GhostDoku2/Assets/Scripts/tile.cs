@@ -28,25 +28,6 @@ public class tile : MonoBehaviour
     {
     }
 
-    private void OnMouseOver()
-    {        
-        if(Input.GetMouseButtonDown(0)) //Toggle sprite between walkable and wall
-        {
-            //Update state
-            string newTag = "tile_walkable";                       
-            if (tag == "tile_walkable")
-                newTag = "tile_grave";
-            tag = newTag;
-
-            //Add or remove gravestone if necessary             
-            if (tag == "tile_grave" && !transform.Find("Gravestone(Clone)"))
-            {
-                Instantiate(gravestones[0], new Vector3(0, 2.5f, 0) + transform.position, new Quaternion(0, 0, 0, 0), transform);
-            }
-            else Destroy(transform.Find("Gravestone(Clone)").gameObject);                  
-        }
-    }
-
     public void calcFCost()
     {
         f = g + h;

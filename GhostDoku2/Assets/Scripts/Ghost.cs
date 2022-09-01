@@ -12,11 +12,21 @@ public class Ghost : MonoBehaviour
     private GameUI guiManager;
     public GhostSO self;
 
+    [Header("Bob Controls")]
+    public float horizBobSpeed;
+    public float vertBobSpeed;
+    public float horizBobCap;
+    public float vertBobCap;
+
+    private Vector2 origPos;
+
     // Start is called before the first frame update
     void Start()
     {
         canvasHideable = GameObject.Find("Hideable");
-        guiManager = GameObject.Find("Canvas_UIoverlay").GetComponent<GameUI>();        
+        guiManager = GameObject.Find("Canvas_UIoverlay").GetComponent<GameUI>();
+
+        origPos = transform.localPosition;
     }
 
     void OnEnable()
@@ -27,6 +37,8 @@ public class Ghost : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        transform.localPosition = new Vector2(origPos.x + Mathf.Cos(Time.time * horizBobSpeed) * horizBobCap, origPos.y + Mathf.Sin(Time.time * vertBobSpeed) * vertBobCap);
+        
         if(Input.GetKeyDown(KeyCode.E))
         {
             if(!currentPrompt)
@@ -38,7 +50,6 @@ public class Ghost : MonoBehaviour
 
     public void UpdateFromSelf()
     {
-        Debug.Log("Updating from self");
         transform.GetComponent<SpriteRenderer>().sprite = self.sprite;
 
         UnityGameEventListener listener = transform.parent.GetComponent<UnityGameEventListener>();

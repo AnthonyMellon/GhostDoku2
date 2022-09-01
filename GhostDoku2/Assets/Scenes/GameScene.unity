@@ -1385,6 +1385,7 @@ MonoBehaviour:
   gridHeight: 15
   cellWidth: 4
   cellHeight: 4
+  fencePad: 2
   gridOrigin: {x: -25, y: -13}
   CellObj: {fileID: 798920232547003345, guid: 9c16f8a627c4cd44694054034054ec69, type: 3}
   gridParent: {fileID: 166127534}

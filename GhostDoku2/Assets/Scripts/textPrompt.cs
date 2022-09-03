@@ -5,10 +5,11 @@ using UnityEngine;
 public class textPrompt : MonoBehaviour
 {
     public GameObject sudoku;
+    public BoolSO gamePaused;
 
-    void Start()
-    {        
-        
+    private void OnEnable()
+    {
+        gamePaused.value = true;
     }
 
     public void LaunchSudoku()
@@ -20,8 +21,14 @@ public class textPrompt : MonoBehaviour
 
     }
 
-    public void Close()
+    public void ReturnToGame()
     {
+        gamePaused.value = false;
+        Close();
+    }
+
+    private void Close()
+    {        
         Destroy(gameObject);
     }
 }

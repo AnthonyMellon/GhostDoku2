@@ -1569,7 +1569,7 @@ MonoBehaviour:
   walkSpeed: 10
   gameManager: {fileID: 1725141963}
   playerAnimation: {fileID: 1911733341}
-  gamePaused: {fileID: 0}
+  gamePaused: {fileID: 11400000, guid: 06e13c6e7bb570a4b841fb41d6e41eb2, type: 2}
 --- !u!1 &1911733338
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,6 +11,7 @@ public class Ghost : MonoBehaviour
     public GameObject sudoku;
     private GameUI guiManager;
     public GhostSO self;
+    public BoolSO gamePaused;
 
     [Header("Bob Controls")]
     public float horizBobSpeed;
@@ -36,14 +37,18 @@ public class Ghost : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-        transform.localPosition = new Vector2(origPos.x + Mathf.Cos(Time.time * horizBobSpeed) * horizBobCap, origPos.y + Mathf.Sin(Time.time * vertBobSpeed) * vertBobCap);
-        
-        if(Input.GetKeyDown(KeyCode.E))
+    {        
+        if(!gamePaused.value)
         {
-            if(!currentPrompt)
+            transform.localPosition = new Vector2(origPos.x + Mathf.Cos(Time.time * horizBobSpeed) * horizBobCap, origPos.y + Mathf.Sin(Time.time * vertBobSpeed) * vertBobCap);
+
+            if (Input.GetKeyDown(KeyCode.E))
             {
-                currentPrompt = Instantiate(sudokuPromptPrefab, canvasHideable.transform);
+                if (!currentPrompt)
+                {
+                    currentPrompt = Instantiate(sudokuPromptPrefab, canvasHideable.transform);
+                    currentPrompt.GetComponent<textPrompt>().parentGhost = self;
+                }
             }
         }
     }

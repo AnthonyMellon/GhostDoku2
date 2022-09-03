@@ -10,7 +10,6 @@ public class GhostlyTrail : MonoBehaviour
     {
         Animator anim = transform.GetComponent<Animator>();
         lifeTime = anim.runtimeAnimatorController.animationClips[0].length;
-        Debug.Log("Duration: " + lifeTime);
     }
 
     void Update()

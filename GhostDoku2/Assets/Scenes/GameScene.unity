@@ -1451,6 +1451,7 @@ MonoBehaviour:
   pathSprite: {fileID: 21300000, guid: 50c5dc28fa7ccd14582ec89fea9e7349, type: 3}
   touchIndicator: {fileID: 5571509379344326103, guid: 31f182c066a45724d8865716770a0f94,
     type: 3}
+  gamePaused: {fileID: 11400000, guid: 06e13c6e7bb570a4b841fb41d6e41eb2, type: 2}
   gridWidth: 27
   gridHeight: 15
   cellWidth: 4

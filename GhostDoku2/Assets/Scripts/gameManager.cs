@@ -8,6 +8,7 @@ public class gameManager : MonoBehaviour
 
     public Sprite pathSprite;
     public GameObject touchIndicator;
+    public BoolSO gamePaused;
 
     [Space]
     [Header("Grid Varibles")]
@@ -32,6 +33,7 @@ public class gameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        gamePaused.value = false;
         myGrid = new GameGrid(gridWidth, gridHeight, cellWidth, cellHeight, gridOrigin, fencePad, CellObj, gridParent, tileOverlays);
         myGrid.makeGrid();
         myGrid.generate();

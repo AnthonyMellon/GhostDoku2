@@ -12,6 +12,7 @@ public class Gravestone : MonoBehaviour
     void Start()
     {
         transform.GetComponent<SpriteRenderer>().sortingOrder = utils.yToZIndex(transform.position.y);
+        self.Setup();
     }
 
     // Update is called once per frame

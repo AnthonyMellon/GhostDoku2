@@ -6,6 +6,7 @@ public class textPrompt : MonoBehaviour
 {
     public GameObject sudoku;
     public BoolSO gamePaused;
+    public GhostSO parentGhost;
 
     private void OnEnable()
     {
@@ -17,6 +18,7 @@ public class textPrompt : MonoBehaviour
         //Launch a sudoku
         GameObject mySudoku = Instantiate(sudoku, new Vector3(0, 0, 0), new Quaternion(0, 0, 0, 0), GameObject.Find("Canvas_UIoverlay").transform);
         mySudoku.transform.localPosition = new Vector3(0, 0, 0);
+        mySudoku.GetComponent<Sudoku>().parentGhost = parentGhost;
         Close();
 
     }

@@ -10,8 +10,7 @@ public class Player : MonoBehaviour
     private List<tile> path;
     private GameObject spriteObj;
     public Animator playerAnimation;
-
-    public IntGameEvent testEvent;
+    public BoolSO gamePaused;
 
     // Start is called before the first frame update
     void Start()
@@ -22,14 +21,13 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        getNewTargetPos();
+        if(!gamePaused.value) getNewTargetPos();
         sortSprite();
     }
 
     private void FixedUpdate()
     {
-
-        followPath();
+        if(!gamePaused.value) followPath();
     }
 
     private void sortSprite()
@@ -100,10 +98,5 @@ public class Player : MonoBehaviour
         }
 
         return reachedBreadCrumb;
-    }
-
-    private void updateAnimator()
-    {
-
     }
 }

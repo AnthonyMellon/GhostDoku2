@@ -322,6 +322,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gamePaused: {fileID: 11400000, guid: 06e13c6e7bb570a4b841fb41d6e41eb2, type: 2}
   winEvent: {fileID: 11400000, guid: aee4cca5ed2f0d54283f718f60fe7d86, type: 2}
+  eventSequence: {fileID: 11400000, guid: 02bbaf38c007bcd468ceed777432ae4d, type: 2}
+  parentGhost: {fileID: 0}
 --- !u!1 &7128835030878761117
 GameObject:
   m_ObjectHideFlags: 0

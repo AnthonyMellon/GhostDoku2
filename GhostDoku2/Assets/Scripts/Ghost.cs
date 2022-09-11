@@ -28,6 +28,8 @@ public class Ghost : MonoBehaviour
         guiManager = GameObject.Find("Canvas_UIoverlay").GetComponent<GameUI>();
 
         origPos = transform.localPosition;
+
+        GetComponent<IntGameEventListener>().@event = self.levelEvent;
     }
 
     void OnEnable()
@@ -72,4 +74,9 @@ public class Ghost : MonoBehaviour
             Destroy(currentPrompt.gameObject);
         gameObject.SetActive(false);
     }
+
+    public void LevelSelf()
+    {
+        self.IncLevel();
+    } 
 }

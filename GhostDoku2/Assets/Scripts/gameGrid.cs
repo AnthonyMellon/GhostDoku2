@@ -47,19 +47,25 @@ public class GameGrid
 
                 if ((y == fencePad || y == nTilesY - 1 - fencePad) && x >= fencePad && x < nTilesX - fencePad) grid[x, y] = grid[x, y] = tileOverlays.Find(to => to.name == "FenceHorizontal");
 
-                else if((x == fencePad || x == nTilesX - 1 - fencePad) && y >= fencePad && y < nTilesY - fencePad) grid[x, y] = tileOverlays.Find(to => to.name == "FenceVertical");                
+                else if ((x == fencePad || x == nTilesX - 1 - fencePad) && y >= fencePad && y < nTilesY - fencePad) grid[x, y] = tileOverlays.Find(to => to.name == "FenceVertical");
 
-                else if (x == 5 && y == 7) grid[x, y] = grid[x, y] = tileOverlays.Find(to => to.name == "HusbandGrave");
+                else if (x == 19 && y == 4) grid[x, y] = tileOverlays.Find(to => to.name == "HusbandGrave");
 
-                else if (x == 8 && y == 7) grid[x, y] = grid[x, y] = tileOverlays.Find(to => to.name == "BruceGrave");
+                else if (x == 13 && y == 10) grid[x, y] = tileOverlays.Find(to => to.name == "BruceGrave");
 
-                else if (x == 11 && y == 7) grid[x, y] = grid[x, y] = tileOverlays.Find(to => to.name == "CharlotteGrave");
+                else if (x == 16 && y == 7) grid[x, y] = tileOverlays.Find(to => to.name == "CharlotteGrave");
 
-                else if (x == 14 && y == 7) grid[x, y] = grid[x, y] = tileOverlays.Find(to => to.name == "EdithGrave");
+                else if (x == 4 && y == 6) grid[x, y] = tileOverlays.Find(to => to.name == "EdithGrave");
 
-                else if (x == 17 && y == 7) grid[x, y] = grid[x, y] = tileOverlays.Find(to => to.name == "JasperGrave");
+                else if (x == 9 && y == 4) grid[x, y] = tileOverlays.Find(to => to.name == "JasperGrave");
 
-                else if (x == 20 && y == 7) grid[x, y] = grid[x, y] = tileOverlays.Find(to => to.name == "MarthaGrave");
+                else if (x == 7 && y == 10) grid[x, y] = tileOverlays.Find(to => to.name == "MarthaGrave");
+
+                else if (x == 19 && y == 10) grid[x, y] = tileOverlays.Find(to => to.name == "Tree");
+                
+                else if (x == 1 && y == 5) grid[x, y] = tileOverlays.Find(to => to.name == "Tree");
+
+                else if (x == 5 && y == 1) grid[x, y] = tileOverlays.Find(to => to.name == "Tree2");
             }
         }
     }
@@ -95,7 +101,7 @@ public class GameGrid
                         ghost.GetComponent<Ghost>().self = currentOverlay.ghostSO;
                         ghost.GetComponent<Ghost>().UpdateFromSelf();
                         overlayObj.GetComponent<Gravestone>().ghost = ghost;
-
+                        overlayObj.GetComponent<SpriteRenderer>().sprite = currentOverlay.sprite;
                     }
                 }
             }

@@ -9,5 +9,6 @@ public class TileOverlaySO : ScriptableObject
     public GameObject overlayObject;
     public GameObject ghostObj;
     public GhostSO ghostSO;
+    public Sprite sprite;
 }
 

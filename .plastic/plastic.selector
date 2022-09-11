@@ -1,4 +1,0 @@
-repository "GD2@local"
-  path "/"
-    br "/main"
-    co "/main"

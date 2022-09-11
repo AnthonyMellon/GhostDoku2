@@ -8,4 +8,21 @@ public class GhostSO : ScriptableObject
     public new string name;
     public Sprite sprite;
     public IntGameEvent levelEvent;
+    public int startLevel;
+    public int maxLevel;
+    public int currentLevel;
+
+
+    private void OnEnable()
+    {
+        currentLevel = startLevel;
+    }
+
+    public void IncLevel()
+    {
+        if (currentLevel < maxLevel)
+        {
+            currentLevel++;
+        }
+    }
 }

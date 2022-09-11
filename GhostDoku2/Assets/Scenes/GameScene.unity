@@ -1452,7 +1452,7 @@ MonoBehaviour:
   touchIndicator: {fileID: 5571509379344326103, guid: 31f182c066a45724d8865716770a0f94,
     type: 3}
   gamePaused: {fileID: 11400000, guid: 06e13c6e7bb570a4b841fb41d6e41eb2, type: 2}
-  gridWidth: 27
+  gridWidth: 24
   gridHeight: 15
   cellWidth: 4
   cellHeight: 4
@@ -1469,6 +1469,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 16b4ef243a72d1f4c8170b201e8d8b03, type: 2}
   - {fileID: 11400000, guid: e005726d14f683a4f8e4fe224aff90cf, type: 2}
   - {fileID: 11400000, guid: 721f7cbf627294245b55cd4988e4a76f, type: 2}
+  - {fileID: 11400000, guid: be87c387f44f63b4da71a6c2fc7e15e4, type: 2}
+  - {fileID: 11400000, guid: d4f09a6bd7993034e83b9772a3167aad, type: 2}
 --- !u!4 &1725141965
 Transform:
   m_ObjectHideFlags: 0

@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-[CreateAssetMenu(fileName = "GameEvent", menuName = "Events/Game Event")]
 public class GameEvent<T> : ScriptableObject
 {
     [SerializeField]

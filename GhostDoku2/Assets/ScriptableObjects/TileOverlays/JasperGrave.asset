@@ -18,3 +18,4 @@ MonoBehaviour:
   ghostObj: {fileID: 7101149342071158018, guid: ab5391c14184f7545abb49e1a55d1535,
     type: 3}
   ghostSO: {fileID: 11400000, guid: 1be1059f014069e4ca4b302e03bffc75, type: 2}
+  sprite: {fileID: 21300000, guid: 66934010b51434b4f87420874d02a187, type: 3}

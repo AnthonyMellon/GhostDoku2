@@ -44,7 +44,7 @@ public class Ghost : MonoBehaviour
         {
             transform.localPosition = new Vector2(origPos.x + Mathf.Cos(Time.time * horizBobSpeed) * horizBobCap, origPos.y + Mathf.Sin(Time.time * vertBobSpeed) * vertBobCap);
 
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.E) || Input.touchCount == 2)
             {
                 if (!currentPrompt)
                 {

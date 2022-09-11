@@ -7,13 +7,17 @@ public class Gravestone : MonoBehaviour
     public graveSO self;
     public GameObject fog;
     public GameObject ghost;
+    public GhostSO ghostSelf;
 
     // Start is called before the first frame update
     void Start()
     {
+        ghostSelf = ghost.GetComponent<Ghost>().self;
         transform.GetComponent<SpriteRenderer>().sortingOrder = utils.yToZIndex(transform.position.y);
         self.Setup();
-    }
+        UpdateFog();
+        UpdateWalkableTiles();
+    }    
 
     // Update is called once per frame
     void Update()
@@ -35,15 +39,50 @@ public class Gravestone : MonoBehaviour
 
     public void levelUp()
     {
-        self.IncLevel();
-        Debug.Log($"I'm now level {self.currentLevel}");
+        ghostSelf.IncLevel();
+        Debug.Log($"{ghostSelf.name} is now level {ghostSelf.currentLevel}");
 
-        switch (self.currentLevel) {
+        UpdateFog();
+        UpdateWalkableTiles();
+    }
+
+    public void UpdateFog()
+    {
+        switch (ghostSelf.currentLevel)
+        {
             case 0:
                 fog.SetActive(true);
                 break;
             default:
                 fog.SetActive(false);
+                break;
+        }
+    }
+
+    public void UpdateWalkableTiles()
+    {
+        PathBlocker blocker = transform.GetComponent<PathBlocker>();
+        if (!blocker.setupComplete) blocker.Setup();
+
+        List<Vector2> noFogNonWalkables = new List<Vector2> { new Vector2(0, 0) };
+        List<Vector2> fogNonWalkables = new List<Vector2> { 
+            new Vector2(-1, 1), new Vector2(0, 1), new Vector2(1, 1),
+            new Vector2(-1, 0), new Vector2(0, 0), new Vector2(1, 0),
+            new Vector2(-1, -1), new Vector2(0, -1), new Vector2(1, -1)
+        };
+
+
+        switch (ghostSelf.currentLevel)
+        {
+            case 0:
+                blocker.UnBlockTiles();
+                blocker.relativeTilesBlocked = fogNonWalkables;
+                blocker.BlockTiles();
+                break;
+            default:
+                blocker.UnBlockTiles();
+                blocker.relativeTilesBlocked = noFogNonWalkables;
+                blocker.BlockTiles();
                 break;
         }
     }

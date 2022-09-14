@@ -32,7 +32,7 @@ public class PathBlocker : MonoBehaviour
         foreach(Vector2 tilePos in relativeTilesBlocked)
         {
             Vector2 pos = tilePos + myPosition;
-            grid.cells[(int)pos.x, (int)pos.y].tag = "tile_nonWalkable";
+            grid.cells[(int)pos.x, (int)pos.y].tag = "Untagged";
         }
     }
 

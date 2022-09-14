@@ -97,7 +97,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7101149342071158018}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 3ce0a57d425c322459a1f22339112f3b, type: 2}
   m_CullingMode: 0
@@ -126,10 +126,10 @@ MonoBehaviour:
   sudoku: {fileID: 7128835030449516228, guid: bae7d83f730d5dd46964aefe56d05b7d, type: 3}
   self: {fileID: 11400000, guid: cb2477389634412438bf29fe1671ee9d, type: 2}
   gamePaused: {fileID: 11400000, guid: 06e13c6e7bb570a4b841fb41d6e41eb2, type: 2}
-  horizBobSpeed: 1
-  vertBobSpeed: 1
-  horizBobCap: 1
-  vertBobCap: 1
+  horizBobSpeed: 0
+  vertBobSpeed: 0
+  horizBobCap: 0
+  vertBobCap: 0
 --- !u!114 &-5059884718424158927
 MonoBehaviour:
   m_ObjectHideFlags: 0

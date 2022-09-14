@@ -69,25 +69,25 @@ public class Player : MonoBehaviour
 
     private void getNewTargetPos()
     {
-        /*        if (Input.GetMouseButtonDown(1))
-                {
-                    GameGrid grid = gameManager.GetComponent<gameManager>().myGrid;
+        if (Input.GetMouseButtonDown(1))
+        {
+            GameGrid grid = gameManager.GetComponent<gameManager>().myGrid;
 
-                    Vector2 targetPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                    targetPos = grid.worldToAbsolute(targetPos);
-                    targetPos.x = Mathf.RoundToInt(targetPos.x);
-                    targetPos.y = Mathf.RoundToInt(targetPos.y);
+            Vector2 targetPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            targetPos = grid.worldToAbsolute(targetPos);
+            targetPos.x = Mathf.RoundToInt(targetPos.x);
+            targetPos.y = Mathf.RoundToInt(targetPos.y);
 
-                    Vector2 originPos = transform.position;
-                    originPos = grid.worldToAbsolute(originPos);
-                    originPos.x = Mathf.RoundToInt(originPos.x);
-                    originPos.y = Mathf.RoundToInt(originPos.y);
+            Vector2 originPos = transform.position;
+            originPos = grid.worldToAbsolute(originPos);
+            originPos.x = Mathf.RoundToInt(originPos.x);
+            originPos.y = Mathf.RoundToInt(originPos.y);
 
-                    path = PathFinder.FindPath((int)originPos.x, (int)originPos.y, (int)targetPos.x, (int)targetPos.y, grid);
-                    //transform.position = grid.absoluteToWorld(path[0].GetComponent<tile>().normalPosition);
-                }*/
-       
-        if (Input.touchCount > 0)
+            path = PathFinder.FindPath((int)originPos.x, (int)originPos.y, (int)targetPos.x, (int)targetPos.y, grid);
+            //transform.position = grid.absoluteToWorld(path[0].GetComponent<tile>().normalPosition);
+        }
+
+/*        if (Input.touchCount > 0)
         {
             Touch touch = Input.GetTouch(0);
 
@@ -105,7 +105,7 @@ public class Player : MonoBehaviour
 
             path = PathFinder.FindPath((int)originPos.x, (int)originPos.y, (int)targetPos.x, (int)targetPos.y, grid);
             //transform.position = grid.absoluteToWorld(path[0].GetComponent<tile>().normalPosition);
-        }
+        }*/
     }
 
     private bool reachedBreacCrumb(Vector2 breadCrumbPos)

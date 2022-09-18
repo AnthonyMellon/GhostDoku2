@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5239290852376063119}
   - component: {fileID: -5059884718424158927}
   - component: {fileID: -6497434962357366949}
+  - component: {fileID: -7824859806048988664}
   m_Layer: 0
   m_Name: Ghost
   m_TagString: Untagged
@@ -77,8 +78,7 @@ SpriteRenderer:
   m_SortingLayerID: -103827839
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1049179304341873464, guid: 5a15823ffbf86c946a63301f6e44e677,
-    type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0.6}
   m_FlipX: 0
   m_FlipY: 0
@@ -86,7 +86,7 @@ SpriteRenderer:
   m_Size: {x: 1.98, y: 4.21}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!95 &9193769475234502203
@@ -97,7 +97,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7101149342071158018}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 3ce0a57d425c322459a1f22339112f3b, type: 2}
   m_CullingMode: 0
@@ -126,6 +126,8 @@ MonoBehaviour:
   sudoku: {fileID: 7128835030449516228, guid: bae7d83f730d5dd46964aefe56d05b7d, type: 3}
   self: {fileID: 11400000, guid: cb2477389634412438bf29fe1671ee9d, type: 2}
   gamePaused: {fileID: 11400000, guid: 06e13c6e7bb570a4b841fb41d6e41eb2, type: 2}
+  cutscene: {fileID: 11400000, guid: 2ab73a4808ff9fa4abf389d59b3f4fe2, type: 2}
+  anim: {fileID: 9193769475234502203}
   horizBobSpeed: 0
   vertBobSpeed: 0
   horizBobCap: 0
@@ -176,4 +178,32 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &-7824859806048988664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7101149342071158018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d9b3b7e20f7c7141bf68204708a032b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  event: {fileID: 11400000, guid: f4a939678ae6382488656c4f1c202cc4, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5239290852376063119}
+        m_TargetAssemblyTypeName: Ghost, Assembly-CSharp
+        m_MethodName: EnableAnimator
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
         m_CallState: 2

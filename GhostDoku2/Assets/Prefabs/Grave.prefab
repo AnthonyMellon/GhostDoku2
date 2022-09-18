@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3290145015042029271}
   - component: {fileID: 7335381611603231222}
   - component: {fileID: 6863023197943858589}
+  - component: {fileID: -3581587329429702896}
   - component: {fileID: -2735835253479343102}
   m_Layer: 0
   m_Name: Grave
@@ -142,6 +143,34 @@ MonoBehaviour:
       - m_Target: {fileID: 3290145015042029271}
         m_TargetAssemblyTypeName: 
         m_MethodName: levelUp
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &-3581587329429702896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 431156629373085172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d9b3b7e20f7c7141bf68204708a032b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  event: {fileID: 11400000, guid: 55fe55f0dcb8bf74f86fe60fa8b45eac, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3290145015042029271}
+        m_TargetAssemblyTypeName: Gravestone, Assembly-CSharp
+        m_MethodName: UpdateFog
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

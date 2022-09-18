@@ -12,6 +12,8 @@ public class Ghost : MonoBehaviour
     private GameUI guiManager;
     public GhostSO self;
     public BoolSO gamePaused;
+    public Vec2GameEvent cutscene;
+    public Animator anim;
 
     [Header("Bob Controls")]
     public float horizBobSpeed;
@@ -35,6 +37,7 @@ public class Ghost : MonoBehaviour
     void OnEnable()
     {
         UpdateFromSelf();
+        cutscene.Raise(transform.position);
     }
 
     // Update is called once per frame
@@ -57,8 +60,6 @@ public class Ghost : MonoBehaviour
 
     public void UpdateFromSelf()
     {
-        transform.GetComponent<SpriteRenderer>().sprite = self.sprite;
-
         IntGameEventListener listener = transform.parent.GetComponent<IntGameEventListener>();
         listener.swapEvent(self.levelEvent);
     }
@@ -78,5 +79,10 @@ public class Ghost : MonoBehaviour
     public void LevelSelf()
     {
         self.IncLevel();
-    } 
+    }
+
+    public void EnableAnimator()
+    {
+        anim.enabled = true;
+    }
 }

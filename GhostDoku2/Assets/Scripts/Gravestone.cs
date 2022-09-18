@@ -17,6 +17,7 @@ public class Gravestone : MonoBehaviour
         self.Setup();
         UpdateFog();
         UpdateWalkableTiles();
+        UpdateGhost();
     }    
 
     // Update is called once per frame
@@ -27,14 +28,14 @@ public class Gravestone : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if(ghost)
-            ghost.GetComponent<Ghost>().Show();
+/*        if(ghost)
+            ghost.GetComponent<Ghost>().Show();*/
     }
 
     void OnTriggerExit2D(Collider2D other)
     {
-        if(ghost)
-            ghost.GetComponent<Ghost>().Hide();
+/*        if(ghost)
+            ghost.GetComponent<Ghost>().Hide();*/
     }    
 
     public void levelUp()
@@ -42,8 +43,16 @@ public class Gravestone : MonoBehaviour
         ghostSelf.IncLevel();
         Debug.Log($"{ghostSelf.name} is now level {ghostSelf.currentLevel}");
 
-        UpdateFog();
         UpdateWalkableTiles();
+        UpdateGhost();
+    }
+
+    public void UpdateGhost()
+    {
+        if (ghostSelf.currentLevel > 0)
+            ghost.GetComponent<Ghost>().Show();
+        else
+            ghost.GetComponent<Ghost>().Hide();
     }
 
     public void UpdateFog()

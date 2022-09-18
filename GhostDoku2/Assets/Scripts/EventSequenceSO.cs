@@ -6,7 +6,7 @@ using UnityEngine;
 public class EventSequenceSO : ScriptableObject
 {
     public List<IntGameEvent> events;
-    private int currentEvent = 0;
+    public int currentEvent = 0;
 
     private void OnEnable()
     {

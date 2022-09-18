@@ -47,14 +47,19 @@ public class Ghost : MonoBehaviour
         {
             transform.localPosition = new Vector2(origPos.x + Mathf.Cos(Time.time * horizBobSpeed) * horizBobCap, origPos.y + Mathf.Sin(Time.time * vertBobSpeed) * vertBobCap);
 
-            if (Input.GetKeyDown(KeyCode.E) || Input.touchCount == 2)
+/*            if (Input.GetKeyDown(KeyCode.E) || Input.touchCount == 2)
             {
-                if (!currentPrompt)
-                {
-                    currentPrompt = Instantiate(sudokuPromptPrefab, canvasHideable.transform);
-                    currentPrompt.GetComponent<textPrompt>().parentGhost = self;
-                }
-            }
+                SpawnPrompt();
+            }*/
+        }
+    }
+
+    public void SpawnPrompt()
+    {
+        if (!currentPrompt)
+        {
+            currentPrompt = Instantiate(sudokuPromptPrefab, canvasHideable.transform);
+            currentPrompt.GetComponent<textPrompt>().parentGhost = self;
         }
     }
 

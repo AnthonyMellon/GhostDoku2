@@ -128,6 +128,7 @@ MonoBehaviour:
   gamePaused: {fileID: 11400000, guid: 06e13c6e7bb570a4b841fb41d6e41eb2, type: 2}
   cutscene: {fileID: 11400000, guid: 2ab73a4808ff9fa4abf389d59b3f4fe2, type: 2}
   anim: {fileID: 9193769475234502203}
+  spawnPrompt: {fileID: 11400000, guid: 3e543842f7c6e834e95e5ea1d60f5340, type: 2}
   horizBobSpeed: 0
   vertBobSpeed: 0
   horizBobCap: 0

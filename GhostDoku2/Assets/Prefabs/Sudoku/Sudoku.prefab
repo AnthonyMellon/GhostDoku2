@@ -706,8 +706,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gamePaused: {fileID: 11400000, guid: 06e13c6e7bb570a4b841fb41d6e41eb2, type: 2}
   winEvent: {fileID: 11400000, guid: aee4cca5ed2f0d54283f718f60fe7d86, type: 2}
-  eventSequence: {fileID: 11400000, guid: 02bbaf38c007bcd468ceed777432ae4d, type: 2}
-  parentGhost: {fileID: 0}
+  story: {fileID: 11400000, guid: a6af2ad39154ad84e8d10dbdef8bb256, type: 2}
   gameGrid: {fileID: 6933472747777904214}
   cellObj: {fileID: 4764312379825204654, guid: a8eb7439379a39b4498a0d0f92b957cb, type: 3}
   currentCell: 0

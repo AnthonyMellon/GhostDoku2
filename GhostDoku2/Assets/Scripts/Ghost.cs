@@ -14,6 +14,7 @@ public class Ghost : MonoBehaviour
     public BoolSO gamePaused;
     public Vec2GameEvent cutscene;
     public Animator anim;
+    public IntGameEvent spawnPrompt;
 
     [Header("Bob Controls")]
     public float horizBobSpeed;
@@ -49,11 +50,12 @@ public class Ghost : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.E) || Input.touchCount == 2)
             {
-                if (!currentPrompt)
+                spawnPrompt.Raise(0);
+/*                if (!currentPrompt)
                 {
                     currentPrompt = Instantiate(sudokuPromptPrefab, canvasHideable.transform);
                     currentPrompt.GetComponent<textPrompt>().parentGhost = self;
-                }
+                }*/
             }
         }
     }

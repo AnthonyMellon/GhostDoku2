@@ -7,8 +7,7 @@ public class Sudoku : MonoBehaviour
 {
     public BoolSO gamePaused;
     public IntGameEvent winEvent;
-    public EventSequenceSO eventSequence;
-    public GhostSO parentGhost;
+    public StorySO story;
     public Transform gameGrid;
     public GameObject cellObj;
     public int currentCell;
@@ -100,8 +99,7 @@ public class Sudoku : MonoBehaviour
 
     public void Win()
     {
-        eventSequence.CallCurrentEvent();
-        eventSequence.NextEvent();
+        story.NextStoryPoint();
         currentSudoku.value++;
 
         Exit();

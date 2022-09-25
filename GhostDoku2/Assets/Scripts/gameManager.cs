@@ -9,6 +9,9 @@ public class gameManager : MonoBehaviour
     public Sprite pathSprite;
     public GameObject touchIndicator;
     public BoolSO gamePaused;
+    public StorySO story;
+    public GameObject sudoku;
+    public GameObject sudokuParent;
 
     [Space]
     [Header("Grid Varibles")]
@@ -62,5 +65,15 @@ public class gameManager : MonoBehaviour
             step.gameObject.GetComponent<SpriteRenderer>().sprite = pathSprite;
             yield return new WaitForSeconds(.1f);
         }        
+    }
+
+    public void ProgressStory()
+    {
+        story.NextStoryPoint();
+    }
+
+    public void LaunchSudoku()
+    {
+        Instantiate(sudoku, sudokuParent.transform);
     }
 }

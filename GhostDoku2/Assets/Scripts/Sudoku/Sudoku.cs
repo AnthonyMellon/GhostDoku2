@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Sudoku : MonoBehaviour
 {
@@ -12,11 +13,15 @@ public class Sudoku : MonoBehaviour
     public GameObject cellObj;
     public int currentCell;
 
-    [Header("Colors")]
+    [Header("Background Colours")]
     public Color defaultColor;
     public Color selectedColor;
     public Color highlightedColor;
     public Color wrongColor;
+
+    [Header("Text Colours")]
+    public Color preFilledText;
+    public Color playerFilledText;
 
     [Header("Sudoku Variables")]
     public IntSO currentSudoku;
@@ -64,7 +69,17 @@ public class Sudoku : MonoBehaviour
             SudokuCell sCell = myCell.GetComponent<SudokuCell>();
             sCell.id = i;
             sCell.value = myVal;
-            if (myVal != 0) myCell.GetComponent<Button>().interactable = false;
+
+            if (myVal != 0)
+            {
+                myCell.GetComponent<Button>().interactable = false;
+                myCell.transform.Find("Text (TMP)").GetComponent<TMP_Text>().color = preFilledText;
+            }
+            else
+            {
+                myCell.transform.Find("Text (TMP)").GetComponent<TMP_Text>().color = playerFilledText;
+            }
+                
             sCell.UpdateText();
 
             myCells.Add(sCell);

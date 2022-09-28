@@ -692,6 +692,10 @@ MonoBehaviour:
   portrait: {fileID: 7886007282941796985}
   characterName: {fileID: 7886007282782667377}
   dialogue: {fileID: 7886007283950889860}
+  enableGhostInteraction: {fileID: 11400000, guid: b445c6dd648fdbf489e404b3248255e3,
+    type: 2}
+  disableGhostInteraction: {fileID: 11400000, guid: 0cb68347ba0447a4386e27d0e91a65a2,
+    type: 2}
 --- !u!1 &7886007284720181617
 GameObject:
   m_ObjectHideFlags: 0

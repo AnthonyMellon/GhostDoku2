@@ -12,6 +12,7 @@ public class Sudoku : MonoBehaviour
     public Transform gameGrid;
     public GameObject cellObj;
     public int currentCell;
+    public IntGameEvent enableGhostInteraction;
 
     [Header("Background Colours")]
     public Color defaultColor;
@@ -39,6 +40,7 @@ public class Sudoku : MonoBehaviour
 
     private void OnEnable()
     {
+        gamePaused.value = true;
         myCells = new List<SudokuCell>();
 
         string[] sudokuAsStrings;
@@ -123,6 +125,7 @@ public class Sudoku : MonoBehaviour
     public void Exit()
     {
         gamePaused.value = false;
+        enableGhostInteraction.Raise(0);
         Destroy(gameObject);
     }
 

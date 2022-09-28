@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f31177141980e3c42b132183120d617a, type: 3}
   m_Name: S1P13
   m_EditorClassIdentifier: 
+  Initiator: {fileID: 11400000, guid: cb2477389634412438bf29fe1671ee9d, type: 2}
   character: Meemaw
   description: meemaw to geroge, loving
   portrait: {fileID: 21300000, guid: df03b9f5b8ffbb746bcc41247cec9ae2, type: 3}
@@ -19,3 +20,4 @@ MonoBehaviour:
   text: "\"I\u2019ll always love you too.\""
   Events:
   - {fileID: 11400000, guid: bb8b3db81f4f98e4f9fba9c2724961f3, type: 2}
+  - {fileID: 11400000, guid: c4a2e44ec55d909458b265c6cb0d7c19, type: 2}

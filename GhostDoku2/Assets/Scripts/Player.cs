@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     private GameObject spriteObj;
     public Animator playerAnimation;
     public BoolSO gamePaused;
+    public Joystick moveInput;
 
     // Start is called before the first frame update
     void Start()
@@ -27,7 +28,21 @@ public class Player : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if(!gamePaused.value) followPath();
+        //if(!gamePaused.value) followPath();
+        if (!gamePaused.value) JoysticMove();
+
+    }
+
+    public void JoysticMove()
+    {
+        if(Mathf.Abs(moveInput.Horizontal) > 0 || Mathf.Abs(moveInput.Vertical) > 0) spriteObj.transform.GetComponent<Animator>().SetBool("moving", true);
+        else spriteObj.transform.GetComponent<Animator>().SetBool("moving", false);
+
+        if(moveInput.Horizontal > 0) transform.Find("PlayerSprite").localScale = new Vector3(-1, 1, 1);
+        else if (moveInput.Horizontal < 0) transform.Find("PlayerSprite").localScale = new Vector3(1, 1, 1);
+
+        Vector2 move = new Vector2(moveInput.Horizontal * 0.2f, moveInput.Vertical * 0.2f);
+        transform.position = (Vector2)transform.position + move;
     }
 
     private void sortSprite()

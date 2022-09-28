@@ -15,6 +15,9 @@ public class Ghost : MonoBehaviour
     public Vec2GameEvent cutscene;
     public Animator anim;
     public IntGameEvent spawnPrompt;
+    public IntGameEvent enableGhostInteraction;
+    public IntGameEvent disableGhostInteraction;
+    public StorySO story;
 
     [Header("Bob Controls")]
     public float horizBobSpeed;
@@ -47,16 +50,15 @@ public class Ghost : MonoBehaviour
         if(!gamePaused.value)
         {
             transform.localPosition = new Vector2(origPos.x + Mathf.Cos(Time.time * horizBobSpeed) * horizBobCap, origPos.y + Mathf.Sin(Time.time * vertBobSpeed) * vertBobCap);
+        }
+    }
 
-            if (Input.GetKeyDown(KeyCode.E) || Input.touchCount == 2)
-            {
-                spawnPrompt.Raise(0);
-/*                if (!currentPrompt)
-                {
-                    currentPrompt = Instantiate(sudokuPromptPrefab, canvasHideable.transform);
-                    currentPrompt.GetComponent<textPrompt>().parentGhost = self;
-                }*/
-            }
+    public void SpawnPrompt()
+    {
+        if (!currentPrompt)
+        {
+            currentPrompt = Instantiate(sudokuPromptPrefab, canvasHideable.transform);
+            currentPrompt.GetComponent<textPrompt>().parentGhost = self;
         }
     }
 
@@ -86,5 +88,16 @@ public class Ghost : MonoBehaviour
     public void EnableAnimator()
     {
         anim.enabled = true;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (story.GetCurrentStoryPoint().Initiator == self) enableGhostInteraction.Raise(0);
+
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        disableGhostInteraction.Raise(0);
     }
 }

@@ -26,3 +26,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 26e958ab2668f734780f7e1d88ce5f58, type: 2}
   - {fileID: 11400000, guid: d43d56402bee45044b6f704ee081e223, type: 2}
   - {fileID: 11400000, guid: 2ee329e502c8a2f4f924a187de214b51, type: 2}
+  - {fileID: 11400000, guid: 858e4d97dd9466d449aece6f767c9637, type: 2}
+  currentStoryPoint: 13

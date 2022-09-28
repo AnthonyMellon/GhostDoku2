@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f31177141980e3c42b132183120d617a, type: 3}
   m_Name: S1P2
   m_EditorClassIdentifier: 
+  Initiator: {fileID: 11400000, guid: cb2477389634412438bf29fe1671ee9d, type: 2}
   character: George
   description: George to Meemaw, loving
   portrait: {fileID: 21300000, guid: cd8a8839f2b7bfd46805e46ee4dbad29, type: 3}

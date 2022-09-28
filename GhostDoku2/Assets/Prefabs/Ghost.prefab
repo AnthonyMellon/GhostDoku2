@@ -15,13 +15,14 @@ GameObject:
   - component: {fileID: -5059884718424158927}
   - component: {fileID: -6497434962357366949}
   - component: {fileID: -7824859806048988664}
+  - component: {fileID: 7772288144927146916}
   m_Layer: 0
   m_Name: Ghost
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &7101149342071158028
 Transform:
   m_ObjectHideFlags: 0
@@ -83,7 +84,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.98, y: 4.21}
+  m_Size: {x: 3.57, y: 5.21}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
@@ -129,6 +130,11 @@ MonoBehaviour:
   cutscene: {fileID: 11400000, guid: 2ab73a4808ff9fa4abf389d59b3f4fe2, type: 2}
   anim: {fileID: 9193769475234502203}
   spawnPrompt: {fileID: 11400000, guid: 3e543842f7c6e834e95e5ea1d60f5340, type: 2}
+  enableGhostInteraction: {fileID: 11400000, guid: b445c6dd648fdbf489e404b3248255e3,
+    type: 2}
+  disableGhostInteraction: {fileID: 11400000, guid: 0cb68347ba0447a4386e27d0e91a65a2,
+    type: 2}
+  story: {fileID: 11400000, guid: a6af2ad39154ad84e8d10dbdef8bb256, type: 2}
   horizBobSpeed: 0
   vertBobSpeed: 0
   horizBobCap: 0
@@ -208,3 +214,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+--- !u!58 &7772288144927146916
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7101149342071158018}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 4

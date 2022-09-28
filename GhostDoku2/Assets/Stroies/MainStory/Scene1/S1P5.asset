@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f31177141980e3c42b132183120d617a, type: 3}
   m_Name: S1P5
   m_EditorClassIdentifier: 
+  Initiator: {fileID: 11400000, guid: cb2477389634412438bf29fe1671ee9d, type: 2}
   character: Meemaw
   description: Meemaw to George, loving,  Play sudoku after
   portrait: {fileID: 21300000, guid: df03b9f5b8ffbb746bcc41247cec9ae2, type: 3}

@@ -5,6 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "ScriptableObjects/Story/Stroy Point")]
 public class StoryPointSO : ScriptableObject
 {
+    public GhostSO Initiator;
     public string character;
     public string description;
 

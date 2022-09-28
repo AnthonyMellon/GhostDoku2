@@ -7,7 +7,7 @@ public class StorySO : ScriptableObject
 {
     public List<StoryPointSO> storyPoints;
 
-    private int currentStoryPoint = 0;
+    [SerializeField]private int currentStoryPoint = 0;
 
     private void OnEnable()
     {

@@ -10,11 +10,13 @@ public class StoryPrompt : MonoBehaviour
     public Image portrait;
     public TMP_Text characterName;
     public TMP_Text dialogue;
+    public IntGameEvent disableGhostInteraction;
 
 
     private void OnEnable()
     {
-        UpdatePrompt();
+        disableGhostInteraction.Raise(0);
+        UpdatePrompt();        
     }
 
     public void UpdatePrompt()
@@ -26,15 +28,15 @@ public class StoryPrompt : MonoBehaviour
     }
 
     public void RunCurrentEvents()
-    {        
-        foreach(IntGameEvent myEvent in myStory.GetCurrentStoryPoint().Events)
+    {
+        foreach (IntGameEvent myEvent in myStory.GetCurrentStoryPoint().Events)
         {
             myEvent.Raise(0);
         }
     }
 
     public void Delete()
-    {
+    {                
         Destroy(gameObject);
     }
 

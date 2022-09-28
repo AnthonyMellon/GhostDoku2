@@ -788,12 +788,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -1635,7 +1635,7 @@ MonoBehaviour:
     type: 3}
   gamePaused: {fileID: 11400000, guid: 06e13c6e7bb570a4b841fb41d6e41eb2, type: 2}
   story: {fileID: 11400000, guid: a6af2ad39154ad84e8d10dbdef8bb256, type: 2}
-  sudoku: {fileID: 7128835030449516228, guid: bae7d83f730d5dd46964aefe56d05b7d, type: 3}
+  sudoku: {fileID: 5710281733685222441, guid: 1da15dfce9f92e44aab9379655b470ea, type: 3}
   sudokuParent: {fileID: 803779596}
   gridWidth: 24
   gridHeight: 15

@@ -87,7 +87,7 @@ public class Player : MonoBehaviour
             //transform.position = grid.absoluteToWorld(path[0].GetComponent<tile>().normalPosition);
         }
 
-/*        if (Input.touchCount > 0)
+        if (Input.touchCount > 0)
         {
             Touch touch = Input.GetTouch(0);
 
@@ -105,7 +105,7 @@ public class Player : MonoBehaviour
 
             path = PathFinder.FindPath((int)originPos.x, (int)originPos.y, (int)targetPos.x, (int)targetPos.y, grid);
             //transform.position = grid.absoluteToWorld(path[0].GetComponent<tile>().normalPosition);
-        }*/
+        }
     }
 
     private bool reachedBreacCrumb(Vector2 breadCrumbPos)

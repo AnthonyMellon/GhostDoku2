@@ -12,17 +12,21 @@ public class Player : MonoBehaviour
     public Animator playerAnimation;
     public BoolSO gamePaused;
     public Joystick moveInput;
+    public float speed;
+    private Rigidbody2D rb;
 
     // Start is called before the first frame update
     void Start()
     {
+        rb = transform.GetComponent<Rigidbody2D>();
+        Debug.Log(rb);
         spriteObj = transform.Find("PlayerSprite").gameObject;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(!gamePaused.value) getNewTargetPos();
+        //if(!gamePaused.value) getNewTargetPos();
         sortSprite();
     }
 
@@ -41,8 +45,9 @@ public class Player : MonoBehaviour
         if(moveInput.Horizontal > 0) transform.Find("PlayerSprite").localScale = new Vector3(-1, 1, 1);
         else if (moveInput.Horizontal < 0) transform.Find("PlayerSprite").localScale = new Vector3(1, 1, 1);
 
-        Vector2 move = new Vector2(moveInput.Horizontal * 0.2f, moveInput.Vertical * 0.2f);
-        transform.position = (Vector2)transform.position + move;
+        Vector2 move = new Vector2(moveInput.Horizontal * speed, moveInput.Vertical * speed);
+        //transform.position = (Vector2)transform.position + move;
+        rb.velocity = move;
     }
 
     private void sortSprite()
@@ -50,7 +55,7 @@ public class Player : MonoBehaviour
         spriteObj.transform.GetComponent<SpriteRenderer>().sortingOrder = utils.yToZIndex(transform.position.y);
     }
 
-    private void followPath()
+/*    private void followPath()
     {
         if (path != null)
         {
@@ -80,9 +85,9 @@ public class Player : MonoBehaviour
                 spriteObj.transform.GetComponent<Animator>().SetBool("moving", false);
             }
         }        
-    }
+    }*/
 
-    private void getNewTargetPos()
+/*    private void getNewTargetPos()
     {
         if (Input.GetMouseButtonDown(1))
         {
@@ -121,9 +126,9 @@ public class Player : MonoBehaviour
             path = PathFinder.FindPath((int)originPos.x, (int)originPos.y, (int)targetPos.x, (int)targetPos.y, grid);
             //transform.position = grid.absoluteToWorld(path[0].GetComponent<tile>().normalPosition);
         }
-    }
+    }*/
 
-    private bool reachedBreacCrumb(Vector2 breadCrumbPos)
+/*    private bool reachedBreacCrumb(Vector2 breadCrumbPos)
     {
         bool reachedBreadCrumb = false;
 
@@ -133,5 +138,5 @@ public class Player : MonoBehaviour
         }
 
         return reachedBreadCrumb;
-    }
+    }*/
 }

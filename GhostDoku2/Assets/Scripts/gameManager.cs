@@ -37,34 +37,6 @@ public class gameManager : MonoBehaviour
     void Start()
     {
         gamePaused.value = false;
-        myGrid = new GameGrid(gridWidth, gridHeight, cellWidth, cellHeight, gridOrigin, fencePad, CellObj, gridParent, tileOverlays);
-        myGrid.makeGrid();
-        myGrid.generate();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if(prevWidth != gridWidth || prevHeight != gridHeight || prevPad != fencePad)
-        {
-            myGrid.destroyAllCells();
-            myGrid = new GameGrid(gridWidth, gridHeight, cellWidth, cellHeight, gridOrigin, fencePad, CellObj, gridParent, tileOverlays);
-            myGrid.makeGrid();
-            myGrid.generate();
-        }
-
-        prevWidth = gridWidth;
-        prevHeight = gridHeight;
-        prevPad = fencePad;
-    }
-
-    private IEnumerator pathAnimate(List<tile> path)
-    {
-        foreach (tile step in path)
-        {
-            step.gameObject.GetComponent<SpriteRenderer>().sprite = pathSprite;
-            yield return new WaitForSeconds(.1f);
-        }        
     }
 
     public void ProgressStory()

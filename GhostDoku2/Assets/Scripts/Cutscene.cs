@@ -20,7 +20,6 @@ public class Cutscene : MonoBehaviour
     private IEnumerator RunCutscene()
     {
         paused.value = true;
-        Debug.Log(paused.value);
 
         //Move to grave
         while(Vector2.Distance(transform.position, mPos) > 1)

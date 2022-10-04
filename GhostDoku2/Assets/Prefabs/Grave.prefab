@@ -14,7 +14,9 @@ GameObject:
   - component: {fileID: 7335381611603231222}
   - component: {fileID: 6863023197943858589}
   - component: {fileID: -3581587329429702896}
-  - component: {fileID: -2735835253479343102}
+  - component: {fileID: -7477496275859918799}
+  - component: {fileID: 7677833974507396015}
+  - component: {fileID: -2982535943973768775}
   m_Layer: 0
   m_Name: Grave
   m_TagString: Untagged
@@ -104,10 +106,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de0c4827ff2d65e49a2ea7039d6d4ddd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  self: {fileID: 11400000, guid: 1c5fc350aab7fe74cbe02ddc97b43fd1, type: 2}
+  self: {fileID: 0}
   fog: {fileID: 7193452920575357982}
   ghost: {fileID: 0}
   ghostSelf: {fileID: 0}
+  myName: 
 --- !u!58 &7335381611603231222
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -180,7 +183,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &-2735835253479343102
+--- !u!114 &-7477496275859918799
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -189,21 +192,49 @@ MonoBehaviour:
   m_GameObject: {fileID: 431156629373085172}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46498bc3b0652954fb38111500498701, type: 3}
+  m_Script: {fileID: 11500000, guid: 7a438237036514a41906249e0f8adefb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myPosition: {x: 0, y: 0}
-  relativeTilesBlocked:
-  - {x: -1, y: 1}
-  - {x: 0, y: 1}
-  - {x: 1, y: 1}
-  - {x: -1, y: 0}
-  - {x: 0, y: 0}
-  - {x: 1, y: 0}
-  - {x: -1, y: -1}
-  - {x: 0, y: -1}
-  - {x: 1, y: -1}
-  setupComplete: 0
+  gridSettings: {fileID: 0}
+--- !u!114 &7677833974507396015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 431156629373085172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4038466747125ce418ed203d7905fc7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onUpdate: 0
+--- !u!61 &-2982535943973768775
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 431156629373085172}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.85, y: 7.25}
+    newSize: {x: 2.85, y: 7.25}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.85, y: 7.25}
+  m_EdgeRadius: 0
 --- !u!1 &2164608504148110269
 GameObject:
   m_ObjectHideFlags: 0
@@ -844,6 +875,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4812815456601491294}
   - component: {fileID: 5632662536877122348}
+  - component: {fileID: 7062352604168734536}
   m_Layer: 0
   m_Name: Fog
   m_TagString: Untagged
@@ -884,6 +916,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeMe: 0
   fadeChildren: 1
+--- !u!61 &7062352604168734536
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7193452920575357982}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 20, y: 10}
+  m_EdgeRadius: 0
 --- !u!1 &7542420723654932582
 GameObject:
   m_ObjectHideFlags: 0

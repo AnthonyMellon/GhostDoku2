@@ -4,21 +4,25 @@ using UnityEngine;
 
 public class Gravestone : MonoBehaviour
 {
-    public graveSO self;
-    public GameObject fog;
+    [SerializeField]private TileOverlaySO self;
+    [SerializeField]private GameObject fog;
     public GameObject ghost;
-    public GhostSO ghostSelf;
+    [SerializeField] public GhostSO ghostSelf;
+    public string myName;
 
     // Start is called before the first frame update
     void Start()
     {
-        ghostSelf = ghost.GetComponent<Ghost>().self;
-        transform.GetComponent<SpriteRenderer>().sortingOrder = utils.yToZIndex(transform.position.y);
-        self.Setup();
+        GetComponent<SpriteRenderer>().sprite = self.sprite;
+
+        ghostSelf = self.ghostSO;
+        ghost = Instantiate(self.ghostObj, transform);
+        ghost.GetComponent<Ghost>().self = ghostSelf;
+
         UpdateFog();
-        UpdateWalkableTiles();
+        //UpdateWalkableTiles();
         UpdateGhost();
-    }    
+    }
 
     // Update is called once per frame
     void Update()
@@ -43,7 +47,7 @@ public class Gravestone : MonoBehaviour
         ghostSelf.IncLevel();
         Debug.Log($"{ghostSelf.name} is now level {ghostSelf.currentLevel}");
 
-        UpdateWalkableTiles();
+        //UpdateWalkableTiles();
         UpdateGhost();
     }
 

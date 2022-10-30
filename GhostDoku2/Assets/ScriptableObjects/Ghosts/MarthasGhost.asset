@@ -15,6 +15,7 @@ MonoBehaviour:
   name: Martha
   sprite: {fileID: 21300000, guid: 8e07a415881e6a24f80c16a4ca014deb, type: 3}
   levelEvent: {fileID: 11400000, guid: b21d2c7f322a7034c9c01c3702ec2696, type: 2}
+  animation: {fileID: 9100000, guid: b85f812af9709b64cafde4e50d8f506c, type: 2}
   startLevel: 0
   maxLevel: 3
-  currentLevel: 0
+  currentLevel: 1

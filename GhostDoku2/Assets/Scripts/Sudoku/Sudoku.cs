@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Linq;
 
 public class Sudoku : MonoBehaviour
 {
@@ -63,7 +64,7 @@ public class Sudoku : MonoBehaviour
         }
 
         //Make the cells
-        for(int i = 0; i < 81; i++)
+        for(int i = 0; i < sudokuAsStrings.Length; i++)
         {
             int myVal = System.Convert.ToInt16(sudokuAsStrings[i]);
 
@@ -87,6 +88,7 @@ public class Sudoku : MonoBehaviour
             myCells.Add(sCell);
         }
 
+        Hint();
         SetColors();
     }
 
@@ -154,6 +156,15 @@ public class Sudoku : MonoBehaviour
         SetColors();
 
         if (CheckSolved()) Win();
+    }
+
+    public void Hint()
+    {
+        var results = myCells.Where(o => o.value == 0).ToList();
+        int rand = Random.Range(0, results.Count());
+
+
+        Debug.Log(results[rand]);
     }
 
     public bool CheckSolved()

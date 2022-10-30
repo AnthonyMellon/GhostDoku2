@@ -5,8 +5,18 @@ using UnityEngine;
 [RequireComponent(typeof(SpriteRenderer))]
 public class DeGloomer : MonoBehaviour
 {
+    public DecorationSO spriteList;
     public List<Sprite> sprites;
     private int gloomLevel = 0;
+
+    private void Start()
+    {
+        if (spriteList != null)
+        {
+            sprites = spriteList.Sprites;
+            transform.GetComponent<SpriteRenderer>().sprite = spriteList.Sprites[0];
+        }
+    }
 
     public void deGloom()
     {

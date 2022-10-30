@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6544c2c1d4d65894a8f5cb91bdeb58a8, type: 3}
+  m_Name: Tree4
+  m_EditorClassIdentifier: 
+  Sprites:
+  - {fileID: 21300000, guid: fa794730c75801444b0d774a20d06f44, type: 3}
+  - {fileID: 21300000, guid: fa794730c75801444b0d774a20d06f44, type: 3}
+  - {fileID: 21300000, guid: 430cedee25debfd48a31ea9a06b20546, type: 3}
+  - {fileID: 21300000, guid: 434420b87df9fcc45a8461bf9668c07c, type: 3}
+  - {fileID: 21300000, guid: 8d6ef92698c6d2046990e434f50c851b, type: 3}

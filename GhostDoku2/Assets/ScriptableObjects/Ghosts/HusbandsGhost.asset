@@ -15,6 +15,7 @@ MonoBehaviour:
   name: George
   sprite: {fileID: 1049179304341873464, guid: 5a15823ffbf86c946a63301f6e44e677, type: 3}
   levelEvent: {fileID: 11400000, guid: 411a1fc8043bdf54897d1ba07cfdaaa3, type: 2}
+  animation: {fileID: 9100000, guid: 895eec7a9ed623c46802e0a58d9dff0d, type: 2}
   startLevel: 1
   maxLevel: 2
-  currentLevel: 2
+  currentLevel: 1

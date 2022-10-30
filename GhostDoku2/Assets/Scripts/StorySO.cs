@@ -5,7 +5,8 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "ScriptableObjects/Story/Story")] 
 public class StorySO : ScriptableObject
 {
-    public List<StoryPointSO> storyPoints;
+    
+    private List<StoryPointSO> storyPoints;
 
     [SerializeField]private int currentStoryPoint = 0;
 
@@ -25,5 +26,20 @@ public class StorySO : ScriptableObject
     public StoryPointSO GetCurrentStoryPoint()
     {
         return storyPoints[currentStoryPoint];
+    }
+
+    public StoryPointSO GetStoryPoint(int index)
+    {
+        return storyPoints[index];
+    }
+
+    public void ClearList()
+    {
+        storyPoints = new List<StoryPointSO>();
+    }
+
+    public void AddStoryPoint(StoryPointSO sp)
+    {
+        storyPoints.Add(sp);
     }
 }

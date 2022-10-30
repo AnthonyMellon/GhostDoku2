@@ -1,0 +1,1966 @@
+{
+    "Dialogue": [
+        {
+            "Character": "Meemaw",
+            "Emotion": "Suprised",
+            "Text": "George? Am I seeing things? Are you real?",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "George",
+            "Emotion": "Happy",
+            "Text": "It's me, my love. I miss you so much.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Meemaw",
+            "Emotion": "Sad",
+            "Text": "I miss you too, dear. Your ceremony yesterday was lovely. But why haven't you passed over yet?",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "George",
+            "Emotion": "Sad",
+            "Text": "I wanted to play a game of sudoku with you before I moved on. Will you play with me one last time?",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Meemaw",
+            "Emotion": "Loving",
+            "Text": "Of course, dear.",
+            "Events": [
+                "Sudoku"
+            ]
+        },
+        {
+            "Character": "George",
+            "Emotion": "Sad",
+            "Text": "Thank you, my love. I feel ready to move on.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "George",
+            "Emotion": "Questioning",
+            "Text": "Before I go, honey... maybe you could help the others too?",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "George",
+            "Emotion": "Sad",
+            "Text": "They're trapped. They have unresolved issues from that tragic accident of 1964.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "George",
+            "Emotion": "Questioning",
+            "Text": "Could you talk to my childhood friend, Charlotte, about it?",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Meemaw",
+            "Emotion": "Questioning",
+            "Text": "I'll see what I can do.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "George",
+            "Emotion": "Questioning",
+            "Text": "Why don't you play some sudoku with them. Maybe it will help them open up to you?",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "George",
+            "Emotion": "Happy",
+            "Text": "Thank you honey! I'll always love you!",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Meemaw",
+            "Emotion": "Loving/Proud",
+            "Text": "I'll always love you too.",
+            "Events": [
+                "Charlotte",
+                "CharlotteLevel",
+                "Scene"
+            ]
+        },
+        {
+            "Character": "Meemaw",
+            "Emotion": "Questioning",
+            "Text": "Hello, dear. Are you Charlotte by any chance?",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Charlotte",
+            "Emotion": "Sad",
+            "Text": "Hello? I think so.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Charlotte",
+            "Emotion": "Sad",
+            "Text": "My memory is a bit hazy.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Meemaw",
+            "Emotion": "Neutral/Smile",
+            "Text": "I think I have a trick for that.",
+            "Events": [
+                "Sudoku"
+            ]
+        },
+        {
+            "Character": "Charlotte",
+            "Emotion": "Thoughtful",
+            "Text": "I think that actually worked! My memory is slowly coming back to me.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Charlotte",
+            "Emotion": "Happy",
+            "Text": "Is there anything I can help you with?",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Meemaw",
+            "Emotion": "Neutral/Smile",
+            "Text": "I was actually wondering if there was anything I could help you with.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Meemaw",
+            "Emotion": "Explaining",
+            "Text": "My late husband George said that something happened in 1964?",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Charlotte",
+            "Emotion": "Thoughtful",
+            "Text": "That sounds really familiar. I know! That's the year I died!",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Charlotte",
+            "Emotion": "Happy",
+            "Text": "I was married to Bruce. He was the best husband. He provided so much for us.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Charlotte",
+            "Emotion": "Neutral",
+            "Text": "And, my sister, Martha, always looked out for me, especially so on my death bed.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Charlotte",
+            "Emotion": "Thoughtful",
+            "Text": "Anyway, would you be able to talk to some of the other ghosts about the accident?",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Charlotte",
+            "Emotion": "Thoughtful",
+            "Text": "See if you can put some more of the pieces together for me?",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Charlotte",
+            "Emotion": "Neutral",
+            "Text": "Maybe you should go and talk to Martha. She's very observant.",
+            "Events": [
+                "Martha",
+                "MarthaLevel"
+            ]
+        },
+        {
+            "Character": "Meemaw",
+            "Emotion": "Questioning",
+            "Text": "Are you Martha?",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Martha",
+            "Emotion": "Questioning",
+            "Text": "Yes, that name sounds really familiar.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Meemaw",
+            "Emotion": "Explaining",
+            "Text": "Charlotte sent me over here to talk to you, to see if you knew anything about the cause of her death.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Martha",
+            "Emotion": "Questioning",
+            "Text": "I'm having trouble remembering details.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Meemaw",
+            "Emotion": "Happy",
+            "Text": "Let me try to help.",
+            "Events": [
+                "Sudoku"
+            ]
+        },
+        {
+            "Character": "Martha",
+            "Emotion": "Happy",
+            "Text": "I think that may have actually worked.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Martha",
+            "Emotion": "Neutral",
+            "Text": "I remember that I used to work in a materials factory with Edith.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Martha",
+            "Emotion": "Angry",
+            "Text": "That woman! All she knew was how to gossip and talk about herself. ",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Martha",
+            "Emotion": "Angry",
+            "Text": "Maybe go talk to her since she loves a good scandal. ",
+            "Events": [
+                "Edith",
+                "EdithLevel"
+            ]
+        },
+        {
+            "Character": "Meemaw",
+            "Emotion": "Questioning",
+            "Text": "Hello, dear. I assume you're Edith?",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Edith",
+            "Emotion": "Questioning",
+            "Text": "Who's asking?",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Meemaw",
+            "Emotion": "Apologetic",
+            "Text": "Martha said that I should go talk to an Edith about what happened to Charlotte?",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Edith",
+            "Emotion": "Sad",
+            "Text": "The truth is, I'm not sure who I am.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Meemaw",
+            "Emotion": "Neutral/Smile",
+            "Text": "Let me try to help.",
+            "Events": [
+                "Sudoku"
+            ]
+        },
+        {
+            "Character": "Edith",
+            "Emotion": "Questioning",
+            "Text": "That was really weird. But it worked.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Edith",
+            "Emotion": "Neutral",
+            "Text": "I'm starting to remember Charlotte, in a negative way.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Edith",
+            "Emotion": "Sad",
+            "Text": "I didn't like her very much. I was jealous of her 'perfect' marriage.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Edith",
+            "Emotion": "Sad",
+            "Text": "My own marriage was on the rocks. Jasper was always too busy with the farm, and drank at Bruce's pub every night.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Meemaw",
+            "Emotion": "Sad",
+            "Text": "I'm so sorry, dear.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Edith",
+            "Emotion": "Sad",
+            "Text": "Could you leave me alone for now, please? I just want to think about some things.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Meemaw",
+            "Emotion": "Apologetic",
+            "Text": "Of course. I'll go find Bruce.",
+            "Events": [
+                "Bruce",
+                "BruceLevel"
+            ]
+        },
+        {
+            "Character": "Meemaw",
+            "Emotion": "Questioning",
+            "Text": "Hello there, is there perhaps any chance your name is Bruce?",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Bruce",
+            "Emotion": "Questioning",
+            "Text": "I'm pretty sure it is. Why's that?",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Meemaw",
+            "Emotion": "Explaining",
+            "Text": "I've talked to Charlotte, Martha and Edith, who have all mentioned that you're Charlotte's husband.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Meemaw",
+            "Emotion": "Questioning",
+            "Text": "I was wondering if you could shed a little bit of light on the situation?",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Bruce",
+            "Emotion": "Sad",
+            "Text": "Unfortunately I don't really remember these people.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Meemaw",
+            "Emotion": "Neutral/Smile",
+            "Text": "I have a trick that seems to work with the others, let me give it a go.",
+            "Events": [
+                "Sudoku"
+            ]
+        },
+        {
+            "Character": "Bruce",
+            "Emotion": "Happy",
+            "Text": "I remember my wife Charlotte. She was the kindest, sweetest and most considerate wife.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Bruce",
+            "Emotion": "Happy",
+            "Text": "She was what some referred to as the most 'ideal kind of wife'.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Bruce",
+            "Emotion": "Sad",
+            "Text": "Though, our marriage just started to get so boring, there was no excitement in it anymore.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Bruce",
+            "Emotion": "Neutral",
+            "Text": "I also used to work in a pub and a man called Jasper would come to drink almost every night.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Bruce",
+            "Emotion": "Angry",
+            "Text": "He would usually just drunkenly moan and ramble about his failing life and marriage.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Bruce",
+            "Emotion": "Neutral",
+            "Text": "You should go and talk to him.",
+            "Events": [
+                "Jasper",
+                "JasperLevel"
+            ]
+        },
+        {
+            "Character": "Meemaw",
+            "Emotion": "Thinking",
+            "Text": "Hello there! Jasper, I assume?",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Jasper",
+            "Emotion": "Questioning",
+            "Text": "I believe that's my name. Was there something you need?",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Meemaw",
+            "Emotion": "Neutral",
+            "Text": "I'm trying to find some information on Charlotte's death.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Jasper",
+            "Emotion": "Sad",
+            "Text": "I'm sorry, I can't help you there ma'am. I'm afraid I can't remember much from my past life.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Meemaw",
+            "Emotion": "Happy",
+            "Text": "Don't worry. I know a trick to fix that.",
+            "Events": [
+                "Sudoku"
+            ]
+        },
+        {
+            "Character": "Jasper",
+            "Emotion": "Concerned",
+            "Text": "Great, all I remember is how miserable I was. ",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Jasper",
+            "Emotion": "Sad",
+            "Text": "Everyday I would go to work on the dairy farm, and finish off my day by drinking my sorrows away at Bruce's pub.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Jasper",
+            "Emotion": "Angry",
+            "Text": "I didn't really have any friends and I was beginning to despise my wife for her lack of intimacy.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Meemaw",
+            "Emotion": "Sad",
+            "Text": "I'm sorry to hear that. I'll let you be for now and come talk to you later when you're ready.",
+            "Events": [
+                "Charlotte",
+                "Scene"
+            ]
+        },
+        {
+            "Character": "Meemaw",
+            "Emotion": "Happy",
+            "Text": "I've talked to everyone here and they're slowly starting to regain their memories just like you",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Meemaw",
+            "Emotion": "Happy",
+            "Text": "I'll keep helping you all until we get to the bottom of this, so that you can all pass on.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Charlotte",
+            "Emotion": "Happy",
+            "Text": "Thank you, that's very kind of you!",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Charlotte",
+            "Emotion": "Thoughtful",
+            "Text": "Can we play that puzzle game of yours again please?",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Meemaw",
+            "Emotion": "Happy",
+            "Text": "Of course!",
+            "Events": [
+                "Sudoku"
+            ]
+        },
+        {
+            "Character": "Charlotte",
+            "Emotion": "Sad",
+            "Text": "I'm not remembering good things.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Charlotte",
+            "Emotion": "Sad",
+            "Text": "During the last few months of my life, my relationship with my dear husband started to feel like it was falling apart.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Charlotte",
+            "Emotion": "Sad",
+            "Text": "Bruce used to come home during his lunch breaks to come spend time with me. But he suddenly stopped.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Meemaw",
+            "Emotion": "Thinking",
+            "Text": "That's very odd, I wonder what the reason was.",
+            "Events": [
+                "Martha"
+            ]
+        },
+        {
+            "Character": "Meemaw",
+            "Emotion": "Happy",
+            "Text": "Hello Martha!",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Meemaw",
+            "Emotion": "Questioning",
+            "Text": "How are you doing? Do you need some more help rejogging your memory?",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Martha",
+            "Emotion": "Happy",
+            "Text": "Great thank you and yes please!",
+            "Events": [
+                "Sudoku"
+            ]
+        },
+        {
+            "Character": "Martha",
+            "Emotion": "Neutral",
+            "Text": "Edith used to go on and on about a mystery man she was seeing and how exciting it was.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Martha",
+            "Emotion": "Neutral",
+            "Text": "She also used to use smoke break time to go visit this man, almost every day.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Martha",
+            "Emotion": "Angry",
+            "Text": "But I didn't really care for this type of gossip and didn't want to get involved.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Meemaw",
+            "Emotion": "Thinking",
+            "Text": "How intriguing.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Meemaw",
+            "Emotion": "Neutral",
+            "Text": "Alright I'll go see if I can find out some more information.",
+            "Events": [
+                "Edith"
+            ]
+        },
+        {
+            "Character": "Meemaw",
+            "Emotion": "Questioning",
+            "Text": "Hello Edith, are you feeling a bit better now?",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Edith",
+            "Emotion": "Neutral",
+            "Text": "Yes, I've had some time to think a bit more, but I'm struggling to remember the details.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Edith",
+            "Emotion": "Neutral",
+            "Text": "Let's do that puzzle of yours again.",
+            "Events": [
+                "Sudoku"
+            ]
+        },
+        {
+            "Character": "Edith",
+            "Emotion": "Happy",
+            "Text": "I remember that I used to see a new man during my smoke breaks at work, it was so exciting and fresh.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Edith",
+            "Emotion": "Happy",
+            "Text": "It made me realise what I was missing in my marriage with Jasper. It was everything I ever wanted.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Edith",
+            "Emotion": "Smirk",
+            "Text": "Passionate, affectionate, attentive, spicy. Ugh it was so good.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Meemaw",
+            "Emotion": "Awkward",
+            "Text": "That sounds... uh... fun?",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Edith",
+            "Emotion": "Smirk",
+            "Text": "It was.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Meemaw",
+            "Emotion": "Shocked",
+            "Text": "Alright, well I'll leave you to it then, looks like you need some time alone.",
+            "Events": [
+                "Jasper"
+            ]
+        },
+        {
+            "Character": "Meemaw",
+            "Emotion": "Neutral/Smile",
+            "Text": "Hello again, Jasper.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Meemaw",
+            "Emotion": "Concerned",
+            "Text": "I hope you're feeling a bit better now.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Jasper",
+            "Emotion": "Neutral",
+            "Text": "I guess I am. ",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Jasper",
+            "Emotion": "Questioning",
+            "Text": "I've had some time to think but it's all still a bit hazy.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Meemaw",
+            "Emotion": "Happy",
+            "Text": "Let's do a puzzle dear.",
+            "Events": [
+                "Sudoku"
+            ]
+        },
+        {
+            "Character": "Jasper",
+            "Emotion": "Sad",
+            "Text": "It's just sad memory after sad memory.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Jasper",
+            "Emotion": "Concerned",
+            "Text": "I'm remembering that my relationship with Edith had been strained for a very long time.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Jasper",
+            "Emotion": "Concerned",
+            "Text": "The damage inflicted on our marriage was irreparable and there was nothing I could do to save it.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Meemaw",
+            "Emotion": "Sad",
+            "Text": "Sorry to hear that love.",
+            "Events": [
+                "Bruce"
+            ]
+        },
+        {
+            "Character": "Meemaw",
+            "Emotion": "Happy",
+            "Text": "Bruce! Hello!",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Bruce",
+            "Emotion": "Neutral",
+            "Text": "Hello, again.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Meemaw",
+            "Emotion": "Questioning",
+            "Text": "Need help remembering anything?",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Bruce",
+            "Emotion": "Happy",
+            "Text": "I'd like that, thanks.",
+            "Events": [
+                "Sudoku"
+            ]
+        },
+        {
+            "Character": "Bruce",
+            "Emotion": "Sad",
+            "Text": "I'm not sure I want to say what I'm remembering.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Meemaw",
+            "Emotion": "Explaining",
+            "Text": "I'm here to help you. I can't help if you don't tell me.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Bruce",
+            "Emotion": "Sad",
+            "Text": "Well, I used to see another woman, at the same time as Charlotte.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Meemaw",
+            "Emotion": "Questioning",
+            "Text": "Was this other woman's name 'Edith' by any chance?",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Bruce",
+            "Emotion": "Sad",
+            "Text": "Yes.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Bruce",
+            "Emotion": "Sad",
+            "Text": "I feel awful about it, it's my biggest regret. I can't believe I did that to my poor Charlotte.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Meemaw",
+            "Emotion": "Neutral",
+            "Text": "It's not a very kind thing for you to have done to someone you were supposed to love.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Meemaw",
+            "Emotion": "Disappointed",
+            "Text": "I'll leave you be.",
+            "Events": [
+                "Charlotte",
+                "Scene"
+            ]
+        },
+        {
+            "Character": "Meemaw",
+            "Emotion": "Happy",
+            "Text": "Charlotte! Hello love.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Meemaw",
+            "Emotion": "Questioning",
+            "Text": "Do you want to do another puzzle?",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Charlotte",
+            "Emotion": "Happy",
+            "Text": "That would be great thank you.",
+            "Events": [
+                "Sudoku"
+            ]
+        },
+        {
+            "Character": "Charlotte",
+            "Emotion": "Thoughtful",
+            "Text": "It's another Bruce memory.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Charlotte",
+            "Emotion": "Neutral",
+            "Text": "I remember that I had made Bruce a romantic roast dinner, in an attempt to respark our love.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Charlotte",
+            "Emotion": "Neutral",
+            "Text": "It seemed to work, as there was a noticable difference in his behaviour.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Charlotte",
+            "Emotion": "Happy",
+            "Text": "He became more attentive and came home during his lunch breaks again!",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Meemaw",
+            "Emotion": "Concerned",
+            "Text": "That's great to hear Charlotte.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Meemaw",
+            "Emotion": "Neutral",
+            "Text": "Well, I won't keep you any longer, I'll go check in with Bruce now.",
+            "Events": [
+                "Bruce"
+            ]
+        },
+        {
+            "Character": "Bruce",
+            "Emotion": "Neutral",
+            "Text": "There you are! I need your help, let's cut the chit chat and get straight to the puzzle.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Meemaw",
+            "Emotion": "Suprised",
+            "Text": "Alright then.",
+            "Events": [
+                "Sudoku"
+            ]
+        },
+        {
+            "Character": "Bruce",
+            "Emotion": "Happy",
+            "Text": "Finally! It was eating me up inside, not knowing what I did next.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Bruce",
+            "Emotion": "Happy",
+            "Text": "I remember being fed up with the affair with Edith. I ended it and became faithful to Charlotte once again.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Bruce",
+            "Emotion": "Sad",
+            "Text": "Mistakes were made. I realised what I had given up and I regretted hurting Charlotte like that.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Meemaw",
+            "Emotion": "Neutral",
+            "Text": "I'm glad you've found the errors in your ways.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Meemaw",
+            "Emotion": "Neutral",
+            "Text": "I'll see how Edith feels about the situation.",
+            "Events": [
+                "Edith"
+            ]
+        },
+        {
+            "Character": "Meemaw",
+            "Emotion": "Neutral",
+            "Text": "Good to see you again Edith.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Meemaw",
+            "Emotion": "Concerned",
+            "Text": "I know we left on a postive note last time, but I think there's something you'll want to know.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Meemaw",
+            "Emotion": "Questioning",
+            "Text": "Ready for another puzzle?",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Edith",
+            "Emotion": "Questioning",
+            "Text": "I guess so, but you're making me worried.",
+            "Events": [
+                "Sudoku"
+            ]
+        },
+        {
+            "Character": "Edith",
+            "Emotion": "Angry",
+            "Text": "Why did you make me remember that?!",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Edith",
+            "Emotion": "Angry",
+            "Text": "You've ruined everything! I didn't want to know that!",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Edith",
+            "Emotion": "Sad",
+            "Text": "Bruce called it quits with me and left me all on my own. I couldn't face my husband after what I had done either.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Edith",
+            "Emotion": "Angry",
+            "Text": "Thanks for nothing.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Meemaw",
+            "Emotion": "Apologetic",
+            "Text": "I'm sorry, I thought you should know.",
+            "Events": [
+                "Jasper"
+            ]
+        },
+        {
+            "Character": "Meemaw",
+            "Emotion": "Neutral",
+            "Text": "How are you Jasper?",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Jasper",
+            "Emotion": "Sad",
+            "Text": "I've had some time to process everything and now I'm feeling a bit better.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Meemaw",
+            "Emotion": "Questioning",
+            "Text": "Are you ready to unlock more memories?",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Jasper",
+            "Emotion": "Neutral",
+            "Text": "Ready as I'll ever be.",
+            "Events": [
+                "Sudoku"
+            ]
+        },
+        {
+            "Character": "Jasper",
+            "Emotion": "Neutral",
+            "Text": "Now I'm remembering that I had a day off. The first in a long time, and I went to go run some errands.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Jasper",
+            "Emotion": "Sad",
+            "Text": "So basically my life is just extremely dull and boring.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Jasper",
+            "Emotion": "Sad",
+            "Text": "How disappointing.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Meemaw",
+            "Emotion": "Happy",
+            "Text": "You're just remembering one certain event in your life. That doesn't reflect your whole existence!",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Jasper",
+            "Emotion": "Happy",
+            "Text": "Thanks, I really needed to hear that.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Meemaw",
+            "Emotion": "Neutral",
+            "Text": "No problem. Sorry to leave you again when you're upset but I need to find Martha now.",
+            "Events": [
+                "Martha"
+            ]
+        },
+        {
+            "Character": "Meemaw",
+            "Emotion": "Happy",
+            "Text": "Long time, no see Martha.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Martha",
+            "Emotion": "Happy",
+            "Text": "It's been a while, thought you forgot about me!",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Meemaw",
+            "Emotion": "Happy",
+            "Text": "Hey, I'm not the one who's forgotten things!",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Martha",
+            "Emotion": "Happy",
+            "Text": "Speaking of which, let's do a puzzle, I'm dying to know more.",
+            "Events": [
+                "Sudoku"
+            ]
+        },
+        {
+            "Character": "Martha",
+            "Emotion": "Neutral",
+            "Text": "It's just a boring memory.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Meemaw",
+            "Emotion": "Questioning",
+            "Text": "What is it?",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Martha",
+            "Emotion": "Neutral",
+            "Text": "Nothing. I just remember that I saw Jasper in town for the first time in forever.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Martha",
+            "Emotion": "Questioning",
+            "Text": "I saw him buying some pestisides, it must have been for his crops.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Meemaw",
+            "Emotion": "Questioning",
+            "Text": "What a weird thing to remember. Oh well. Maybe next time will be more interesting.",
+            "Events": [
+                "Edith",
+                "Scene"
+            ]
+        },
+        {
+            "Character": "Meemaw",
+            "Emotion": "Apologetic",
+            "Text": "Sorry about before...",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Edith",
+            "Emotion": "Angry",
+            "Text": "You again. What do you want?",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Meemaw",
+            "Emotion": "Apologetic",
+            "Text": "Please give me one more chance, we're so close to figuring everything out.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Edith",
+            "Emotion": "Neutral",
+            "Text": "Fine, let's hurry up and play your stupid puzzle.",
+            "Events": [
+                "Sudoku"
+            ]
+        },
+        {
+            "Character": "Edith",
+            "Emotion": "Neutral",
+            "Text": "Seems I recognised I was in the wrong.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Edith",
+            "Emotion": "Sad",
+            "Text": "I ended up baking a pie for Charlotte as a subtle apology.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Edith",
+            "Emotion": "Sad",
+            "Text": "Even though I was jealous and spiteful of her, she didn't deserve the way we treated her behind her back.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Edith",
+            "Emotion": "Happy",
+            "Text": "I took the pie over to her house and left it on the front porch, with a piece of paper that had 'sorry' written on it.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Edith",
+            "Emotion": "Neutral",
+            "Text": "I couldn't face her and tell her the truth, but I thought it was a good effort on my part.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Meemaw",
+            "Emotion": "Neutral",
+            "Text": "That's very thoughtful and considerate of you Edith. I'm sure she appreciated the gesture.",
+            "Events": [
+                "Martha"
+            ]
+        },
+        {
+            "Character": "Meemaw",
+            "Emotion": "Happy",
+            "Text": "How are you Martha?",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Martha",
+            "Emotion": "Happy",
+            "Text": "Great! Let's play the puzzle. I feel like we're close!",
+            "Events": [
+                "Sudoku"
+            ]
+        },
+        {
+            "Character": "Martha",
+            "Emotion": "Neutral",
+            "Text": "I remember that I went over to Charlotte's house one afternoon.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Martha",
+            "Emotion": "Angry",
+            "Text": "I was planning on telling her that I suspected Bruce was having an affair with Edith.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Martha",
+            "Emotion": "Questioning",
+            "Text": "Though, now that I think about it, I never got around to telling her.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Martha",
+            "Emotion": "Questioning",
+            "Text": "I vaguely remember her being distracted by a pie that was left on her porch.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Martha",
+            "Emotion": "Sad",
+            "Text": "Later that afternoon she suddenly fell gravely ill and I felt that the timing was wrong.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Martha",
+            "Emotion": "Sad",
+            "Text": "The thing that's keeping me tied to this graveyard is the fact that I never got to tell Charlotte the truth.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Meemaw",
+            "Emotion": "Sad",
+            "Text": "I'm sorry to hear that, love. I'm glad you were trying to do the right thing though.",
+            "Events": [
+                "Charlotte"
+            ]
+        },
+        {
+            "Character": "Meemaw",
+            "Emotion": "Happy",
+            "Text": "Hello my dear, Charlotte.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Charlotte",
+            "Emotion": "Happy",
+            "Text": "Nice to see you again!",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Meemaw",
+            "Emotion": "Happy",
+            "Text": "Are you ready to unlock more memories?",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Charlotte",
+            "Emotion": "Happy",
+            "Text": "I'd love to.",
+            "Events": [
+                "Sudoku"
+            ]
+        },
+        {
+            "Character": "Charlotte",
+            "Emotion": "Sad",
+            "Text": "This is the part where I died...",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Charlotte",
+            "Emotion": "Thoughtful",
+            "Text": "I remember that Martha had come over to spend time with me.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Charlotte",
+            "Emotion": "Thoughtful",
+            "Text": "She wanted to tell me something but we were interrupted by a surprise pie delivery.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Charlotte",
+            "Emotion": "Sad",
+            "Text": "Later that afternoon I started to become very weak and could no longer stand on my own.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Charlotte",
+            "Emotion": "Sad",
+            "Text": "I was bed-ridden for a couple of weeks, until I eventually met my demise.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Meemaw",
+            "Emotion": "Sad",
+            "Text": "I'm so sorry to hear that. That must have been absolutley dreadful.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Meemaw",
+            "Emotion": "Neutral",
+            "Text": "Let me go see what else I can find out.",
+            "Events": [
+                "Bruce"
+            ]
+        },
+        {
+            "Character": "Meemaw",
+            "Emotion": "Neutral",
+            "Text": "Hello Bruce.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Bruce",
+            "Emotion": "Neutral",
+            "Text": "Hello, there!",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Meemaw",
+            "Emotion": "Neutral",
+            "Text": "Ready to unlock another memory?",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Bruce",
+            "Emotion": "Neutral",
+            "Text": "Sure am.",
+            "Events": [
+                "Sudoku"
+            ]
+        },
+        {
+            "Character": "Bruce",
+            "Emotion": "Neutral",
+            "Text": "I remember that I was on my way to see Charlotte. I wanted to own up to what I had done.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Bruce",
+            "Emotion": "Sad",
+            "Text": "But by the time I got home she was seemingly unconscious on the kitchen floor.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Bruce",
+            "Emotion": "Sad",
+            "Text": "I planned to tell her once she got better but she never did. She passed away before I was able to tell her.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Bruce",
+            "Emotion": "Sad",
+            "Text": "The one thing that's holding me here is the fact that I never got to confess what I had done to her.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Meemaw",
+            "Emotion": "Sad",
+            "Text": "I think now is the time to let her know, so that you can both pass on.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Bruce",
+            "Emotion": "Happy",
+            "Text": "You're right, thank you for all of your help.",
+            "Events": [
+                "Jasper"
+            ]
+        },
+        {
+            "Character": "Meemaw",
+            "Emotion": "Neutral",
+            "Text": "Jasper, I hope you're feeling better now. How are you?",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Jasper",
+            "Emotion": "Neutral",
+            "Text": "I'm doing better now, thank you.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Meemaw",
+            "Emotion": "Neutral",
+            "Text": "Are you ready for another puzzle?",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Jasper",
+            "Emotion": "Sad",
+            "Text": "Sure, why not? Can't get any worse.",
+            "Events": [
+                "Sudoku"
+            ]
+        },
+        {
+            "Character": "Jasper",
+            "Emotion": "Concerned",
+            "Text": "...",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Meemaw",
+            "Emotion": "Questioning",
+            "Text": "What is it?",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Jasper",
+            "Emotion": "Concerned",
+            "Text": "I did something bad.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Jasper",
+            "Emotion": "Angry",
+            "Text": "Edith was always being too much.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Jasper",
+            "Emotion": "Angry",
+            "Text": "I went to visit her, during my break, but she was off somewhere else.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Jasper",
+            "Emotion": "Sad",
+            "Text": "So I decided I'd just go grab a pint at Bruce's bar.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Jasper",
+            "Emotion": "Sad",
+            "Text": "To my surprise, Edith was there... kissing Bruce.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Jasper",
+            "Emotion": "Angry",
+            "Text": "That's when I knew I had to get my revenge.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Jasper",
+            "Emotion": "Smirk",
+            "Text": "Edith often baked herself pies and I saw an opportunity.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Jasper",
+            "Emotion": "Smirk",
+            "Text": "I bought some pestisides. Something to deal with the pests on my farm and in my home.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Jasper",
+            "Emotion": "Evil Smirk",
+            "Text": "While she was distracted, I mixed some in and headed off to work.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Jasper",
+            "Emotion": "Evil Smirk",
+            "Text": "I expected to see that wench on the floor when I returned.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Jasper",
+            "Emotion": "Evil Smirk",
+            "Text": "But she was perfectly fine.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Jasper",
+            "Emotion": "Angry",
+            "Text": "I asked her if she had eaten the pie and she remarked that it was for Charlotte Thompson.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Jasper",
+            "Emotion": "Angry",
+            "Text": "In that moment my heart stopped. But then I realised this could work in my favour.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Jasper",
+            "Emotion": "Smirk",
+            "Text": "Everyone would suspect it was Edith's fault.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Jasper",
+            "Emotion": "Evil Smirk",
+            "Text": "Afterall, she hated Charlotte. When word got out about the affair, it made sense.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Jasper",
+            "Emotion": "Evil Smirk",
+            "Text": "Killing the competition.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Jasper",
+            "Emotion": "Smirk",
+            "Text": "People took pity on me, they finally realised how terribly I had been treated.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Jasper",
+            "Emotion": "Sad",
+            "Text": "I took this secret to my grave but I guess there's nothing left for me anyway.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Meemaw",
+            "Emotion": "Shocked",
+            "Text": "Wow, um that's a lot to take in dear, I think you need to apologise to a few of the others.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Meemaw",
+            "Emotion": "Explaining",
+            "Text": "Well I guess the good news is, is that we know what happened.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Meemaw",
+            "Emotion": "Worried",
+            "Text": "I need to go and speak with Charlotte.",
+            "Events": [
+                "Charlotte"
+            ]
+        },
+        {
+            "Character": "Meemaw",
+            "Emotion": "Concerned",
+            "Text": "Hello Charlotte.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Charlotte",
+            "Emotion": "Thoughtful",
+            "Text": "Hi! Any news on what happened?",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Meemaw",
+            "Emotion": "Thoughtful",
+            "Text": "I think we should talk it over with everyone.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Meemaw",
+            "Emotion": "Explaining",
+            "Text": "*Explains the situation*",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Charlotte",
+            "Emotion": "Sad",
+            "Text": "Well that's a lot to take in.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Martha",
+            "Emotion": "Sad",
+            "Text": "Maybe if I had told you my suspicions about Bruce, this never would have happened. I've missed you all these years.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Charlotte",
+            "Emotion": "Thoughtful",
+            "Text": "It's not your fault, don't blame yourself for this. You were just doing what you thought was right at the time. I love you Martha.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Bruce",
+            "Emotion": "Sad",
+            "Text": "I never meant to hurt you. I was so selfish. I'm sorry it ended this way.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Charlotte",
+            "Emotion": "Angry",
+            "Text": "We were married to each other for 10 years, and you threw all of that away.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Charlotte",
+            "Emotion": "Angry",
+            "Text": "You're despicable. I can't even look at you.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Edith",
+            "Emotion": "Sad",
+            "Text": "My intention was to hurt you and I regret what I have done, so for that I am sorry.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Charlotte",
+            "Emotion": "Angry",
+            "Text": "You need to learn how to control your jealousy. Don't take your anger out on others.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Jasper",
+            "Emotion": "Concerned",
+            "Text": "You were never meant to get hurt. I'm sorry you got caught in the crossfire of my spat with Edith. You didn't deserve that.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Charlotte",
+            "Emotion": "Sad",
+            "Text": "I am not ready to forgive you for what you did to me and what you intended to do to Edith.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Meemaw",
+            "Emotion": "Neutral",
+            "Text": "Most of you have found what you were searching for, except Jasper. You didn't recieve the forgiveness that you sought after.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Jasper",
+            "Emotion": "Sad",
+            "Text": "I deserve it. I'll stay here and reflect on my actions.",
+            "Events": [
+                ""
+            ]
+        },
+        {
+            "Character": "Charlotte",
+            "Emotion": "Happy",
+            "Text": "I think the rest of us are ready to move on now. Thank you Meemaw for everything. You've helped us tremedously.",
+            "Events": [
+                "End"
+            ]
+        }
+    ]
+}
+

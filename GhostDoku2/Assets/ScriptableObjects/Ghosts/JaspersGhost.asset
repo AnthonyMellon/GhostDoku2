@@ -15,6 +15,7 @@ MonoBehaviour:
   name: Jasper
   sprite: {fileID: 21300000, guid: 6bf993b5b5723af46b7a67c7894e3068, type: 3}
   levelEvent: {fileID: 11400000, guid: 140838e0dbf3aab4fb0d3fc5fea92cd6, type: 2}
+  animation: {fileID: 9100000, guid: 425051a9adc5f064ca43345dd32afda2, type: 2}
   startLevel: 0
   maxLevel: 3
-  currentLevel: 0
+  currentLevel: 1

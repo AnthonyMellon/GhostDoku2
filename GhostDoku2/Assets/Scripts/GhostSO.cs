@@ -8,6 +8,7 @@ public class GhostSO : ScriptableObject
     public new string name;
     public Sprite sprite;
     public IntGameEvent levelEvent;
+    public RuntimeAnimatorController animation;
     public int startLevel;
     public int maxLevel;
     public int currentLevel;

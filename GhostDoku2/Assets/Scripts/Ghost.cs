@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class Ghost : MonoBehaviour
 {
@@ -18,6 +17,7 @@ public class Ghost : MonoBehaviour
     public IntGameEvent enableGhostInteraction;
     public IntGameEvent disableGhostInteraction;
     public StorySO story;
+    public GameObject interactableAlert;
 
     [Header("Bob Controls")]
     public float horizBobSpeed;
@@ -50,6 +50,9 @@ public class Ghost : MonoBehaviour
         if(!gamePaused.value)
         {
             transform.localPosition = new Vector2(origPos.x + Mathf.Cos(Time.time * horizBobSpeed) * horizBobCap, origPos.y + Mathf.Sin(Time.time * vertBobSpeed) * vertBobCap);
+
+            if (story.GetCurrentStoryPoint().Initiator == self && anim.enabled) interactableAlert.SetActive(true);
+            else interactableAlert.SetActive(false);
         }
     }
 
@@ -88,6 +91,7 @@ public class Ghost : MonoBehaviour
     public void EnableAnimator()
     {
         anim.enabled = true;
+        anim.runtimeAnimatorController = self.animation;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

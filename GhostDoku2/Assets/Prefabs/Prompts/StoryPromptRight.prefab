@@ -68,8 +68,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: Charlotte
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5c44423fca5b41c42a042828e570e40c, type: 2}
+  m_sharedMaterial: {fileID: 625181290082959544, guid: 5c44423fca5b41c42a042828e570e40c,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -93,8 +94,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
-  m_fontSizeBase: 18
+  m_fontSize: 16
+  m_fontSizeBase: 16
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -561,8 +562,9 @@ MonoBehaviour:
   m_text: "\u201CIt\u2019s not your fault, don\u2019t blame yourself for this. You
     were just doing what you thought was right at the time. I love you Martha.\u201D"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5c44423fca5b41c42a042828e570e40c, type: 2}
+  m_sharedMaterial: {fileID: 625181290082959544, guid: 5c44423fca5b41c42a042828e570e40c,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

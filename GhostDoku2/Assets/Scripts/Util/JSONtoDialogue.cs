@@ -83,6 +83,7 @@ public class JSONtoDialogue : MonoBehaviour
     public IntGameEvent level_jasper;
     public IntGameEvent level_martha;
     public IntGameEvent level_Husband;
+    public IntGameEvent mainMenu;
 
 
 
@@ -344,6 +345,10 @@ public class JSONtoDialogue : MonoBehaviour
                         dialogue.Events.Add(nextStoryPoint);
                         dialogue.Events.Add(StoryPrompt);
                         break;
+                    case "NextStroyPoint":
+                        dialogue.Events.Add(nextStoryPoint);
+                        dialogue.Events.Add(StoryPrompt);
+                        break;
                     case "Sudoku":
                         dialogue.Events.Add(Sudoku);
                         break;
@@ -391,6 +396,9 @@ public class JSONtoDialogue : MonoBehaviour
                     case "Martha":
                         dialogue.Events.Add(nextStoryPoint);
                         currentInitiator = martha;
+                        break;
+                    case "End":
+                        dialogue.Events.Add(mainMenu);
                         break;
                     default:
                         Debug.LogWarning($"No event linked to '{myEvent}'");

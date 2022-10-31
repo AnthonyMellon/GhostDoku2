@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6544c2c1d4d65894a8f5cb91bdeb58a8, type: 3}
+  m_Name: Grave1
+  m_EditorClassIdentifier: 
+  Sprites:
+  - {fileID: 21300000, guid: 9f6883a713ba20a4ab2be723f68d29fb, type: 3}
+  - {fileID: 21300000, guid: 9f6883a713ba20a4ab2be723f68d29fb, type: 3}
+  - {fileID: 21300000, guid: 2e6627179a0dc754d9ea616c81f4bc67, type: 3}
+  - {fileID: 21300000, guid: 2dc56d6f654faf24abdfd390f5a4d5cc, type: 3}
+  - {fileID: 21300000, guid: bfe9b5d68dd3d0a45a18e183f4f7caba, type: 3}

@@ -17,6 +17,8 @@ GameObject:
   - component: {fileID: -7477496275859918799}
   - component: {fileID: 7677833974507396015}
   - component: {fileID: -2982535943973768775}
+  - component: {fileID: 1126503288882056836}
+  - component: {fileID: 9153964355865122211}
   m_Layer: 0
   m_Name: Grave
   m_TagString: Untagged
@@ -209,6 +211,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onUpdate: 0
+  offset: 0
 --- !u!61 &-2982535943973768775
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -235,6 +238,53 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.85, y: 7.25}
   m_EdgeRadius: 0
+--- !u!114 &1126503288882056836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 431156629373085172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db56dcaacd64ae64ab85b634f487d233, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteList: {fileID: 0}
+  sprites:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+--- !u!114 &9153964355865122211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 431156629373085172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d9b3b7e20f7c7141bf68204708a032b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  event: {fileID: 11400000, guid: 05d52db0a47647945a9cc839a5350799, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1126503288882056836}
+        m_TargetAssemblyTypeName: DeGloomer, Assembly-CSharp
+        m_MethodName: deGloom
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2164608504148110269
 GameObject:
   m_ObjectHideFlags: 0
@@ -458,6 +508,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onUpdate: 1
+  offset: 0
 --- !u!114 &6332651640694475271
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -470,6 +521,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db56dcaacd64ae64ab85b634f487d233, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteList: {fileID: 0}
   sprites:
   - {fileID: 21300000, guid: 9e6f100d3fad56f42b2ae3944d163bd6, type: 3}
   - {fileID: 21300000, guid: 702cc13ca1489be41bc93183d9783091, type: 3}
@@ -640,6 +692,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onUpdate: 1
+  offset: 0
 --- !u!114 &5998761273538938254
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -652,6 +705,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db56dcaacd64ae64ab85b634f487d233, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteList: {fileID: 0}
   sprites:
   - {fileID: 21300000, guid: 461cc92449381044395f0f122ad6f6ea, type: 3}
   - {fileID: 21300000, guid: c419378a2805a434eba1301e0bdfdcfd, type: 3}
@@ -822,6 +876,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onUpdate: 1
+  offset: 0
 --- !u!114 &6313552277662221984
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -834,6 +889,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db56dcaacd64ae64ab85b634f487d233, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteList: {fileID: 0}
   sprites:
   - {fileID: 21300000, guid: d172556a75ee44d4c8c674bdbca0499e, type: 3}
   - {fileID: 21300000, guid: 6e20aaf450b932a479ce439de2d176f0, type: 3}
@@ -1081,6 +1137,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onUpdate: 1
+  offset: 0
 --- !u!114 &2895520551750376250
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1093,6 +1150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db56dcaacd64ae64ab85b634f487d233, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteList: {fileID: 0}
   sprites:
   - {fileID: 21300000, guid: e7534505d503d0e48854d3ea8755daac, type: 3}
   - {fileID: 21300000, guid: e010d27cd1071f346af27157a5d3c112, type: 3}

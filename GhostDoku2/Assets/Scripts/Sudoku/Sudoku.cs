@@ -14,6 +14,9 @@ public class Sudoku : MonoBehaviour
     public GameObject cellObj;
     public int currentCell;
     public IntGameEvent enableGhostInteraction;
+    public IntGameEvent storyPromptEvent;
+    public AudioSource writeSound;
+    public AudioSource clickSound;
 
     [Header("Background Colours")]
     public Color defaultColor;
@@ -29,7 +32,7 @@ public class Sudoku : MonoBehaviour
     public IntSO currentSudoku;
     public IntSO difficulty;
     public bool showWrong;
-    public bool highlight = false;
+    private bool highlight = false;
 
     [Header("Sudoku Files")]
     public TextAsset VeryEasySudokus;
@@ -43,6 +46,7 @@ public class Sudoku : MonoBehaviour
     {
         gamePaused.value = true;
         myCells = new List<SudokuCell>();
+        clickSound = GameObject.Find("ClickSound").transform.GetComponent<AudioSource>();
 
         string[] sudokuAsStrings;
 
@@ -119,6 +123,7 @@ public class Sudoku : MonoBehaviour
     public void Win()
     {
         story.NextStoryPoint();
+        storyPromptEvent.Raise(0);
         currentSudoku.value++;
 
         Exit();
@@ -127,8 +132,15 @@ public class Sudoku : MonoBehaviour
     public void Exit()
     {
         gamePaused.value = false;
-        enableGhostInteraction.Raise(0);
         Destroy(gameObject);
+        //StartCoroutine(ExitSequence());
+    }
+
+    public IEnumerator ExitSequence()
+    {
+        yield return new WaitForSeconds(.2f);
+
+
     }
 
     public void SetCurrentCell(int id)
@@ -237,15 +249,36 @@ public class Sudoku : MonoBehaviour
 
         for (int i = 0; i < myCells.Count; i++)
         {
-            if (i != index)
+            if (i != index && myCells[index].value != 0)
             {
                 if (getRow(i) == row || getCol(i) == col || getBox(i) == box)
                 {
-                    if (myCells[index].value == myCells[i].value) return true;
+                    if (myCells[index].value == myCells[i].value)
+                    {
+                        Debug.Log($"Found same value at indexes {index} and {i} of values {myCells[index].value} and {myCells[i].value}");
+                        return true;
+                    }
                 }
             }
         }
         return false;
+    }
+
+    public void PlayClick()
+    {
+        clickSound.Play();
+    }
+
+    public void PlayWriteSound()
+    {
+        StartCoroutine(WriteSoundIEnum());
+    }
+
+    public IEnumerator WriteSoundIEnum()
+    {
+        writeSound.mute = false;
+        yield return new WaitForSeconds(1);
+        writeSound.mute = true;
     }
 
 }

@@ -14,6 +14,7 @@ public class Player : MonoBehaviour
     public Joystick moveInput;
     public float speed;
     private Rigidbody2D rb;
+    public AudioSource walkingSound;
 
     // Start is called before the first frame update
     void Start()
@@ -27,7 +28,6 @@ public class Player : MonoBehaviour
     void Update()
     {
         //if(!gamePaused.value) getNewTargetPos();
-        sortSprite();
     }
 
     private void FixedUpdate()
@@ -39,20 +39,22 @@ public class Player : MonoBehaviour
 
     public void JoysticMove()
     {
-        if(Mathf.Abs(moveInput.Horizontal) > 0 || Mathf.Abs(moveInput.Vertical) > 0) spriteObj.transform.GetComponent<Animator>().SetBool("moving", true);
-        else spriteObj.transform.GetComponent<Animator>().SetBool("moving", false);
-
+        if (Mathf.Abs(moveInput.Horizontal) > 0 || Mathf.Abs(moveInput.Vertical) > 0)
+        {
+            spriteObj.transform.GetComponent<Animator>().SetBool("moving", true);
+            walkingSound.mute = false;
+        }
+        else
+        {
+            spriteObj.transform.GetComponent<Animator>().SetBool("moving", false);
+            walkingSound.mute = true;
+        }
         if(moveInput.Horizontal > 0) transform.Find("PlayerSprite").localScale = new Vector3(-1, 1, 1);
         else if (moveInput.Horizontal < 0) transform.Find("PlayerSprite").localScale = new Vector3(1, 1, 1);
 
         Vector2 move = new Vector2(moveInput.Horizontal * speed, moveInput.Vertical * speed);
         //transform.position = (Vector2)transform.position + move;
         rb.velocity = move;
-    }
-
-    private void sortSprite()
-    {
-        spriteObj.transform.GetComponent<SpriteRenderer>().sortingOrder = utils.yToZIndex(transform.position.y);
     }
 
 /*    private void followPath()

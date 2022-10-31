@@ -18,6 +18,7 @@ public class Ghost : MonoBehaviour
     public IntGameEvent disableGhostInteraction;
     public StorySO story;
     public GameObject interactableAlert;
+    public AudioSource spawnSound;
 
     [Header("Bob Controls")]
     public float horizBobSpeed;
@@ -90,6 +91,8 @@ public class Ghost : MonoBehaviour
 
     public void EnableAnimator()
     {
+        spawnSound.enabled = true; 
+        Handheld.Vibrate();
         anim.enabled = true;
         anim.runtimeAnimatorController = self.animation;
     }

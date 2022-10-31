@@ -13,8 +13,6 @@ public class Gravestone : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GetComponent<SpriteRenderer>().sprite = self.sprite;
-
         ghostSelf = self.ghostSO;
         ghost = Instantiate(self.ghostObj, transform);
         ghost.GetComponent<Ghost>().self = ghostSelf;

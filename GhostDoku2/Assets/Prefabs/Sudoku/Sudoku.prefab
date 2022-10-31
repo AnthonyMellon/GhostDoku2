@@ -1189,6 +1189,9 @@ MonoBehaviour:
   gameGrid: {fileID: 3712857100491985139}
   cellObj: {fileID: 4764312379825204654, guid: a8eb7439379a39b4498a0d0f92b957cb, type: 3}
   currentCell: 0
+  enableGhostInteraction: {fileID: 11400000, guid: b445c6dd648fdbf489e404b3248255e3,
+    type: 2}
+  storyPromptEvent: {fileID: 11400000, guid: 3e543842f7c6e834e95e5ea1d60f5340, type: 2}
   defaultColor: {r: 0.7, g: 0.6662651, b: 0.6662651, a: 0}
   selectedColor: {r: 0.3, g: 0.2856522, b: 0.2856522, a: 0}
   highlightedColor: {r: 0.5, g: 0.4775281, b: 0.4775281, a: 0}
@@ -1197,8 +1200,8 @@ MonoBehaviour:
   playerFilledText: {r: 0.4627451, g: 0.37254903, b: 0.15294118, a: 1}
   currentSudoku: {fileID: 11400000, guid: 708b616af8575424ab04e2ee341bedc0, type: 2}
   difficulty: {fileID: 11400000, guid: 0b600703791eb2145aba29f32e09ff42, type: 2}
-  showWrong: 1
-  highlight: 0
+  showWrong: 0
+  highlight: 1
   VeryEasySudokus: {fileID: 4900000, guid: 5200fe3b1ac56e442af539c025df7f91, type: 3}
   EasySudokus: {fileID: 4900000, guid: a365136d3ec4444408dd9df1ee49e763, type: 3}
   MediumSudokus: {fileID: 4900000, guid: 873d93001d1b485468bc4d3b86c7fe57, type: 3}
@@ -1707,6 +1710,7 @@ RectTransform:
   - {fileID: 8460512901166665883}
   - {fileID: 8870539039418120638}
   - {fileID: 1518413054453697650}
+  - {fileID: 4247666107627633213}
   m_Father: {fileID: 7128835030449516229}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

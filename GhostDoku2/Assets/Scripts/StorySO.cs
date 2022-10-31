@@ -28,6 +28,11 @@ public class StorySO : ScriptableObject
         return storyPoints[currentStoryPoint];
     }
 
+    public void SetCurrentStoryPoint(int point)
+    {
+        currentStoryPoint = point;
+    }
+
     public StoryPointSO GetStoryPoint(int index)
     {
         return storyPoints[index];

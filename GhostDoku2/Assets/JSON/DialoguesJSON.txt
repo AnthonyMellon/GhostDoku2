@@ -45,7 +45,8 @@
             "Emotion": "Sad",
             "Text": "Thank you, my love. I feel ready to move on.",
             "Events": [
-                ""
+                "GeorgeLevel",
+                "NextStroyPoint"
             ]
         },
         {
@@ -143,7 +144,8 @@
             "Emotion": "Thoughtful",
             "Text": "I think that actually worked! My memory is slowly coming back to me.",
             "Events": [
-                ""
+                "CharlotteLevel",
+                "NextStroyPoint"
             ]
         },
         {
@@ -264,7 +266,8 @@
             "Emotion": "Happy",
             "Text": "I think that may have actually worked.",
             "Events": [
-                ""
+                "MarthaLevel",
+                "NextStroyPoint"
             ]
         },
         {
@@ -337,7 +340,8 @@
             "Emotion": "Questioning",
             "Text": "That was really weird. But it worked.",
             "Events": [
-                ""
+                "EdithLevel",
+                "NextStroyPoint"
             ]
         },
         {
@@ -442,7 +446,8 @@
             "Emotion": "Happy",
             "Text": "I remember my wife Charlotte. She was the kindest, sweetest and most considerate wife.",
             "Events": [
-                ""
+                "BruceLevel",
+                "NextStroyPoint"
             ]
         },
         {
@@ -529,9 +534,10 @@
         {
             "Character": "Jasper",
             "Emotion": "Concerned",
-            "Text": "Great, all I remember is how miserable I was. ",
+            "Text": "Great, all I remember is how miserable I was.",
             "Events": [
-                ""
+                "JasperLevel",
+                "NextStroyPoint"
             ]
         },
         {
@@ -604,7 +610,8 @@
             "Emotion": "Sad",
             "Text": "I'm not remembering good things.",
             "Events": [
-                ""
+                "CharlotteLevel",
+                "NextStroyPoint"
             ]
         },
         {
@@ -660,7 +667,8 @@
             "Emotion": "Neutral",
             "Text": "Edith used to go on and on about a mystery man she was seeing and how exciting it was.",
             "Events": [
-                ""
+                "MarthaLevel",
+                "NextStroyPoint"
             ]
         },
         {
@@ -724,7 +732,8 @@
             "Emotion": "Happy",
             "Text": "I remember that I used to see a new man during my smoke breaks at work, it was so exciting and fresh.",
             "Events": [
-                ""
+                "EdithLevel",
+                "NextStroyPoint"
             ]
         },
         {
@@ -812,7 +821,8 @@
             "Emotion": "Sad",
             "Text": "It's just sad memory after sad memory.",
             "Events": [
-                ""
+                "JasperLevel",
+                "NextStroyPoint"
             ]
         },
         {
@@ -876,7 +886,8 @@
             "Emotion": "Sad",
             "Text": "I'm not sure I want to say what I'm remembering.",
             "Events": [
-                ""
+                "BruceLevel",
+                "NextStroyPoint"
             ]
         },
         {
@@ -965,7 +976,8 @@
             "Emotion": "Thoughtful",
             "Text": "It's another Bruce memory.",
             "Events": [
-                ""
+                "CharlotteLevel",
+                "NextStroyPoint"
             ]
         },
         {
@@ -1029,7 +1041,8 @@
             "Emotion": "Happy",
             "Text": "Finally! It was eating me up inside, not knowing what I did next.",
             "Events": [
-                ""
+                "BruceLevel",
+                "NextStroyPoint"
             ]
         },
         {
@@ -1101,7 +1114,8 @@
             "Emotion": "Angry",
             "Text": "Why did you make me remember that?!",
             "Events": [
-                ""
+                "EdithLevel",
+                "NextStroyPoint"
             ]
         },
         {
@@ -1173,7 +1187,8 @@
             "Emotion": "Neutral",
             "Text": "Now I'm remembering that I had a day off. The first in a long time, and I went to go run some errands.",
             "Events": [
-                ""
+                "JasperLevel",
+                "NextStroyPoint"
             ]
         },
         {
@@ -1253,7 +1268,8 @@
             "Emotion": "Neutral",
             "Text": "It's just a boring memory.",
             "Events": [
-                ""
+                "MarthaLevel",
+                "NextStroyPoint"
             ]
         },
         {
@@ -1326,7 +1342,8 @@
             "Emotion": "Neutral",
             "Text": "Seems I recognised I was in the wrong.",
             "Events": [
-                ""
+                "EdithLevel",
+                "NextStroyPoint"
             ]
         },
         {
@@ -1390,7 +1407,8 @@
             "Emotion": "Neutral",
             "Text": "I remember that I went over to Charlotte's house one afternoon.",
             "Events": [
-                ""
+                "MarthaLevel",
+                "NextStroyPoint"
             ]
         },
         {
@@ -1478,7 +1496,8 @@
             "Emotion": "Sad",
             "Text": "This is the part where I died...",
             "Events": [
-                ""
+                "CharlotteLevel",
+                "NextStroyPoint"
             ]
         },
         {
@@ -1566,7 +1585,8 @@
             "Emotion": "Neutral",
             "Text": "I remember that I was on my way to see Charlotte. I wanted to own up to what I had done.",
             "Events": [
-                ""
+                "BruceLevel",
+                "NextStroyPoint"
             ]
         },
         {
@@ -1646,7 +1666,8 @@
             "Emotion": "Concerned",
             "Text": "...",
             "Events": [
-                ""
+                "JasperLevel",
+                "NextStroyPoint"
             ]
         },
         {

@@ -11,10 +11,12 @@ public class StoryPrompt : MonoBehaviour
     public TMP_Text characterName;
     public TMP_Text dialogue;
     public IntGameEvent disableGhostInteraction;
+    private AudioSource clickSound;
 
 
     private void OnEnable()
     {
+        clickSound = GameObject.Find("ClickSound").transform.GetComponent<AudioSource>();
         disableGhostInteraction.Raise(0);
         UpdatePrompt();        
     }
@@ -36,7 +38,8 @@ public class StoryPrompt : MonoBehaviour
     }
 
     public void Delete()
-    {                
+    {
+        clickSound.Play();
         Destroy(gameObject);
     }
 

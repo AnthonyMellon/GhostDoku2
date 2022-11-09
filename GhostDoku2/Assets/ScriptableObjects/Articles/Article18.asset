@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76907b6ee80af9349b283101f07ce3f0, type: 3}
+  m_Name: Article18
+  m_EditorClassIdentifier: 
+  headline: Lloyd twin kicks the bucket.
+  blurb: Charlotte Thompson mysteriously loses her life over the course of a few
+    days, many conspiracies being wispered around the town. Wondering who is to blame.
+  image: {fileID: 21300000, guid: a7fad9386a6fcf148b38934ad4a4727d, type: 3}

@@ -12,6 +12,7 @@ public class gameManager : MonoBehaviour
     public StorySO story;
     public GameObject sudoku;
     public GameObject sudokuParent;
+    public ArticleListSO articleList;
 
     [Space]
     [Header("Grid Varibles")]
@@ -37,6 +38,7 @@ public class gameManager : MonoBehaviour
     void Start()
     {
         gamePaused.value = true;
+        articleList.currentArticle = 0;
     }
 
     public void ProgressStory()

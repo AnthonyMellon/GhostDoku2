@@ -49,8 +49,8 @@ public class Player : MonoBehaviour
             spriteObj.transform.GetComponent<Animator>().SetBool("moving", false);
             walkingSound.mute = true;
         }
-        if(moveInput.Horizontal > 0) transform.Find("PlayerSprite").localScale = new Vector3(-1, 1, 1);
-        else if (moveInput.Horizontal < 0) transform.Find("PlayerSprite").localScale = new Vector3(1, 1, 1);
+        if(moveInput.Horizontal > 0) transform.Find("PlayerSprite").localScale = new Vector3(1, 1, 1);
+        else if (moveInput.Horizontal < 0) transform.Find("PlayerSprite").localScale = new Vector3(-1, 1, 1);
 
         Vector2 move = new Vector2(moveInput.Horizontal * speed, moveInput.Vertical * speed);
         //transform.position = (Vector2)transform.position + move;

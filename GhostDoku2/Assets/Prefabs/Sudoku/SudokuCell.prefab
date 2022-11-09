@@ -262,7 +262,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 3038905064487515866}
         m_TargetAssemblyTypeName: SudokuCell, Assembly-CSharp
-        m_MethodName: Raise
+        m_MethodName: Toggle
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -286,6 +286,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   iEvent: {fileID: 11400000, guid: 9b5b4cadca490cd4fb813692f88589fa, type: 2}
   id: 0
+  currentCell: {fileID: 11400000, guid: 0eac25f0449c60243a29b6bd81293a2b, type: 2}
   showID: 0
   value: 0
 --- !u!114 &2027273469620012492

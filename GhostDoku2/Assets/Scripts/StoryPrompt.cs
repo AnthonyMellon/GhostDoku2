@@ -12,13 +12,14 @@ public class StoryPrompt : MonoBehaviour
     public TMP_Text dialogue;
     public IntGameEvent disableGhostInteraction;
     private AudioSource clickSound;
-
+    public BoolSO paused;
 
     private void OnEnable()
-    {
+    {        
         clickSound = GameObject.Find("ClickSound").transform.GetComponent<AudioSource>();
         disableGhostInteraction.Raise(0);
-        UpdatePrompt();        
+        UpdatePrompt();
+        paused.value = true;
     }
 
     public void UpdatePrompt()
@@ -31,6 +32,7 @@ public class StoryPrompt : MonoBehaviour
 
     public void RunCurrentEvents()
     {
+        paused.value = false;
         foreach (IntGameEvent myEvent in myStory.GetCurrentStoryPoint().Events)
         {
             myEvent.Raise(0);
@@ -39,7 +41,7 @@ public class StoryPrompt : MonoBehaviour
 
     public void Delete()
     {
-        clickSound.Play();
+        //clickSound.Play();        
         Destroy(gameObject);
     }
 

@@ -8,6 +8,7 @@ public class SudokuCell : MonoBehaviour
 {
     public IntGameEvent iEvent;
     public int id;
+    public IntSO currentCell;
     public bool showID;
     public int value;
 
@@ -25,8 +26,9 @@ public class SudokuCell : MonoBehaviour
         transform.GetComponent<Image>().color = nColor;       
     }
 
-    public void Raise()
+    public void Toggle()
     {
-        iEvent.Raise(id);
+        if (id == currentCell.value) iEvent.Raise(-1);
+        else iEvent.Raise(id);
     }
 }

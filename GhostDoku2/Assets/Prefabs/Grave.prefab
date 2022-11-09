@@ -212,6 +212,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onUpdate: 0
   offset: 0
+  spriteRendererOverride: {fileID: 0}
 --- !u!61 &-2982535943973768775
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -509,6 +510,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onUpdate: 1
   offset: 0
+  spriteRendererOverride: {fileID: 0}
 --- !u!114 &6332651640694475271
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -693,6 +695,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onUpdate: 1
   offset: 0
+  spriteRendererOverride: {fileID: 0}
 --- !u!114 &5998761273538938254
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -877,6 +880,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onUpdate: 1
   offset: 0
+  spriteRendererOverride: {fileID: 0}
 --- !u!114 &6313552277662221984
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -979,7 +983,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7193452920575357982}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -1138,6 +1142,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onUpdate: 1
   offset: 0
+  spriteRendererOverride: {fileID: 0}
 --- !u!114 &2895520551750376250
 MonoBehaviour:
   m_ObjectHideFlags: 0

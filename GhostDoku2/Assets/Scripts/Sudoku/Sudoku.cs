@@ -12,11 +12,19 @@ public class Sudoku : MonoBehaviour
     public StorySO story;
     public Transform gameGrid;
     public GameObject cellObj;
-    public int currentCell;
+    //private int currentCell = -1;
+    public IntSO currentCell;
     public IntGameEvent enableGhostInteraction;
     public IntGameEvent storyPromptEvent;
     public AudioSource writeSound;
     public AudioSource clickSound;
+    public List<SudokuNumSelect> numButtons;
+
+    [Header("Articles")]
+    public ArticleListSO articleList;
+    public TMP_Text Header;
+    public TMP_Text Body;
+    public Image image;
 
     [Header("Background Colours")]
     public Color defaultColor;
@@ -27,6 +35,10 @@ public class Sudoku : MonoBehaviour
     [Header("Text Colours")]
     public Color preFilledText;
     public Color playerFilledText;
+
+    [Header("Text Fonts")]
+    public TMP_FontAsset playerFilledFont;
+    public TMP_FontAsset preFilledFont;
 
     [Header("Sudoku Variables")]
     public IntSO currentSudoku;
@@ -44,9 +56,19 @@ public class Sudoku : MonoBehaviour
 
     private void OnEnable()
     {
+        SetCurrentCell(-1);
+        Debug.Log($"Current Cell: {currentCell}");
+
         gamePaused.value = true;
         myCells = new List<SudokuCell>();
         clickSound = GameObject.Find("ClickSound").transform.GetComponent<AudioSource>();
+
+        //Setup the article
+        Header.text = articleList.articles[articleList.currentArticle].headline;
+        string newBody =  articleList.articles[articleList.currentArticle].blurb + Body.text;
+        Body.text = newBody;
+        image.sprite = articleList.articles[articleList.currentArticle].image;
+
 
         string[] sudokuAsStrings;
 
@@ -81,10 +103,14 @@ public class Sudoku : MonoBehaviour
             {
                 myCell.GetComponent<Button>().interactable = false;
                 myCell.transform.Find("Text (TMP)").GetComponent<TMP_Text>().color = preFilledText;
+                myCell.transform.Find("Text (TMP)").GetComponent<TMP_Text>().font = preFilledFont;
+                myCell.transform.GetComponent<SudokuCell>().UpdateColor(defaultColor); 
             }
             else
             {
                 myCell.transform.Find("Text (TMP)").GetComponent<TMP_Text>().color = playerFilledText;
+                myCell.transform.Find("Text (TMP)").GetComponent<TMP_Text>().font = playerFilledFont;
+                myCell.transform.GetComponent<SudokuCell>().UpdateColor(new Color(0, 0, 0, 0));
             }
                 
             sCell.UpdateText();
@@ -108,14 +134,14 @@ public class Sudoku : MonoBehaviour
             {
                 if(sCell.value != 0 && bCell.interactable)
                 {
-                    if(checkWrong(currentCell)) sCell.UpdateColor(wrongColor);
+                    if(checkWrong(currentCell.value, -1)) sCell.UpdateColor(wrongColor);
                 }                
             }
             if (highlight)
             {
-                if (sCell.id == currentCell) sCell.UpdateColor(selectedColor);
-                else if (getRow(sCell.id) == getRow(currentCell)) sCell.UpdateColor(highlightedColor);
-                else if (getCol(sCell.id) == getCol(currentCell)) sCell.UpdateColor(highlightedColor);
+                if (sCell.id == currentCell.value) sCell.UpdateColor(selectedColor);
+                else if (getRow(sCell.id) == getRow(currentCell.value)) sCell.UpdateColor(highlightedColor);
+                else if (getCol(sCell.id) == getCol(currentCell.value)) sCell.UpdateColor(highlightedColor);
             }
         }
     }
@@ -125,8 +151,9 @@ public class Sudoku : MonoBehaviour
         story.NextStoryPoint();
         storyPromptEvent.Raise(0);
         currentSudoku.value++;
+        articleList.currentArticle += 1;
 
-        Exit();
+        Destroy(gameObject);        
     }
 
     public void Exit()
@@ -146,28 +173,49 @@ public class Sudoku : MonoBehaviour
     public void SetCurrentCell(int id)
     {
         //Toggle highlight
-        if (currentCell == id)
+        if (currentCell.value == id)
         {
             highlight = !highlight;
         }
         else
         {
-            currentCell = id;
+            currentCell.value = id;
             highlight = true;
         }
-            
 
+        UpdateButtons();
         SetColors();
     }
 
     public void SetCurrentCellValue(int value)
     {
-        myCells[currentCell].value = value;
-        myCells[currentCell].UpdateText();
+        if (currentCell.value == -1) return;
+
+        myCells[currentCell.value].value = value;
+        myCells[currentCell.value].UpdateText();
 
         SetColors();
 
         if (CheckSolved()) Win();
+    }
+
+    public void UpdateButtons()
+    {
+        if (currentCell.value == -1)
+        {
+            foreach(SudokuNumSelect sns in numButtons)
+            {
+                sns.Disable();
+            }
+        }
+        else //If a cell is selected
+        {
+            foreach (SudokuNumSelect sns in numButtons)
+            {
+                if (checkWrong(currentCell.value, sns.myVal)) sns.Disable();
+                else sns.Enable();
+            }
+        }
     }
 
     public void Hint()
@@ -241,21 +289,26 @@ public class Sudoku : MonoBehaviour
         result = icol + irow * m;
         return result;
     }
-    public bool checkWrong(int index)
+    public bool checkWrong(int index, int overrideValue)
     {
         int col = getCol(index);
         int row = getRow(index);
         int box = getBox(index);
 
+        int checkVal;
+        if (overrideValue == -1) checkVal = myCells[index].value;
+        else checkVal = overrideValue;
+
+
         for (int i = 0; i < myCells.Count; i++)
         {
-            if (i != index && myCells[index].value != 0)
+            if (i != index && checkVal != 0)
             {
                 if (getRow(i) == row || getCol(i) == col || getBox(i) == box)
-                {
-                    if (myCells[index].value == myCells[i].value)
+                {                    
+                    if (checkVal == myCells[i].value)
                     {
-                        Debug.Log($"Found same value at indexes {index} and {i} of values {myCells[index].value} and {myCells[i].value}");
+                        //Debug.Log($"Found same value at indexes {index} and {i} of values {myCells[index].value} and {myCells[i].value}");
                         return true;
                     }
                 }

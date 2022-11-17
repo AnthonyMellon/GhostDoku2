@@ -12451,7 +12451,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4190c149fb8c984faac09e8b9cc2e53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextScene: ThankYouScene
+  nextScene: CreditsScene
 --- !u!114 &1725141973
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -26,16 +26,20 @@ public class ghostInteraction : MonoBehaviour
 
     private void OnMouseDown()
     {
-        clickSound.Play();
-        Debug.Log(transform.parent.GetComponent<Ghost>().self.name);
+        if(!gamePaused.value)
+        {
+            clickSound.Play();
+            Debug.Log(transform.parent.GetComponent<Ghost>().self.name);
 
-        if (interactable)
-        {            
-            promptManager.SpawnPrompt();
+            if (interactable)
+            {
+                promptManager.SpawnPrompt();
+            }
+            else
+            {
+                if (playerNear && !gamePaused.value) promptManager.SpawnDefaultPrompt(transform.parent.GetComponent<Ghost>().self.name);
+            }
         }
-        else
-        {            
-            if(playerNear && !gamePaused.value) promptManager.SpawnDefaultPrompt(transform.parent.GetComponent<Ghost>().self.name);
-        }
+
     }  
 }

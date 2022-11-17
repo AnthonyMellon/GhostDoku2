@@ -21,7 +21,7 @@ public class StoryPrompt : MonoBehaviour
     private void OnEnable()
     {        
         clickSound = GameObject.Find("ClickSound").transform.GetComponent<AudioSource>();
-        disableGhostInteraction.Raise(0);
+        //disableGhostInteraction.Raise(0);
         if (dynamic) UpdatePrompt();
         else SetText();
         paused.value = true;

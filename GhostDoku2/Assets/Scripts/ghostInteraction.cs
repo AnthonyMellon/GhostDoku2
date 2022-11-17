@@ -9,6 +9,8 @@ public class ghostInteraction : MonoBehaviour
     private PromptManager promptManager;
     private AudioSource clickSound;
     public SpriteRenderer interactableAlert;
+    public bool playerNear;
+    public BoolSO gamePaused;
 
     private void Start()
     {
@@ -24,10 +26,16 @@ public class ghostInteraction : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if(interactable)
-        {
-            clickSound.Play();
+        clickSound.Play();
+        Debug.Log(transform.parent.GetComponent<Ghost>().self.name);
+
+        if (interactable)
+        {            
             promptManager.SpawnPrompt();
+        }
+        else
+        {            
+            if(playerNear && !gamePaused.value) promptManager.SpawnDefaultPrompt(transform.parent.GetComponent<Ghost>().self.name);
         }
     }  
 }

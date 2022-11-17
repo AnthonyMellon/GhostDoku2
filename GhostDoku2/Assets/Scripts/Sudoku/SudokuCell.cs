@@ -21,9 +21,19 @@ public class SudokuCell : MonoBehaviour
 
     }
 
-    public void UpdateColor(Color nColor)
+    public void UpdateColor(Color enabledColor, Color disabledColor)
     {
-        transform.GetComponent<Image>().color = nColor;       
+        transform.GetComponent<Image>().color = enabledColor;
+        transform.GetComponent<Button>().colors = new ColorBlock
+        {
+            normalColor = enabledColor,
+            highlightedColor = new Color(0, 0, 0, 0),
+            pressedColor = new Color(0, 0, 0, 0),
+            selectedColor = enabledColor,
+            disabledColor = disabledColor,
+            colorMultiplier = 1,
+            fadeDuration = .1f
+        };
     }
 
     public void Toggle()

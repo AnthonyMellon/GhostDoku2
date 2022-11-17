@@ -15,6 +15,7 @@ public class Player : MonoBehaviour
     public float speed;
     private Rigidbody2D rb;
     public AudioSource walkingSound;
+    public Vector2SO positionSO;
 
     // Start is called before the first frame update
     void Start()
@@ -55,6 +56,7 @@ public class Player : MonoBehaviour
         Vector2 move = new Vector2(moveInput.Horizontal * speed, moveInput.Vertical * speed);
         //transform.position = (Vector2)transform.position + move;
         rb.velocity = move;
+        positionSO.value = transform.position;
     }
 
 /*    private void followPath()

@@ -37,9 +37,16 @@ public class gameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+    }
+
+    private void OnEnable()
+    {
         gamePaused.value = true;
         articleList.currentArticle = 0;
+        story.SetCurrentStoryPoint(0);
     }
+
 
     public void ProgressStory()
     {

@@ -36,6 +36,10 @@ public class Sudoku : MonoBehaviour
     public Color preFilledText;
     public Color playerFilledText;
 
+    [Header("Sudoku Colours")]
+    public Color preFilledBackground;
+    public Color playerFilledBackground;
+
     [Header("Text Fonts")]
     public TMP_FontAsset playerFilledFont;
     public TMP_FontAsset preFilledFont;
@@ -65,7 +69,7 @@ public class Sudoku : MonoBehaviour
 
         //Setup the article
         Header.text = articleList.articles[articleList.currentArticle].headline;
-        string newBody =  articleList.articles[articleList.currentArticle].blurb + Body.text;
+        string newBody =  articleList.articles[articleList.currentArticle].blurb + " " + Body.text;
         Body.text = newBody;
         image.sprite = articleList.articles[articleList.currentArticle].image;
 
@@ -104,13 +108,13 @@ public class Sudoku : MonoBehaviour
                 myCell.GetComponent<Button>().interactable = false;
                 myCell.transform.Find("Text (TMP)").GetComponent<TMP_Text>().color = preFilledText;
                 myCell.transform.Find("Text (TMP)").GetComponent<TMP_Text>().font = preFilledFont;
-                myCell.transform.GetComponent<SudokuCell>().UpdateColor(defaultColor); 
+                myCell.transform.GetComponent<SudokuCell>().UpdateColor(playerFilledBackground, wrongColor); 
             }
             else
             {
                 myCell.transform.Find("Text (TMP)").GetComponent<TMP_Text>().color = playerFilledText;
                 myCell.transform.Find("Text (TMP)").GetComponent<TMP_Text>().font = playerFilledFont;
-                myCell.transform.GetComponent<SudokuCell>().UpdateColor(new Color(0, 0, 0, 0));
+                myCell.transform.GetComponent<SudokuCell>().UpdateColor(preFilledBackground, wrongColor);
             }
                 
             sCell.UpdateText();
@@ -126,22 +130,24 @@ public class Sudoku : MonoBehaviour
     {
         foreach(SudokuCell sCell in myCells)
         {
-            Button bCell = sCell.transform.GetComponent<Button>();
 
-            sCell.UpdateColor(defaultColor);
+            /*            Button bCell = sCell.transform.GetComponent<Button>();*/
+            /*            if (showWrong)
+                        {
+                            if (sCell.value != 0 && bCell.interactable)
+                            {
+                                if (checkWrong(currentCell.value, -1)) sCell.UpdateColor(wrongColor);
+                            }
+                        }*/
 
-            if (showWrong)
-            {
-                if(sCell.value != 0 && bCell.interactable)
-                {
-                    if(checkWrong(currentCell.value, -1)) sCell.UpdateColor(wrongColor);
-                }                
-            }
+
+
+            sCell.UpdateColor(playerFilledBackground, preFilledBackground);
             if (highlight)
             {
-                if (sCell.id == currentCell.value) sCell.UpdateColor(selectedColor);
-                else if (getRow(sCell.id) == getRow(currentCell.value)) sCell.UpdateColor(highlightedColor);
-                else if (getCol(sCell.id) == getCol(currentCell.value)) sCell.UpdateColor(highlightedColor);
+                if (sCell.id == currentCell.value) sCell.UpdateColor(selectedColor, selectedColor);
+                else if (getRow(sCell.id) == getRow(currentCell.value)) sCell.UpdateColor(highlightedColor, highlightedColor);
+                else if (getCol(sCell.id) == getCol(currentCell.value)) sCell.UpdateColor(highlightedColor, highlightedColor);
             }
         }
     }

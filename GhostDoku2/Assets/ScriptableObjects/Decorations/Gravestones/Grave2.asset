@@ -15,6 +15,6 @@ MonoBehaviour:
   Sprites:
   - {fileID: 21300000, guid: f77de1d6121606d4d9126f252c9dbef4, type: 3}
   - {fileID: 21300000, guid: bf426d8cb6abd834e81f717eddf1866a, type: 3}
-  - {fileID: 21300000, guid: 9abe3e8f945f3aa4d9006a8de836f42b, type: 3}
+  - {fileID: 21300000, guid: a8f3ba14dd5018f4990f624b6148586a, type: 3}
   - {fileID: 21300000, guid: c561cf2c4a0b1df4895289ef7ce495db, type: 3}
   - {fileID: 21300000, guid: 9904ec82903242d45910ab47b2871d46, type: 3}

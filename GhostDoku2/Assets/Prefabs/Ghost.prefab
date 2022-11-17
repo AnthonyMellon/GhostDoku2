@@ -170,7 +170,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0.6}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 3.57, y: 5.21}
@@ -226,6 +226,8 @@ MonoBehaviour:
   story: {fileID: 11400000, guid: a6af2ad39154ad84e8d10dbdef8bb256, type: 2}
   interactableAlert: {fileID: 4536795943055044514}
   spawnSound: {fileID: 1663365820045504819}
+  playerPosition: {fileID: 11400000, guid: d391fe658edc40d47a00e277dac1d9ce, type: 2}
+  interactButton: {fileID: 1997402508798754408}
   horizBobSpeed: 0
   vertBobSpeed: 0
   horizBobCap: 0
@@ -532,3 +534,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactableAlert: {fileID: 2946791271449749005}
+  playerNear: 0
+  gamePaused: {fileID: 11400000, guid: 06e13c6e7bb570a4b841fb41d6e41eb2, type: 2}

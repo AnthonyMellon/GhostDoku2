@@ -1188,20 +1188,30 @@ MonoBehaviour:
   story: {fileID: 11400000, guid: a6af2ad39154ad84e8d10dbdef8bb256, type: 2}
   gameGrid: {fileID: 3712857100491985139}
   cellObj: {fileID: 4764312379825204654, guid: a8eb7439379a39b4498a0d0f92b957cb, type: 3}
-  currentCell: 0
+  currentCell: {fileID: 0}
   enableGhostInteraction: {fileID: 11400000, guid: b445c6dd648fdbf489e404b3248255e3,
     type: 2}
   storyPromptEvent: {fileID: 11400000, guid: 3e543842f7c6e834e95e5ea1d60f5340, type: 2}
-  defaultColor: {r: 0.7, g: 0.6662651, b: 0.6662651, a: 0}
+  writeSound: {fileID: 0}
+  clickSound: {fileID: 0}
+  numButtons: []
+  articleList: {fileID: 0}
+  Header: {fileID: 0}
+  Body: {fileID: 0}
+  image: {fileID: 0}
+  defaultColor: {r: 1, g: 0, b: 0, a: 1}
   selectedColor: {r: 0.3, g: 0.2856522, b: 0.2856522, a: 0}
-  highlightedColor: {r: 0.5, g: 0.4775281, b: 0.4775281, a: 0}
+  highlightedColor: {r: 0.87843144, g: 0.95294124, b: 0.97647065, a: 1}
   wrongColor: {r: 1, g: 0.3537736, b: 0.3537736, a: 1}
   preFilledText: {r: 0.64705884, g: 0.53333336, b: 0.25490198, a: 1}
   playerFilledText: {r: 0.4627451, g: 0.37254903, b: 0.15294118, a: 1}
+  preFilledBackground: {r: 0, g: 0, b: 0, a: 0}
+  playerFilledBackground: {r: 0, g: 0, b: 0, a: 0}
+  playerFilledFont: {fileID: 0}
+  preFilledFont: {fileID: 0}
   currentSudoku: {fileID: 11400000, guid: 708b616af8575424ab04e2ee341bedc0, type: 2}
   difficulty: {fileID: 11400000, guid: 0b600703791eb2145aba29f32e09ff42, type: 2}
   showWrong: 0
-  highlight: 1
   VeryEasySudokus: {fileID: 4900000, guid: 5200fe3b1ac56e442af539c025df7f91, type: 3}
   EasySudokus: {fileID: 4900000, guid: a365136d3ec4444408dd9df1ee49e763, type: 3}
   MediumSudokus: {fileID: 4900000, guid: 873d93001d1b485468bc4d3b86c7fe57, type: 3}

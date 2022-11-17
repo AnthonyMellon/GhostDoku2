@@ -1711,12 +1711,14 @@ MonoBehaviour:
   Header: {fileID: 5710281731762065404}
   Body: {fileID: 5710281731673753192}
   image: {fileID: 5710281732148456087}
-  defaultColor: {r: 0.69803923, g: 0.6666667, b: 0.6662651, a: 0.38431373}
-  selectedColor: {r: 0.29803923, g: 0.28627452, b: 0.28627452, a: 0.5019608}
-  highlightedColor: {r: 0.5019608, g: 0.47843137, b: 0.47843137, a: 0.5019608}
-  wrongColor: {r: 1, g: 0.3537736, b: 0.3537736, a: 0.5019608}
+  defaultColor: {r: 1, g: 1, b: 1, a: 0}
+  selectedColor: {r: 0.74509805, g: 0.8980393, b: 0.9450981, a: 1}
+  highlightedColor: {r: 0.74509805, g: 0.8980393, b: 0.9450981, a: 1}
+  wrongColor: {r: 1, g: 0.3537736, b: 0.3537736, a: 1}
   preFilledText: {r: 0.64705884, g: 0.53333336, b: 0.25490198, a: 1}
   playerFilledText: {r: 0.4627451, g: 0.37254903, b: 0.15294118, a: 1}
+  preFilledBackground: {r: 0.8352942, g: 0.76470596, b: 0.54509807, a: 0.74509805}
+  playerFilledBackground: {r: 0.9294118, g: 0.89019614, b: 0.7843138, a: 1}
   playerFilledFont: {fileID: 11400000, guid: 5c44423fca5b41c42a042828e570e40c, type: 2}
   preFilledFont: {fileID: 11400000, guid: 12de0f86154b29c4392baa3048ff3a94, type: 2}
   currentSudoku: {fileID: 11400000, guid: 708b616af8575424ab04e2ee341bedc0, type: 2}

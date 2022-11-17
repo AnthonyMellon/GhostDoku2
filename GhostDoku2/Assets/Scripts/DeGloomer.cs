@@ -18,6 +18,11 @@ public class DeGloomer : MonoBehaviour
         }
     }
 
+    private void OnEnable()
+    {
+        gloomLevel = 0;
+    }
+
     public void deGloom()
     {
         gloomLevel ++;

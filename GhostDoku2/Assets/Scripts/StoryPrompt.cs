@@ -13,12 +13,17 @@ public class StoryPrompt : MonoBehaviour
     public IntGameEvent disableGhostInteraction;
     private AudioSource clickSound;
     public BoolSO paused;
+    public bool dynamic;
+
+    [Header("Stuff for default prompts (temporary and hacky)")]
+    public string text;
 
     private void OnEnable()
     {        
         clickSound = GameObject.Find("ClickSound").transform.GetComponent<AudioSource>();
         disableGhostInteraction.Raise(0);
-        UpdatePrompt();
+        if (dynamic) UpdatePrompt();
+        else SetText();
         paused.value = true;
     }
 
@@ -30,13 +35,22 @@ public class StoryPrompt : MonoBehaviour
         dialogue.text = currentStoryPoint.text;
     }
 
+    public void SetText()
+    {
+        dialogue.text = $"{text} Try talking to {myStory.GetCurrentStoryPoint().Initiator.name}";
+    }
+
     public void RunCurrentEvents()
     {
         paused.value = false;
-        foreach (IntGameEvent myEvent in myStory.GetCurrentStoryPoint().Events)
+        if(dynamic)
         {
-            myEvent.Raise(0);
+            foreach (IntGameEvent myEvent in myStory.GetCurrentStoryPoint().Events)
+            {
+                myEvent.Raise(0);
+            }
         }
+
     }
 
     public void Delete()
@@ -48,6 +62,6 @@ public class StoryPrompt : MonoBehaviour
 
     private void Update() //Test stuff
     {
-        if (Input.GetKeyDown(KeyCode.U)) UpdatePrompt();
+        //if (Input.GetKeyDown(KeyCode.U)) UpdatePrompt();
     }
 }

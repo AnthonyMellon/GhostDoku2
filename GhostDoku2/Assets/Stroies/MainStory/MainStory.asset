@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60f07a4f9d944cf4ab22e538cf954635, type: 3}
   m_Name: MainStory
   m_EditorClassIdentifier: 
-  currentStoryPoint: 243
+  currentStoryPoint: 0

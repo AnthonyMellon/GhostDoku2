@@ -19,6 +19,8 @@ public class Ghost : MonoBehaviour
     public StorySO story;
     public GameObject interactableAlert;
     public AudioSource spawnSound;
+    public Vector2SO playerPosition;
+    public ghostInteraction interactButton;
 
     [Header("Bob Controls")]
     public float horizBobSpeed;
@@ -54,6 +56,9 @@ public class Ghost : MonoBehaviour
 
             if (story.GetCurrentStoryPoint().Initiator == self && anim.enabled) interactableAlert.SetActive(true);
             else interactableAlert.SetActive(false);
+
+            if (transform.position.x > playerPosition.value.x) transform.GetComponent<SpriteRenderer>().flipX = true;
+            else if (transform.position.x < playerPosition.value.x) transform.GetComponent<SpriteRenderer>().flipX = false;
         }
     }
 
@@ -100,11 +105,13 @@ public class Ghost : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (story.GetCurrentStoryPoint().Initiator == self) enableGhostInteraction.Raise(0);
+        interactButton.playerNear = true;
 
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
         disableGhostInteraction.Raise(0);
+        interactButton.playerNear = false;
     }
 }
